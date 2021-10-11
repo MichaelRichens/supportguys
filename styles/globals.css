@@ -30,11 +30,6 @@ header {
 	text-align: center;
 }
 
-header > nav {
-	display: flex;
-	justify-content: space-evenly;
-}
-
 main {
 	margin-top: 2em;
 	margin-bottom: 2em;
@@ -42,6 +37,12 @@ main {
 
 footer {
 	text-align: center;
+}
+
+header > nav,
+footer > nav {
+	display: flex;
+	justify-content: space-evenly;
 }
 
 header a,
