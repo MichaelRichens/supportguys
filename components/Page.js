@@ -7,11 +7,11 @@ export default function Page(props) {
 	return (
 		<>
 			<Head>
-				<title>Microsite: {props.title}</title>
+				<title>Microsite{props.title && `: ${props.title}`}</title>
 			</Head>
 			<Header />
 			<main>
-				<h1>{props.title}</h1>
+				{props.title && <h1>{props.title}</h1>}
 				{props.children}
 			</main>
 			<Footer />

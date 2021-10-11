@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <Page title="Main Page">
+    <Page>
 		<p>Main page content.</p>
 	</Page>
   )
