@@ -6,13 +6,13 @@ import Footer from "./Footer";
 
 export default function Page(props) {
 	const canonicalURL = process.env.NEXT_PUBLIC_DOMAIN + useRouter().pathname
-	// Example data from MacUpgrades
+	// Example data from MacUpgrades - todo move to .env
 	const structuredDataOrg = { __html: JSON.stringify({
 		"@context": "http://schema.org/",
 		"@type": "Website",
-		"name": `${process.env.NEXT_PUBLIC_STRUC_DAT_ORG_NAME}`,
-		"description": `${process.env.NEXT_PUBLIC_STRUC_DAT_ORG_DESC}`,
-		"keywords": `${process.env.NEXT_PUBLIC_STRUC_DAT_ORG_KEYWORDS}`,
+		"name": `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_NAME}`,
+		"description": `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_DESC}`,
+		"keywords": `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_KEYWORDS}`,
 		"url": `${process.env.NEXT_PUBLIC_DOMAIN}`,
 		"image": {
 			"@type": "ImageObject",
