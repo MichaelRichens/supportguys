@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { CSSTransition } from "react-transition-group"
 
 import ContactForm from "../components/ContactForm"
