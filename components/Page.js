@@ -10,10 +10,10 @@ export default function Page(props) {
 	const structuredDataOrg = { __html: JSON.stringify({
 		"@context": "http://schema.org/",
 		"@type": "Website",
-		"name": "MacUpgrades.co.uk",
-		"description": "Expert Repair and Upgrades for Apple Mac computers with over 20 years experience.   From logic board repair to SSD upgrades, MacUpgrades provides products and services to improve and extend the useful life of your Mac.",
-		"keywords": "macupgrades, mac upgrades, mac repair, logic board repair, mac repair, mac ssd, mac ram, mac drive, macbook pro, macbook air, mac pro, imac",
-		"url": "https://www.macupgrades.co.uk/store/",
+		"name": `${process.env.NEXT_PUBLIC_STRUC_DAT_ORG_NAME}`,
+		"description": `${process.env.NEXT_PUBLIC_STRUC_DAT_ORG_DESC}`,
+		"keywords": `${process.env.NEXT_PUBLIC_STRUC_DAT_ORG_KEYWORDS}`,
+		"url": `${process.env.NEXT_PUBLIC_DOMAIN}`,
 		"image": {
 			"@type": "ImageObject",
 			"url": "https://www.macupgrades.co.uk/store/images/toptitle_sm.gif",
