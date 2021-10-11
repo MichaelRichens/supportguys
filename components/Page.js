@@ -1,65 +1,81 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
+import Head from "next/head"
+import { useRouter } from "next/router"
 
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header"
+import Footer from "./Footer"
 
 export default function Page(props) {
 	const canonicalURL = process.env.NEXT_PUBLIC_DOMAIN + useRouter().pathname
 	// Example data from MacUpgrades - todo move to .env
-	const structuredDataOrg = { __html: JSON.stringify({
-		"@context": "http://schema.org/",
-		"@type": "Website",
-		"name": `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_NAME}`,
-		"description": `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_DESC}`,
-		"keywords": `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_KEYWORDS}`,
-		"url": `${process.env.NEXT_PUBLIC_DOMAIN}`,
-		"image": {
-			"@type": "ImageObject",
-			"url": "https://www.macupgrades.co.uk/store/images/toptitle_sm.gif",
-			"height": 40,
-			"width": 230
-		},
-		"author": {
-			"@type": "Corporation",
-			"name": "MacUpgrades",
-			"description": "Expert Repair and Upgrades for Apple Mac computers with over 20 years experience.  From logic board repair to SSD upgrades, MacUpgrades provides products and services to improve and extend the useful life of your Mac.",
-			"url": "https://www.macupgrades.co.uk/store/",
-			"telephone": "+441223833412",
-			"image": {
+	const structuredDataOrg = {
+		__html: JSON.stringify({
+			"@context": "http://schema.org/",
+			"@type": "Website",
+			name: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_NAME}`,
+			description: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_DESC}`,
+			keywords: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_KEYWORDS}`,
+			url: `${process.env.NEXT_PUBLIC_DOMAIN}/`,
+			image: {
 				"@type": "ImageObject",
-				"url": "https://www.macupgrades.co.uk/store/images/toptitle_sm.gif",
-				"height": 40,
-				"width": 230
+				url: `${
+					process.env.NEXT_PUBLIC_DOMAIN +
+					process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_LOGO_PATH
+				}`,
+				height: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_LOGO_HEIGHT}`,
+				width: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_LOGO_WIDTH}`
+			},
+			author: {
+				"@type": "Corporation",
+				name: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_NAME}`,
+				description: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_NAME}`,
+				url: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_URL}/`,
+				telephone: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_PHONE}`,
+				image: {
+					"@type": "ImageObject",
+					url: `${
+						process.env.NEXT_PUBLIC_DOMAIN +
+						process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_LOGO_PATH
+					}`,
+					height: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_LOGO_HEIGHT}`,
+					width: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_LOGO_WIDTH}`
 				},
-			"contactPoint": [
-				{
-					"@type": "ContactPoint",
-					"contactType": "customer service",
-					"telephone": "+441223833412"
+				contactPoint: [
+					{
+						"@type": "ContactPoint",
+						contactType: "customer service",
+						telephone: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_PHONE}`
+					}
+				],
+				address: {
+					"@type": "PostalAddress",
+					addressCountry: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_COUNTRY}`,
+					streetAddress: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_STREET}`,
+					addressLocality: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_LOCALITY}`,
+					addressRegion: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_REGION}`,
+					postalCode: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_POSTCODE}`
 				}
-			],
-			"address": {
-				"@type": "PostalAddress",
-				"addressCountry": "GB",
-				"streetAddress": "Unit 5 South Cambridgeshire Business Park",
-				"addressLocality": "Sawston",
-				"addressRegion": "Cambridge",
-				"postalCode": "CB22 3JH"				
 			}
-		}
-	})}
+		})
+	}
 
 	return (
 		<>
 			<Head>
-				<title>Microsite{props.title && `: ${props.title}`}</title>
-				{props.metaDescription && <meta name="description" content={props.metaDescription} />}
+				<title>
+					{process.env.NEXT_PUBLIC_NAME +
+						(props.title &&
+						props.title != process.env.NEXT_PUBLIC_NAME
+							? `: ${props.title}`
+							: "")}
+				</title>
+				{props.metaDescription && (
+					<meta name="description" content={props.metaDescription} />
+				)}
 				<link rel="canonical" href={canonicalURL} />
 				<script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={structuredDataOrg}
-      />
+					type="application/ld+json"
+					dangerouslySetInnerHTML={structuredDataOrg}
+				/>
 			</Head>
 			<Header />
 			<main>
@@ -68,5 +84,5 @@ export default function Page(props) {
 			</main>
 			<Footer />
 		</>
-	);
+	)
 }
