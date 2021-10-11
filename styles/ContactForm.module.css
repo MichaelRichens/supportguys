@@ -1,0 +1,55 @@
+.contact-form {
+	z-index: 5000;
+	width: 80%;
+	max-width: 800px;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	margin-left: auto;
+	padding-left: 5%;
+	margin-right: auto;
+	padding-right: 5%;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: lightgray;
+	text-align: right;
+}
+
+.contact-form-enter {
+	opacity: 0;
+	top: -400px;
+}
+
+.contact-form-enter-active {
+	opacity: 1;
+	top: 0;
+	transition: opacity 500ms;
+}
+
+.contact-form-exit {
+	opacity: 1;
+	top: 0;
+}
+
+.contact-form-exit-active {
+	opacity: 0;
+	top: -400px;
+	transition: opacity 500ms;
+}
+
+.contact-form > label {
+	display: block;
+	width: 100%;
+	margin-bottom: 3em;
+}
+
+.contact-form > label:last-of-type {
+	margin-bottom: 0;
+}
+
+.contact-form > label > input,
+.contact-form > label > textarea {
+	width: 75%;
+	margin-left: 1em;
+}
