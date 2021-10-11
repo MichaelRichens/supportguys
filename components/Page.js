@@ -6,6 +6,7 @@ import Footer from "./Footer"
 
 export default function Page(props) {
 	const canonicalURL = process.env.NEXT_PUBLIC_DOMAIN + useRouter().pathname
+
 	// Example data from MacUpgrades - todo move to .env
 	const structuredDataOrg = {
 		__html: JSON.stringify({
