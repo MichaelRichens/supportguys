@@ -8,13 +8,11 @@ import ContactForm from "../components/ContactForm"
 export default function contactus() {
 	const nodeRef = useRef(null)
 	const [contactFormOpen, setContactFormOpen] = useState(false)
-	const initialState = {
-		email: {
-			name: "",
-			email: "",
-			subject: "",
-			body: ""
-		}
+	const initialEmailState = {
+		name: "",
+		email: "",
+		subject: "",
+		body: ""
 	}
 
 	function emailReducer(draft, action) {
@@ -30,7 +28,10 @@ export default function contactus() {
 		}
 	}
 
-	const [state, dispatch] = useImmerReducer(emailReducer, initialState)
+	const [emailState, emailDispatch] = useImmerReducer(
+		emailReducer,
+		initialEmailState
+	)
 
 	function toggleContactForm() {
 		setContactFormOpen((prev) => !prev)
