@@ -139,7 +139,6 @@ export default function contactus() {
 	}, [emailState.body])
 
 	useEffect(() => {
-		alert(process.env.NEXT_PUBLIC_TEST_SECRET_VAR)
 		emailDispatch({type: "emailWarn", value: ""})
 		let timer = null
 		if (emailState.email)
