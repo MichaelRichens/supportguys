@@ -21,8 +21,8 @@ async function postData(url = '', data = {}) {
   }
 
 export default function (req, res) {
-
-	postData('https://www.macupgrades.co.uk/store/fakemail.php', { token: process.env.TOKEN_MAIL })
+	console.log(req.body);
+	postData('https://www.macupgrades.co.uk/store/fakemail.php', { token: process.env.TOKEN_MAIL, data: req.body })
   .then(data => {
     console.log(data); // JSON data parsed by `data.json()` call
   });
