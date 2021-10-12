@@ -7,7 +7,7 @@ import ContactForm from "../components/ContactForm"
 
 export default function contactus() {
 	const nodeRef = useRef(null)
-	const [contactFormOpen, setContactFormOpen] = useState(false)
+	const [isContactFormOpen, setContactFormOpen] = useState(false)
 	const initialEmailState = {
 		name: "",
 		email: "",
@@ -41,7 +41,7 @@ export default function contactus() {
 		<Page title="Contact Us">
 			<CSSTransition
 				nodeRef={nodeRef}
-				in={contactFormOpen}
+				in={isContactFormOpen}
 				timeout={500}
 				classNames="contact-form"
 				unmountOnExit
