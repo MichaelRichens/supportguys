@@ -17,6 +17,18 @@ export default function contactus() {
 
 	function emailReducer(draft, action) {
 		switch (action.type) {
+			case "name":
+				draft.name = action.value				
+				return
+			case "email":
+				draft.email = action.value				
+				return
+			case "subject":
+				draft.subject = action.value				
+				return
+			case "body":
+				draft.body = action.value				
+				return
 			default:
 				if (process.env.NODE_ENV == "development") {
 					console.error(
@@ -25,6 +37,7 @@ export default function contactus() {
 				} else {
 					console.error("Email error.")
 				}
+				return
 		}
 	}
 
@@ -40,7 +53,7 @@ export default function contactus() {
 	return (
 		<Page title="Contact Us">
 			<PopupOverlay nodeRef={nodeRef} isOpen = {isContactFormOpen} close={() => setContactFormOpen(false)}>
-				<ContactForm />
+				<ContactForm emailDispatch = {emailDispatch} />
 			</PopupOverlay>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
