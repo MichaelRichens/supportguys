@@ -106,9 +106,31 @@ export default function contactus() {
 			valid = false
 		}
 		if (valid)
-		{
-			alert("todo - send email...") // Todo handle submitting email form			
-			emailDispatch({type: "reset"})
+		{			
+			const data = {
+				name: emailState.name,
+				email: emailState.email,
+				subject: emailState.subject,
+				body: emailState.body
+			}	
+			fetch("/api/contact", {
+				method: "POST",
+				headers: {
+					'Accept': 'application/json, text/plain, */*',
+					'Content-Type': 'application/json'
+				  },
+				body: JSON.stringify(data)
+			}).then((res) => {
+				console.log('Response received')
+				if (res.status === 200) {
+				  console.log('Response succeeded!')
+				  emailDispatch({type: "reset"})
+				}
+				else
+				{
+					console.error("Response failed...")
+				}
+			})				
 		}
 	}
 
