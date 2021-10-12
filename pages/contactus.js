@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import { useImmerReducer } from "use-immer"
 
+import { useFlashMessageContext } from "../context/FlashMessageContext"
 import Page from "../components/Page"
 import ContactForm from "../components/ContactForm"
 import PopupOverlay from "../components/PopupOverlay"
@@ -34,28 +35,28 @@ export default function contactus() {
 				setContactFormOpen(false)
 				return
 			case "name":
-				draft.name = action.value				
+				draft.name = action.value
 				return
 			case "nameWarn":
-				draft.nameWarn = action.value		
+				draft.nameWarn = action.value
 				return
 			case "email":
-				draft.email = action.value				
+				draft.email = action.value
 				return
 			case "emailWarn":
-				draft.emailWarn = action.value		
+				draft.emailWarn = action.value
 				return
 			case "subject":
-				draft.subject = action.value				
+				draft.subject = action.value
 				return
 			case "subjectWarn":
-				draft.subjectWarn = action.value				
-				return				
+				draft.subjectWarn = action.value
+				return
 			case "body":
-				draft.body = action.value				
+				draft.body = action.value
 				return
 			case "bodyWarn":
-				draft.bodyWarn = action.value				
+				draft.bodyWarn = action.value
 				return
 			default:
 				if (process.env.NODE_ENV == "development") {
@@ -78,103 +79,113 @@ export default function contactus() {
 		setContactFormOpen((prev) => !prev)
 	}
 
-	function handleSubmit(e)
-	{
+	function handleSubmit(e) {
 		e.preventDefault()
 		let valid = true
-		if (!emailState.name)
-		{
-			emailDispatch({type: "nameWarn", value: "No name entered."})
+		if (!emailState.name) {
+			emailDispatch({ type: "nameWarn", value: "No name entered." })
 			valid = false
 		}
-		if (!emailState.email)
-		{
-			emailDispatch({type: "emailWarn", value: "No email address entered."})
+		if (!emailState.email) {
+			emailDispatch({
+				type: "emailWarn",
+				value: "No email address entered."
+			})
 			valid = false
 		} else {
-	
 			valid = validateEmail()
 		}
-		if (!emailState.subject)
-		{
-			emailDispatch({type: "subjectWarn", value: "No subject entered."})
+		if (!emailState.subject) {
+			emailDispatch({ type: "subjectWarn", value: "No subject entered." })
 			valid = false
 		}
-		if (!emailState.body)
-		{
-			emailDispatch({type: "bodyWarn", value: "No message entered."})
+		if (!emailState.body) {
+			emailDispatch({ type: "bodyWarn", value: "No message entered." })
 			valid = false
 		}
-		if (valid)
-		{			
+		if (valid) {
 			const data = {
 				name: emailState.name,
 				email: emailState.email,
 				subject: emailState.subject,
 				body: emailState.body
-			}	
+			}
 			fetch("/api/contact", {
 				method: "POST",
 				headers: {
-					'Accept': 'application/json, text/plain, */*',
-					'Content-Type': 'application/json'
-				  },
+					Accept: "application/json, text/plain, */*",
+					"Content-Type": "application/json"
+				},
 				body: JSON.stringify(data)
 			}).then((res) => {
-				console.log('Response received')
 				if (res.status === 200) {
-				  console.log('Response succeeded!')
-				  emailDispatch({type: "reset"})
-				}
-				else
-				{
+					emailDispatch({ type: "reset" })
+					//todo - below isn't allowed - try moving it into a useEffect of some sort
+					useFlashMessageContext().setFlashMessages((prev) =>
+						prev.concat([
+							{
+								class: "success",
+								message: "Email sent!"
+							}
+						])
+					)
+				} else {
 					console.error("Response failed...")
 				}
-			})				
+			})
 		}
 	}
 
-	function validateEmail()
-	{
-		if (!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailState.email)))
-		{
-			
-			emailDispatch({type: "emailWarn", value: "Invalid email address."});
+	function validateEmail() {
+		if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailState.email)) {
+			emailDispatch({
+				type: "emailWarn",
+				value: "Invalid email address."
+			})
 			return false
 		}
 		return true
 	}
 
-	// Apart from email, only validation warnings are for empty, which is only wanted on submit, 
+	// Apart from email, only validation warnings are for empty, which is only wanted on submit,
 	// so just remove warning whenever a change is made
 
-	useEffect(() => {		
-		emailDispatch({type: "nameWarn", value: ""})
+	useEffect(() => {
+		emailDispatch({ type: "nameWarn", value: "" })
 	}, [emailState.name])
 
-	useEffect(() => {		
-		emailDispatch({type: "subjectWarn", value: ""})
+	useEffect(() => {
+		emailDispatch({ type: "subjectWarn", value: "" })
 	}, [emailState.subject])
 
-	useEffect(() => {		
-		emailDispatch({type: "bodyWarn", value: ""})
+	useEffect(() => {
+		emailDispatch({ type: "bodyWarn", value: "" })
 	}, [emailState.body])
 
 	useEffect(() => {
-		emailDispatch({type: "emailWarn", value: ""})
+		emailDispatch({ type: "emailWarn", value: "" })
 		let timer = null
-		if (emailState.email)
-		{
+		if (emailState.email) {
 			timer = setTimeout(() => validateEmail(), validationTimeout)
 		}
 
-		return () => { clearTimeout(timer) }
+		return () => {
+			clearTimeout(timer)
+		}
 	}, [emailState.email])
 
 	return (
 		<Page title="Contact Us">
-			<PopupOverlay nodeRef={nodeRef} isOpen = {isContactFormOpen} close={() => setContactFormOpen(false)}>
-				<ContactForm emailState = {emailState} emailDispatch = {emailDispatch} handleSubmit = {handleSubmit} />
+			<PopupOverlay
+				nodeRef={nodeRef}
+				isOpen={isContactFormOpen}
+				close={() => setContactFormOpen(false)}
+			>
+				<ContactForm
+					emailState={emailState}
+					emailDispatch={emailDispatch}
+					handleSubmit={handleSubmit}
+				/>
 			</PopupOverlay>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam

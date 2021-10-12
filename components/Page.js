@@ -1,8 +1,11 @@
+import { useContext } from "react"
 import Head from "next/head"
 import { useRouter } from "next/router"
 
+import { useFlashMessageContext } from "../context/FlashMessageContext"
 import Header from "./Header"
 import Footer from "./Footer"
+import FlashMessages from "./FlashMessages"
 
 export default function Page(props) {
 	const canonicalURL = process.env.NEXT_PUBLIC_DOMAIN + useRouter().pathname
@@ -60,6 +63,9 @@ export default function Page(props) {
 
 	return (
 		<>
+			<FlashMessages
+				messages={[useFlashMessageContext().flashMessages]}
+			/>
 			<Head>
 				<title>
 					{process.env.NEXT_PUBLIC_NAME +

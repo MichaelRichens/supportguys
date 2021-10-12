@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import "../styles/globals.css"
+
+import { FlashMessageProvider } from "../context/FlashMessageContext"
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+	return (
+		<FlashMessageProvider>
+			<Component {...pageProps} />
+		</FlashMessageProvider>
+	)
 }
 
 export default MyApp
