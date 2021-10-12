@@ -11,16 +11,33 @@ export default function contactus() {
 	const [isContactFormOpen, setContactFormOpen] = useState(false)
 	const initialEmailState = {
 		name: "",
+		nameWarn: "",
 		email: "",
 		emailWarn: "",
 		subject: "",
-		body: ""
+		subjectWarn: "",
+		body: "",
+		bodyWarn: ""
 	}
 
 	function emailReducer(draft, action) {
 		switch (action.type) {
+			case "reset":
+				draft.name = ""
+				draft.nameWarn = ""
+				draft.email = ""
+				draft.emailWarn = ""
+				draft.subject = ""
+				draft.subjectWarn = ""
+				draft.body = ""
+				draft.bodyWarn = ""
+				setContactFormOpen(false)
+				return
 			case "name":
 				draft.name = action.value				
+				return
+			case "nameWarn":
+				draft.nameWarn = action.value		
 				return
 			case "email":
 				draft.email = action.value				
@@ -31,8 +48,14 @@ export default function contactus() {
 			case "subject":
 				draft.subject = action.value				
 				return
+			case "subjectWarn":
+				draft.subjectWarn = action.value				
+				return				
 			case "body":
 				draft.body = action.value				
+				return
+			case "bodyWarn":
+				draft.bodyWarn = action.value				
 				return
 			default:
 				if (process.env.NODE_ENV == "development") {
@@ -55,14 +78,65 @@ export default function contactus() {
 		setContactFormOpen((prev) => !prev)
 	}
 
+	function handleSubmit(e)
+	{
+		e.preventDefault()
+		let valid = true
+		if (!emailState.name)
+		{
+			emailDispatch({type: "nameWarn", value: "No name entered."})
+			valid = false
+		}
+		if (!emailState.email)
+		{
+			emailDispatch({type: "emailWarn", value: "No email address entered."})
+			valid = false
+		} else {
+	
+			valid = validateEmail()
+		}
+		if (!emailState.subject)
+		{
+			emailDispatch({type: "subjectWarn", value: "No subject entered."})
+			valid = false
+		}
+		if (!emailState.body)
+		{
+			emailDispatch({type: "bodyWarn", value: "No message entered."})
+			valid = false
+		}
+		if (valid)
+		{
+			alert("todo - send email...") // Todo handle submitting email form			
+			emailDispatch({type: "reset"})
+		}
+	}
+
 	function validateEmail()
 	{
 		if (!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailState.email)))
 		{
 			
 			emailDispatch({type: "emailWarn", value: "Invalid email address"});
+			return false
 		}
+		return true
 	}
+
+	// Apart from email, only validation warnings are for empty, which is only wanted on submit, 
+	// so just remove warning whenever a change is made
+
+	useEffect(() => {		
+		emailDispatch({type: "nameWarn", value: ""})
+	}, [emailState.name])
+
+	useEffect(() => {		
+		emailDispatch({type: "subjectWarn", value: ""})
+	}, [emailState.subject])
+
+	useEffect(() => {		
+		emailDispatch({type: "bodyWarn", value: ""})
+	}, [emailState.body])
 
 	useEffect(() => {
 		emailDispatch({type: "emailWarn", value: ""})
@@ -78,7 +152,7 @@ export default function contactus() {
 	return (
 		<Page title="Contact Us">
 			<PopupOverlay nodeRef={nodeRef} isOpen = {isContactFormOpen} close={() => setContactFormOpen(false)}>
-				<ContactForm emailState = {emailState} emailDispatch = {emailDispatch} />
+				<ContactForm emailState = {emailState} emailDispatch = {emailDispatch} handleSubmit = {handleSubmit} />
 			</PopupOverlay>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
