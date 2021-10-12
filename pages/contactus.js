@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useImmerReducer } from "use-immer"
 
 import Page from "../components/Page"
@@ -6,11 +6,13 @@ import ContactForm from "../components/ContactForm"
 import PopupOverlay from "../components/PopupOverlay"
 
 export default function contactus() {
+	const validationTimeout = 1500
 	const nodeRef = useRef(null)
 	const [isContactFormOpen, setContactFormOpen] = useState(false)
 	const initialEmailState = {
 		name: "",
 		email: "",
+		emailWarn: false,
 		subject: "",
 		body: ""
 	}
@@ -22,6 +24,9 @@ export default function contactus() {
 				return
 			case "email":
 				draft.email = action.value				
+				return
+			case "emailWarn":
+				draft.emailWarn = action.value				
 				return
 			case "subject":
 				draft.subject = action.value				
@@ -50,10 +55,28 @@ export default function contactus() {
 		setContactFormOpen((prev) => !prev)
 	}
 
+	function validateEmail(email)
+	{
+		
+	}
+
+	useEffect(() => {
+		emailDispatch({type: "emailWarn", value: false})
+		let timer = null
+		if (emailState.email)
+		{
+			timer = setTimeout(() => {
+				emailDispatch({type: "emailWarn", value: !emailState.email || !(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailState.email))})
+			}, validationTimeout)
+		}
+
+		return () => { clearTimeout(timer) }
+	}, [emailState.email])
+
 	return (
 		<Page title="Contact Us">
 			<PopupOverlay nodeRef={nodeRef} isOpen = {isContactFormOpen} close={() => setContactFormOpen(false)}>
-				<ContactForm emailDispatch = {emailDispatch} />
+				<ContactForm emailState = {emailState} emailDispatch = {emailDispatch} />
 			</PopupOverlay>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam

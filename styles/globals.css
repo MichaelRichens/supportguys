@@ -75,6 +75,15 @@ footer a {
 	text-decoration: none;
 }
 
+.invisible {
+	visibility: hidden;
+}
+
+.validation-warning {
+	color: red;
+	font-size: 85%;
+}
+
 .popup-overlay {
 	z-index: 5000;
 	position: fixed;
