@@ -1,9 +1,9 @@
 import { useRef, useState } from "react"
-import { CSSTransition } from "react-transition-group"
 import { useImmerReducer } from "use-immer"
 
 import Page from "../components/Page"
 import ContactForm from "../components/ContactForm"
+import PopupOverlay from "../components/PopupOverlay"
 
 export default function contactus() {
 	const nodeRef = useRef(null)
@@ -39,18 +39,9 @@ export default function contactus() {
 
 	return (
 		<Page title="Contact Us">
-			<CSSTransition
-				nodeRef={nodeRef}
-				in={isContactFormOpen}
-				timeout={500}
-				classNames="contact-form"
-				unmountOnExit
-			>
-				<ContactForm
-					nodeRef={nodeRef}
-					close={() => setContactFormOpen(false)}
-				/>
-			</CSSTransition>
+			<PopupOverlay nodeRef={nodeRef} isOpen = {isContactFormOpen} close={() => setContactFormOpen(false)}>
+				<ContactForm />
+			</PopupOverlay>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
 				in neque est. Maecenas quis nisl pellentesque, blandit urna id,

@@ -1,15 +1,11 @@
 import React from "react"
-import ReactTooltip from "react-tooltip"
+
+import styles from "../styles/ContactForm.module.css"
 
 export default function ContactForm(props) {
 	return (
-		<div ref={props.nodeRef} className="contact-form">
-			<nav className="close-button">
-				<button type="button" onClick={props.close} data-tip="Close">
-					X
-				</button>
-				<ReactTooltip place="left" delayShow={200} />
-			</nav>
+		<div className={styles["contact-form"]}>
+			
 			<h2>Send Us An Email</h2>
 			<label>
 				Your Name:

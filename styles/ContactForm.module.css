@@ -1,0 +1,45 @@
+.contact-form {
+	padding: 1em 2em 3em;
+	text-align: right;
+}
+
+.contact-form > h2 {
+	text-align: center;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.contact-form > label {
+	display: block;
+	width: 100%;
+	margin-bottom: 3em;
+}
+
+.contact-form > label:last-of-type {
+	margin-bottom: 0;
+}
+
+.contact-form > label > input,
+.contact-form > label > textarea {
+	width: 75%;
+	min-width: 16em;
+	max-width: 85% !important;
+	margin-left: 1em;
+	font-size: 16px;
+}
+
+.contact-form > label:first-of-type > input,
+.contact-form > label:nth-of-type(2) > input {
+	width: 50%;
+}
+
+.contact-form > label > textarea {
+	height: 12em;
+}
+
+@media (max-width: 450px) {
+	.contact-form > label > input,
+	.contact-form > label > textarea {
+		min-width: 95%;
+	}
+}
