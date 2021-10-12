@@ -63,7 +63,7 @@ export default function contactus() {
 						`emailReducer() received unknown action.type: ${action.type}`
 					)
 				} else {
-					console.error("Email error.")
+					console.error("Email form error.")
 				}
 				return
 		}
@@ -139,6 +139,7 @@ export default function contactus() {
 	}, [emailState.body])
 
 	useEffect(() => {
+		alert(process.env.NEXT_PUBLIC_TEST_SECRET_VAR)
 		emailDispatch({type: "emailWarn", value: ""})
 		let timer = null
 		if (emailState.email)
