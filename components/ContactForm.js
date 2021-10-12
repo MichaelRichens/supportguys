@@ -13,34 +13,6 @@ export default function ContactForm(props) {
 		dispatch({type: e.target.name, value: e.target.value })
 	}
 
-	function handleSubmit(e)
-	{
-		e.preventDefault()
-		if (!emailState.name)
-		{
-			emailDispatch({type: "nameWarn", value: "No name entered."})
-		} else {
-			return
-		}
-		if (!validateEmail())
-		{
-			return
-		}
-		if (!emailState.subject)
-		{
-			emailDispatch({type: "subjectWarn", value: "No subject entered."})
-		} else {
-			return
-		}
-		if (!emailState.body)
-		{
-			emailDispatch({type: "bodyWarn", value: "No message entered."})
-		} else {
-			return
-		}
-		// Todo handle submitting email form
-	}
-
 	return (
 		<form className={styles["contact-form"]}>	
 			<h2>Send Us An Email</h2>
@@ -61,7 +33,7 @@ export default function ContactForm(props) {
 			</label>
 			<ValidationWarning condition={state.bodyWarn != ""} message={state.bodyWarn}  />
 			<label>
-				Message:<textarea  name="body" onChange={handleInputChange}>{state.body}</textarea>
+				Message:<textarea  name="body" onChange={handleInputChange} value = {state.body} />
 			</label>
 			<button type="submit" onClick={props.handleSubmit}>Send Email</button>
 		</form>

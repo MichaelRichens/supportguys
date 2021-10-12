@@ -117,7 +117,7 @@ export default function contactus() {
 		if (!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailState.email)))
 		{
 			
-			emailDispatch({type: "emailWarn", value: "Invalid email address"});
+			emailDispatch({type: "emailWarn", value: "Invalid email address."});
 			return false
 		}
 		return true
