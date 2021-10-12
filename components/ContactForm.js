@@ -12,7 +12,7 @@ export default function ContactForm(props) {
 	{
 		dispatch({type: e.target.name, value: e.target.value })
 	}
-	
+
 	return (
 		<div className={styles["contact-form"]}>	
 			<h2>Send Us An Email</h2>
@@ -20,7 +20,7 @@ export default function ContactForm(props) {
 				Your Name:
 				<input type="text" placeholder="John Doe" name="name" onChange={handleInputChange} />
 			</label>
-			<ValidationWarning condition={state.emailWarn} message={"Invalid Email"} />
+			<ValidationWarning condition={state.emailWarn != ""} message={state.emailWarn}  />
 			<label>
 				Your Email:
 				<input type="text" placeholder="john.doe@example.com" name="email" onChange={handleInputChange} />

@@ -12,7 +12,7 @@ export default function contactus() {
 	const initialEmailState = {
 		name: "",
 		email: "",
-		emailWarn: false,
+		emailWarn: "",
 		subject: "",
 		body: ""
 	}
@@ -26,7 +26,7 @@ export default function contactus() {
 				draft.email = action.value				
 				return
 			case "emailWarn":
-				draft.emailWarn = action.value				
+				draft.emailWarn = action.value		
 				return
 			case "subject":
 				draft.subject = action.value				
@@ -55,19 +55,21 @@ export default function contactus() {
 		setContactFormOpen((prev) => !prev)
 	}
 
-	function validateEmail(email)
+	function validateEmail()
 	{
-		
+		if (!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailState.email)))
+		{
+			
+			emailDispatch({type: "emailWarn", value: "Invalid email address"});
+		}
 	}
 
 	useEffect(() => {
-		emailDispatch({type: "emailWarn", value: false})
+		emailDispatch({type: "emailWarn", value: ""})
 		let timer = null
 		if (emailState.email)
 		{
-			timer = setTimeout(() => {
-				emailDispatch({type: "emailWarn", value: !emailState.email || !(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailState.email))})
-			}, validationTimeout)
+			timer = setTimeout(() => validateEmail(), validationTimeout)
 		}
 
 		return () => { clearTimeout(timer) }
