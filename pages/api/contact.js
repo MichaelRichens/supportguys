@@ -1,6 +1,3 @@
-import axios from "axios"
-import FormData from "form-data"
-
 //copied from https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 async function postData(url = "", data = {}) {
 	// Default options are marked with *

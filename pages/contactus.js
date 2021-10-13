@@ -1,7 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react"
 import { useImmerReducer } from "use-immer"
 
-import { useFlashMessageContext } from "../context/FlashMessageContext"
 import Page from "../components/Page"
 import ContactForm from "../components/ContactForm"
 import PopupOverlay from "../components/PopupOverlay"
@@ -18,12 +17,13 @@ export default function contactus() {
 		subject: "",
 		subjectWarn: "",
 		body: "",
-		bodyWarn: ""
+		bodyWarn: "",
+		emailsSent: 0
 	}
 
 	function emailReducer(draft, action) {
 		switch (action.type) {
-			case "reset":
+			case "sent":
 				draft.name = ""
 				draft.nameWarn = ""
 				draft.email = ""
@@ -32,7 +32,7 @@ export default function contactus() {
 				draft.subjectWarn = ""
 				draft.body = ""
 				draft.bodyWarn = ""
-				setContactFormOpen(false)
+				draft.emailsSent++
 				return
 			case "name":
 				draft.name = action.value
@@ -119,16 +119,7 @@ export default function contactus() {
 				body: JSON.stringify(data)
 			}).then((res) => {
 				if (res.status === 200) {
-					emailDispatch({ type: "reset" })
-					//todo - below isn't allowed - try moving it into a useEffect of some sort
-					useFlashMessageContext().setFlashMessages((prev) =>
-						prev.concat([
-							{
-								class: "success",
-								message: "Email sent!"
-							}
-						])
-					)
+					emailDispatch({ type: "sent" })
 				} else {
 					console.error("Response failed...")
 				}
@@ -173,6 +164,12 @@ export default function contactus() {
 			clearTimeout(timer)
 		}
 	}, [emailState.email])
+
+	useEffect(() => {
+		if (emailState.emailsSent) {
+			setContactFormOpen(false)
+		}
+	}, [emailState.emailsSent])
 
 	return (
 		<Page title="Contact Us">

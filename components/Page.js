@@ -2,7 +2,6 @@ import { useContext } from "react"
 import Head from "next/head"
 import { useRouter } from "next/router"
 
-import { useFlashMessageContext } from "../context/FlashMessageContext"
 import Header from "./Header"
 import Footer from "./Footer"
 import FlashMessages from "./FlashMessages"
@@ -63,9 +62,7 @@ export default function Page(props) {
 
 	return (
 		<>
-			<FlashMessages
-				messages={[useFlashMessageContext().flashMessages]}
-			/>
+			<FlashMessages messages={[{ class: "success", message: "test" }]} />
 			<Head>
 				<title>
 					{process.env.NEXT_PUBLIC_NAME +
