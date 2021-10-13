@@ -231,9 +231,22 @@ main .content-box > h1 {
 
 .text-container-with-line-decorator > .decorator {
 	flex: 1;
-	margin-top: 5em;
+	margin-top: 80px;
 	margin-right: 10%;
 	border-top: 3px #1a2b6d solid;
+}
+
+@media (min-width: 2200px) {
+	.text-container-with-line-decorator > .decorator {
+		margin-top: 50px;
+		margin-left: 10%;
+	}
+}
+
+@media (max-width: 700px) {
+	.text-container-with-line-decorator > .decorator {
+		display: none;
+	}
 }
 
 footer {
