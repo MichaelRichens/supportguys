@@ -119,13 +119,29 @@ export default function contactus() {
 					"Content-Type": "application/json"
 				},
 				body: JSON.stringify(data)
-			}).then((res) => {
-				if (res.status === 200) {
-					emailDispatch({ type: "sent" })
-				} else {
-					console.error("Response failed...")
-				}
 			})
+				.then((res) => {
+					if (res.status === 200) {
+						emailDispatch({ type: "sent" })
+					} else {
+						console.error(res)
+						setFlashMessages((prev) =>
+							prev.concat({
+								class: "error",
+								message: "Sorry, email failed..."
+							})
+						)
+					}
+				})
+				.catch((error) => {
+					console.error(error)
+					setFlashMessages((prev) =>
+						prev.concat({
+							class: "error",
+							message: "Sorry, email failed..."
+						})
+					)
+				})
 		}
 	}
 
