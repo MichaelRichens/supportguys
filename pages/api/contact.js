@@ -19,7 +19,7 @@ async function postData(url = "", data = {}) {
 
 export default function (req, res) {
 	return new Promise((resolve, reject) => {
-		postData("https://www.macupgrades.co.uk/store/fakemail.php", {
+		postData(process.env.MAIL_URL, {
 			token: process.env.TOKEN_MAIL,
 			data: req.body
 		})
