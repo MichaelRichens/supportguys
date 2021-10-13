@@ -113,39 +113,18 @@ header a.urgent {
 main {
 	margin-top: 2em;
 	margin-bottom: 2em;
-	min-height: 200px;
 	max-width: 2000px;
+	min-height: 600px;
 	margin-left: auto;
 	margin-right: auto;
+	background-size: 120%;
+	background-repeat: no-repeat;
+	overflow: auto;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
 	main {
-		min-height: initial;
-	}
-}
-
-@media (min-width: 800px) {
-	main {
-		min-height: 300px;
-	}
-}
-
-@media (min-width: 1100px) {
-	main {
-		min-height: 400px;
-	}
-}
-
-@media (min-width: 1500px) {
-	main {
-		min-height: 500px;
-	}
-}
-
-@media (min-width: 1800px) {
-	main {
-		min-height: 600px;
+		background-image: none !important;
 	}
 }
 
@@ -157,46 +136,35 @@ main .content-box {
 }
 
 main .content-box-main {
-	position: absolute;
-	top: 15em;
-	left: 30%;
-	width: 40%;
+	margin-top: 10em;
+	margin-right: 10%;
+	margin-left: auto;
+	width: 30%;
 	min-width: 600px;
 }
 
 @media (max-width: 1000px) {
 	main .content-box-main {
-		left: 25%;
-	}
-}
-
-@media (max-width: 800px) {
-	main .content-box-main {
-		left: 15%;
-	}
-}
-
-@media (max-width: 700px) {
-	main .content-box-main {
+		margin-top: 5em;
+		margin-right: 5%;
 		min-width: 400px;
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 	main .content-box-main {
+		margin-top: 3em;
 		min-width: 300px;
 	}
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
 	main .content-box-main {
-		position: relative;
-		left: 0;
-		top: 0;
-		padding-left: 0.2em;
-		padding-right: 0.2em;
+		margin-top: 1em;
 		min-width: initial;
-		width: 100%;
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -211,6 +179,24 @@ main .content-box > h3 {
 
 main .content-box > h1 {
 	font-size: 46px;
+}
+
+@media (max-width: 1000px) {
+	main .content-box > h1 {
+		font-size: 38px;
+	}
+}
+
+@media (max-width: 600px) {
+	main .content-box > h1 {
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 400px) {
+	main .content-box > h1 {
+		font-size: 24px;
+	}
 }
 
 .text-container-with-line-decorator {
@@ -237,7 +223,7 @@ main .content-box > h1 {
 	}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 	.text-container-with-line-decorator > .decorator {
 		display: none;
 	}
