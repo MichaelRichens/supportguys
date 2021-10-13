@@ -6,11 +6,6 @@ body {
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-body {
-	margin-left: 1.5em;
-	margin-right: 1.5em;
-}
-
 * {
 	box-sizing: border-box;
 }
@@ -52,7 +47,67 @@ details > summary > * {
 }
 
 header {
-	text-align: center;
+	background-color: #1c2936;
+	padding-left: 5%;
+	display: flex;
+	justify-items: flex-start;
+}
+
+header > .logo-container {
+	flex: 1;
+	min-width: 35%;
+	cursor: pointer;
+}
+
+header > nav {
+	flex: 2;
+	display: flex;
+	justify-content: flex-start;
+	justify-items: center;
+	align-items: center;
+	color: white;
+	font-size: 16px;
+	flex-wrap: wrap;
+}
+
+header > nav > * {
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+}
+
+@media (max-width: 1200px) {
+	header > .logo-container {
+		min-width: 40%;
+	}
+	header > nav {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 700px) {
+	header {
+		flex-direction: column;
+	}
+	header > nav {
+		justify-content: space-around;
+	}
+
+	header > nav > * {
+		line-height: 2em;
+	}
+}
+
+header a {
+	text-decoration: none;
+}
+
+header a:hover,
+header a.urgent:hover {
+	color: orange;
+}
+
+header a.urgent {
+	color: red;
 }
 
 main {
@@ -62,17 +117,6 @@ main {
 
 footer {
 	text-align: center;
-}
-
-header > nav,
-footer > nav {
-	display: flex;
-	justify-content: space-evenly;
-}
-
-header a,
-footer a {
-	text-decoration: none;
 }
 
 .invisible {
