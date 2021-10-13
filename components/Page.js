@@ -1,5 +1,6 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
+import Image from "next/image"
 
 import Header from "./Header"
 import Footer from "./Footer"
@@ -80,10 +81,27 @@ export default function Page(props) {
 					type="application/ld+json"
 					dangerouslySetInnerHTML={structuredDataOrg}
 				/>
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link
+					rel="preconnect"
+					href="https://fonts.gstatic.com"
+					crossorigin
+				/>
+				<link
+					href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap"
+					rel="stylesheet"
+				/>
 			</Head>
 			<Header />
 			<main>
-				{props.title && <h1>{props.title}</h1>}
+				{props.backgroundImage && (
+					<div className="background-image">
+						<Image
+							src={props.backgroundImage}
+							layout="responsive"
+						/>
+					</div>
+				)}
 				{props.children}
 			</main>
 			<Footer />
