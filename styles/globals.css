@@ -54,13 +54,13 @@ header {
 }
 
 header > .logo-container {
-	flex: 1;
+	flex: 2;
 	min-width: 35%;
 	cursor: pointer;
 }
 
 header > nav {
-	flex: 2;
+	flex: 3;
 	display: flex;
 	justify-content: flex-start;
 	justify-items: center;
@@ -81,6 +81,12 @@ header > nav > * {
 	}
 	header > nav {
 		font-size: 14px;
+	}
+}
+
+@media (max-width: 900px) {
+	header > .logo-container {
+		min-width: 50%;
 	}
 }
 
