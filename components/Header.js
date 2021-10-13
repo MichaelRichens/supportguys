@@ -6,7 +6,7 @@ import logo from "../public/images/support_guys_logo620x100.png"
 export default function Header() {
 	return (
 		<header>
-			<div class="logo-container">
+			<div className="logo-container">
 				<Link href="/">
 					<Image src={logo} quality="100" />
 				</Link>
