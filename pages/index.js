@@ -7,7 +7,7 @@ export default function Home() {
 		<Page
 			title={process.env.NEXT_PUBLIC_NAME}
 			metaDescription="Support Guys bring two decades of Apple Mac experience to support our SME customers in ensuring your IT setup is resilient and trouble free."
-			backgroundImage={background_image}
+			backgroundImageUrl={"homepage_image.png"}
 			className="index"
 		>
 			<div className="content-box content-box-main">

@@ -149,12 +149,6 @@ main {
 	}
 }
 
-main > .background-image {
-	height: 1px;
-	position: relative;
-	z-index: -1;
-}
-
 main .content-box {
 	background-color: #f2f2f2;
 	color: black;
