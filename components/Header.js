@@ -30,7 +30,7 @@ export default function Header() {
 				<Link href="/pricing">
 					<a>Plans and Costs</a>
 				</Link>
-				<Link href="/support">
+				<Link href="/whats_this_for">
 					<a className="urgent">Support Now!</a>
 				</Link>
 				<Link href="/ticket">
