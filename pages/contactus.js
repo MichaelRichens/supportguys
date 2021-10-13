@@ -1,11 +1,13 @@
-import { useContext, useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useImmerReducer } from "use-immer"
 
+import { useFlashMessages } from "../shared/useFlashMessages"
 import Page from "../components/Page"
 import ContactForm from "../components/ContactForm"
 import PopupOverlay from "../components/PopupOverlay"
 
 export default function contactus() {
+	const [flashMessages, setFlashMessages] = useFlashMessages()
 	const validationTimeout = 1500
 	const nodeRef = useRef(null)
 	const [isContactFormOpen, setContactFormOpen] = useState(false)
@@ -167,6 +169,12 @@ export default function contactus() {
 
 	useEffect(() => {
 		if (emailState.emailsSent) {
+			setFlashMessages((prev) =>
+				prev.concat({
+					class: "success",
+					message: "Email Sent!"
+				})
+			)
 			setContactFormOpen(false)
 		}
 	}, [emailState.emailsSent])
