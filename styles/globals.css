@@ -2,7 +2,25 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: Spinnaker, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	max-width: 2000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Spinnaker, Arial, Helvetica, sans-serif;
+	color: navy;
+}
+
+h1,
+h2 {
 	font-weight: 400;
 }
 
@@ -23,7 +41,6 @@ button {
 	display: inline-block;
 	cursor: pointer;
 	color: black;
-	font-family: Arial;
 	padding: 0.3em 0.7em;
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #e1e2ed;
@@ -130,13 +147,13 @@ header a:active {
 section {
 	margin-top: 2em;
 	margin-bottom: 2em;
-	max-width: 2000px;
-	min-height: 600px;
-	margin-left: auto;
-	margin-right: auto;
 	background-size: 120%;
 	background-repeat: no-repeat;
 	overflow: auto;
+}
+
+main > section:first-child {
+	margin-top: 0;
 }
 
 @media (max-width: 400px) {
@@ -163,6 +180,42 @@ section {
 
 .content-box > h2 {
 	font-size: 46px;
+}
+
+.standard-text {
+	margin-left: 15%;
+	margin-right: 30%;
+}
+
+@media (max-width: 1200px) {
+	.standard-text {
+		margin-left: 10%;
+		margin-right: 20%;
+	}
+}
+
+@media (max-width: 700px) {
+	.standard-text {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+@media (max-width: 500px) {
+	.standard-text {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
+.standard-text > h1,
+.standard-text > h2,
+.standard-text > h3 {
+	color: #1a2b6d;
+}
+
+.standard-text p {
+	line-height: 1.5em;
 }
 
 @media (max-width: 1000px) {
