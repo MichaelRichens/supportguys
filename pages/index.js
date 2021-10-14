@@ -1,6 +1,7 @@
 import ContentBoxMain from "../components/ContentBoxMain"
 import PageSection from "../components/PageSection"
 import Page from "../components/Page"
+import FindOutMore from "../components/FindOutMore"
 
 export default function Home() {
 	return (
@@ -23,6 +24,7 @@ export default function Home() {
 						Filemaker servers, NAS solutions, and backups.
 					</p>
 				</ContentBoxMain>
+				<FindOutMore href="/about_us" />
 			</PageSection>
 		</Page>
 	)
