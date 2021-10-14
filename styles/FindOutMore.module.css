@@ -29,7 +29,7 @@
 }
 
 .find-out-more > nav > a:first-child:hover {
-	background-color: red;
+	background-color: blue;
 	transition: all 200ms;
 }
 
@@ -41,6 +41,6 @@
 }
 
 .find-out-more > nav > a:last-child:hover {
-	background-color: navy;
+	background-color: darkred;
 	transition: all 200ms;
 }
