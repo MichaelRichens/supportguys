@@ -54,13 +54,8 @@ header {
 }
 
 header > .logo-container {
-<<<<<<< HEAD
-	flex: 2;
-	min-width: 35%;
-=======
 	flex: 1;
 	min-width: 45%;
->>>>>>> 8bf41ceddbf9026e0d5cbfeedbb7186be02ccd7e
 	cursor: pointer;
 }
 
@@ -77,11 +72,7 @@ header > .logo-container {
 }
 
 header > nav {
-<<<<<<< HEAD
-	flex: 3;
-=======
 	flex: 1;
->>>>>>> 8bf41ceddbf9026e0d5cbfeedbb7186be02ccd7e
 	display: flex;
 	justify-content: flex-start;
 	justify-items: center;
@@ -103,15 +94,6 @@ header > nav > * {
 }
 
 @media (max-width: 900px) {
-<<<<<<< HEAD
-	header > .logo-container {
-		min-width: 50%;
-	}
-}
-
-@media (max-width: 700px) {
-=======
->>>>>>> 8bf41ceddbf9026e0d5cbfeedbb7186be02ccd7e
 	header {
 		flex-direction: column;
 		align-items: center;

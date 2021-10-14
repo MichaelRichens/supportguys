@@ -8,13 +8,9 @@ export default function Header() {
 		<header>
 			<div className="logo-container">
 				<Link href="/">
-<<<<<<< HEAD
-					<Image src={logo} quality="100" className="logo" />
-=======
 					<a>
 						<Image src={logo} quality="100" />
 					</a>
->>>>>>> 8bf41ceddbf9026e0d5cbfeedbb7186be02ccd7e
 				</Link>
 			</div>
 			<nav>
