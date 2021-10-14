@@ -1,5 +1,8 @@
+main > .content-box-main:first-child {
+	margin-top: 6em;
+}
+
 main .content-box-main {
-	margin-top: 10em;
 	margin-right: 10%;
 	margin-left: auto;
 	width: 30%;
@@ -7,23 +10,32 @@ main .content-box-main {
 }
 
 @media (max-width: 1000px) {
+	main > .content-box-main:first-child {
+		margin-top: 4em;
+	}
+
 	main .content-box-main {
-		margin-top: 5em;
 		margin-right: 5%;
 		min-width: 400px;
 	}
 }
 
 @media (max-width: 600px) {
-	main .content-box-main {
+	main > .content-box-main:first-child {
 		margin-top: 3em;
+	}
+
+	main .content-box-main {
 		min-width: 300px;
 	}
 }
 
 @media (max-width: 400px) {
-	main .content-box-main {
+	main > .content-box-main:first-child {
 		margin-top: 1em;
+	}
+
+	main .content-box-main {
 		min-width: initial;
 		width: 95%;
 		margin-left: auto;
