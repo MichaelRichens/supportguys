@@ -1,8 +1,6 @@
 import ContentBoxMain from "../components/ContentBoxMain"
 import Page from "../components/Page"
 
-import background_image from "../public/images/homepage_image.png"
-
 export default function Home() {
 	return (
 		<Page
