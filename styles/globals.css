@@ -177,6 +177,51 @@ main > section:first-child {
 	}
 }
 
+.text-over-image {
+	color: white;
+}
+
+.text-over-image > h2 {
+	text-align: center;
+	font-size: 68px;
+	color: white;
+	font-weight: bold;
+}
+
+.text-over-image > p {
+	font-size: 23px;
+	font-weight: bold;
+	width: 50%;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+@media (max-width: 800px) {
+	.text-over-image > p {
+		width: 80%;
+	}
+}
+
+@media (max-width: 400px) {
+	section {
+		background-image: none !important;
+	}
+	.text-over-image {
+		color: black;
+	}
+
+	.text-over-image > h2 {
+		color: #1a2b6d;
+	}
+
+	.text-over-image > p {
+		width: 95%;
+		font-weight: normal;
+	}
+}
+
 .content-box {
 	background-color: #f2f2f2;
 	color: black;

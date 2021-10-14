@@ -4,6 +4,7 @@ import ContentBoxTitle from "../components/ContentBoxTitle"
 import Page from "../components/Page"
 
 import TextAboutUsOverview from "../components/text_components/TextAboutUsOverview"
+import TextAboutUsCambs from "../components/text_components/TextAboutUsCambs"
 
 export default function aboutus() {
 	const current_year = new Date().getFullYear()
@@ -24,14 +25,7 @@ export default function aboutus() {
 			</section>
 			<section className="standard-text">
 				<h2>Location and working Areas</h2>
-				<p>
-					Based in the city of Cambridge, Support Guys are a trading
-					division of MacUpgrades; a{" "}
-					{" " + (current_year - 2001) + " "} year veteran in
-					Macintosh upgrades and repairs. Developed to support our SME
-					customers, Support Guys are here to help ensure your
-					business's IT setup is resilient and trouble free.
-				</p>
+				<TextAboutUsCambs />
 				<p>
 					Support Guys works with customers, usually within an area of
 					2 hours travel from our Cambridge location, although we have

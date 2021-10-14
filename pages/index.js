@@ -3,6 +3,7 @@ import Page from "../components/Page"
 import FindOutMore from "../components/FindOutMore"
 
 import TextAboutUsOverview from "../components/text_components/TextAboutUsOverview"
+import TextAboutUsCambs from "../components/text_components/TextAboutUsCambs"
 
 export default function Home() {
 	return (
@@ -20,6 +21,15 @@ export default function Home() {
 				</ContentBoxMain>
 			</section>
 			<FindOutMore href="/aboutus" />
+			<section
+				className="text-over-image"
+				style={{
+					backgroundImage: "url(/images/cambridge_skyline.png)"
+				}}
+			>
+				<h2>About Us</h2>
+				<TextAboutUsCambs />
+			</section>
 		</Page>
 	)
 }
