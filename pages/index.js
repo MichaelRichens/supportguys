@@ -1,5 +1,5 @@
 import ContentBoxMain from "../components/ContentBoxMain"
-import LayoutBox from "../components/LayoutBox"
+import PageSection from "../components/PageSection"
 import Page from "../components/Page"
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
 			metaDescription="Support Guys bring two decades of Apple Mac experience to support our SME customers in ensuring your IT setup is resilient and trouble free."
 			className="index"
 		>
-			<LayoutBox backgroundImageUrl={"homepage_image.png"}>
+			<PageSection backgroundImageUrl={"homepage_image.png"}>
 				<ContentBoxMain title="Tailored Mac Support for your Business">
 					<p>
 						People used to say: "go and speak to those support guys;
@@ -23,7 +23,7 @@ export default function Home() {
 						Filemaker servers, NAS solutions, and backups.
 					</p>
 				</ContentBoxMain>
-			</LayoutBox>
+			</PageSection>
 		</Page>
 	)
 }

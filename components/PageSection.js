@@ -1,4 +1,4 @@
-export default function LayoutBox(props) {
+export default function PageSection(props) {
 	return (
 		<section
 			style={{
