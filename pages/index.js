@@ -13,7 +13,7 @@ export default function Home() {
 		>
 			<section
 				style={{
-					backgroundImage: "url(/images/homepage_image.png)"
+					backgroundImage: "url(/images/homepage_image.webp)"
 				}}
 			>
 				<ContentBoxMain title="Tailored Mac Support for your Business">
@@ -24,7 +24,7 @@ export default function Home() {
 			<section
 				className="text-over-image"
 				style={{
-					backgroundImage: "url(/images/cambridge_skyline.png)"
+					backgroundImage: "url(/images/cambridge_skyline.webp)"
 				}}
 			>
 				<h2>About Us</h2>
