@@ -93,15 +93,7 @@ export default function Page(props) {
 				/>
 			</Head>
 			<Header />
-			<main
-				style={{
-					backgroundImage: props.backgroundImageUrl
-						? `url(/images/${props.backgroundImageUrl})`
-						: "none"
-				}}
-			>
-				{props.children}
-			</main>
+			<main>{props.children}</main>
 			<Footer />
 		</>
 	)

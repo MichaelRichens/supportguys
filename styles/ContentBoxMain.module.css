@@ -1,27 +1,31 @@
-main > .content-box-main:first-child {
-	margin-top: 6em;
-}
-
-main .content-box-main {
+.content-box-main {
 	margin-right: 10%;
 	margin-left: auto;
 	width: 30%;
 	min-width: 600px;
 }
 
+main > .content-box-main:first-child,
+section > .content-box-main:first-child {
+	margin-top: 6em;
+}
+
 @media (max-width: 1000px) {
-	main > .content-box-main:first-child {
+	main > .content-box-main:first-child,
+	section > .content-box-main:first-child {
 		margin-top: 4em;
 	}
 
-	main .content-box-main {
+	main .content-box-main,
+	section > .content-box-main {
 		margin-right: 5%;
 		min-width: 400px;
 	}
 }
 
 @media (max-width: 600px) {
-	main > .content-box-main:first-child {
+	main > .content-box-main:first-child,
+	section > .content-box-main:first-child {
 		margin-top: 3em;
 	}
 
@@ -31,11 +35,13 @@ main .content-box-main {
 }
 
 @media (max-width: 400px) {
-	main > .content-box-main:first-child {
+	main > .content-box-main:first-child,
+	section > .content-box-main:first-child {
 		margin-top: 1em;
 	}
 
-	main .content-box-main {
+	main .content-box-main,
+	section .content-box-main {
 		min-width: initial;
 		width: 95%;
 		margin-left: auto;

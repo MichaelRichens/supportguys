@@ -125,7 +125,7 @@ header a:active {
 	margin-bottom: -2px;
 }
 
-main {
+section {
 	margin-top: 2em;
 	margin-bottom: 2em;
 	max-width: 2000px;
@@ -138,45 +138,45 @@ main {
 }
 
 @media (max-width: 400px) {
-	main {
+	section {
 		background-image: none !important;
 	}
 }
 
-main .content-box {
+.content-box {
 	background-color: #f2f2f2;
 	color: black;
 	padding: 1em 3em;
 	line-height: 1.8em;
 }
 
-main .content-box > h1,
-main .content-box > h2,
-main .content-box > h3 {
+.content-box > h1,
+.content-box > h2,
+.content-box > h3 {
 	color: #1a2b6d;
 	margin-top: 0;
 	font-weight: 400;
 	line-height: 1.2em;
 }
 
-main .content-box > h2 {
+.content-box > h2 {
 	font-size: 46px;
 }
 
 @media (max-width: 1000px) {
-	main .content-box > h2 {
+	.content-box > h2 {
 		font-size: 38px;
 	}
 }
 
 @media (max-width: 600px) {
-	main .content-box > h2 {
+	.content-box > h2 {
 		font-size: 32px;
 	}
 }
 
 @media (max-width: 400px) {
-	main .content-box > h2 {
+	.content-box > h2 {
 		font-size: 24px;
 	}
 }
