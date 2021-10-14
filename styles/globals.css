@@ -28,8 +28,20 @@ h2 {
 	box-sizing: border-box;
 }
 
-a {
-	color: inherit;
+a,
+a:visited {
+	color: #0e4c92;
+}
+
+a:hover {
+	color: navy;
+	background-color: lightgray;
+	transition: all 300ms;
+}
+
+a:active {
+	color: orange;
+	background-color: transparent;
 }
 
 button {
@@ -125,20 +137,23 @@ header > nav > * {
 	}
 }
 
-header a {
+header > nav a,
+header > nav a:visited {
+	color: white;
 	text-decoration: none;
 }
 
-header a.urgent {
+header > nav a.urgent {
 	color: red;
 }
 
-header a:hover {
+header > nav a:hover {
 	color: orange;
 	transition: color 200ms;
+	background-color: transparent;
 }
 
-header a:active {
+header > nav a:active {
 	color: darkorange;
 	margin-bottom: -2px;
 	transition: all 100ms;

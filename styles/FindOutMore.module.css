@@ -28,11 +28,6 @@
 	background-color: navy;
 }
 
-.find-out-more > nav > a:first-child:hover {
-	background-color: blue;
-	transition: all 200ms;
-}
-
 .find-out-more > nav > a:last-child {
 	font-size: 17px;
 	padding-left: 20px;
@@ -40,7 +35,12 @@
 	background-color: red;
 }
 
-.find-out-more > nav > a:last-child:hover {
-	background-color: darkred;
+.find-out-more > nav:hover > a:first-child {
+	background-color: red;
+	transition: all 200ms;
+}
+
+.find-out-more > nav:hover > a:last-child {
+	background-color: navy;
 	transition: all 200ms;
 }

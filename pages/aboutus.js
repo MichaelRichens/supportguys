@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import ContentBoxTitle from "../components/ContentBoxTitle"
 import Page from "../components/Page"
 
@@ -90,11 +92,10 @@ export default function aboutus() {
 					{new Date().getFullYear() <= 2022
 						? ` (such as a global pandemic${
 								new Date().getFullYear() <= 2021
-									? " or no one able to get into the office as their cars have no petrol!)"
+									? ", or no one able to get into the office as their cars have no petrol!)"
 									: "!)"
 						  }`
-						: ""}
-					.
+						: "."}
 				</p>
 				<p>
 					Hindsight is a wonderful thing - but proactive planning is
@@ -103,6 +104,34 @@ export default function aboutus() {
 				<p>
 					Wether you are planning for the future or need help now, we
 					at Support Guys can help.
+				</p>
+			</section>
+			<section className="standard-text">
+				<h2>Next Steps</h2>
+				<p>
+					Just <Link href="/contactus">get in touch</Link> with our
+					team to begin the process.
+				</p>
+				<p>
+					Initial Assessment: historically this was a visit to your
+					site, walk and talk through what is causing issues. These
+					days this can be remote if needed (via Teamviewer, or even
+					apps like Zoom or FaceTime)
+				</p>
+				<p>
+					A usual assessment reveals two distinct (related but
+					separate) requirements:
+				</p>
+				<ol type="i">
+					<li>How much support do you need and how often.</li>
+
+					<li>
+						Very specific projects; expected costs and time lines.
+					</li>
+				</ol>
+				<p>
+					We are here to help every step through the journey. We look
+					forward to working with you.
 				</p>
 			</section>
 		</Page>
