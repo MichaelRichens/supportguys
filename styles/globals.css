@@ -118,11 +118,13 @@ header a.urgent {
 
 header a:hover {
 	color: orange;
+	transition: color 200ms;
 }
 
 header a:active {
 	color: darkorange;
 	margin-bottom: -2px;
+	transition: all 100ms;
 }
 
 section {
