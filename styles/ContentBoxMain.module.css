@@ -1,0 +1,74 @@
+main > .content-box-main:first-child {
+	margin-top: 6em;
+}
+
+main .content-box-main {
+	margin-right: 10%;
+	margin-left: auto;
+	width: 30%;
+	min-width: 600px;
+}
+
+@media (max-width: 1000px) {
+	main > .content-box-main:first-child {
+		margin-top: 4em;
+	}
+
+	main .content-box-main {
+		margin-right: 5%;
+		min-width: 400px;
+	}
+}
+
+@media (max-width: 600px) {
+	main > .content-box-main:first-child {
+		margin-top: 3em;
+	}
+
+	main .content-box-main {
+		min-width: 300px;
+	}
+}
+
+@media (max-width: 400px) {
+	main > .content-box-main:first-child {
+		margin-top: 1em;
+	}
+
+	main .content-box-main {
+		min-width: initial;
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.text-container-with-line-decorator {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.text-container-with-line-decorator > .text {
+	flex: 3;
+}
+
+.text-container-with-line-decorator > .decorator {
+	flex: 1;
+	margin-top: 80px;
+	margin-right: 10%;
+	border-top: 3px #1a2b6d solid;
+}
+
+@media (min-width: 2200px) {
+	.text-container-with-line-decorator > .decorator {
+		margin-top: 50px;
+		margin-left: 10%;
+	}
+}
+
+@media (max-width: 800px) {
+	.text-container-with-line-decorator > .decorator {
+		display: none;
+	}
+}

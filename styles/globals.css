@@ -2,8 +2,8 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: Spinnaker, sans-serif;
+	font-weight: 400;
 }
 
 * {
@@ -54,13 +54,34 @@ header {
 }
 
 header > .logo-container {
+<<<<<<< HEAD
 	flex: 2;
 	min-width: 35%;
+=======
+	flex: 1;
+	min-width: 45%;
+>>>>>>> 8bf41ceddbf9026e0d5cbfeedbb7186be02ccd7e
 	cursor: pointer;
 }
 
+@media (max-width: 1200px) {
+	header > .logo-container {
+		min-width: 50%;
+	}
+}
+
+@media (max-width: 1100px) {
+	header > .logo-container {
+		min-width: 55%;
+	}
+}
+
 header > nav {
+<<<<<<< HEAD
 	flex: 3;
+=======
+	flex: 1;
+>>>>>>> 8bf41ceddbf9026e0d5cbfeedbb7186be02ccd7e
 	display: flex;
 	justify-content: flex-start;
 	justify-items: center;
@@ -76,26 +97,28 @@ header > nav > * {
 }
 
 @media (max-width: 1200px) {
-	header > .logo-container {
-		min-width: 40%;
-	}
 	header > nav {
 		font-size: 14px;
 	}
 }
 
 @media (max-width: 900px) {
+<<<<<<< HEAD
 	header > .logo-container {
 		min-width: 50%;
 	}
 }
 
 @media (max-width: 700px) {
+=======
+>>>>>>> 8bf41ceddbf9026e0d5cbfeedbb7186be02ccd7e
 	header {
 		flex-direction: column;
+		align-items: center;
 	}
 	header > nav {
 		justify-content: space-around;
+		width: 100%;
 	}
 
 	header > nav > * {
@@ -107,18 +130,73 @@ header a {
 	text-decoration: none;
 }
 
-header a:hover,
-header a.urgent:hover {
+header a.urgent {
+	color: red;
+}
+
+header a:hover {
 	color: orange;
 }
 
-header a.urgent {
-	color: red;
+header a:active {
+	color: darkorange;
+	margin-bottom: -2px;
 }
 
 main {
 	margin-top: 2em;
 	margin-bottom: 2em;
+	max-width: 2000px;
+	min-height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	background-size: 120%;
+	background-repeat: no-repeat;
+	overflow: auto;
+}
+
+@media (max-width: 400px) {
+	main {
+		background-image: none !important;
+	}
+}
+
+main .content-box {
+	background-color: #f2f2f2;
+	color: black;
+	padding: 1em 3em;
+	line-height: 1.8em;
+}
+
+main .content-box > h1,
+main .content-box > h2,
+main .content-box > h3 {
+	color: #1a2b6d;
+	margin-top: 0;
+	font-weight: 400;
+	line-height: 1.2em;
+}
+
+main .content-box > h2 {
+	font-size: 46px;
+}
+
+@media (max-width: 1000px) {
+	main .content-box > h2 {
+		font-size: 38px;
+	}
+}
+
+@media (max-width: 600px) {
+	main .content-box > h2 {
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 400px) {
+	main .content-box > h2 {
+		font-size: 24px;
+	}
 }
 
 footer {
