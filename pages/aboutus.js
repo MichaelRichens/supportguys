@@ -6,6 +6,7 @@ import Page from "../components/Page"
 import TextAboutUsOverview from "../components/text_components/TextAboutUsOverview"
 
 export default function aboutus() {
+	const current_year = new Date().getFullYear()
 	return (
 		<Page
 			title="About Us"
@@ -25,9 +26,9 @@ export default function aboutus() {
 				<p>
 					Based in the city of Cambridge, Support Guys are a trading
 					division of MacUpgrades; a{" "}
-					{" " + (new Date().getFullYear() - 2001) + " "} year veteran
-					in Macintosh upgrades and repairs. Developed to support our
-					SME customers, Support Guys are here to help ensure your
+					{" " + (current_year - 2001) + " "} year veteran in
+					Macintosh upgrades and repairs. Developed to support our SME
+					customers, Support Guys are here to help ensure your
 					business's IT setup is resilient and trouble free.
 				</p>
 				<p>
@@ -89,9 +90,9 @@ export default function aboutus() {
 					Sometimes you need a detailed disaster recovery plan for a
 					business proposal, or to update one as new risks have
 					emerged
-					{new Date().getFullYear() <= 2022
+					{current_year <= 2022
 						? ` (such as a global pandemic${
-								new Date().getFullYear() <= 2021
+								current_year <= 2021
 									? ", or no one able to get into the office as their cars have no petrol!)"
 									: "!)"
 						  }`
@@ -114,9 +115,9 @@ export default function aboutus() {
 				</p>
 				<p>
 					Initial Assessment: historically this was a visit to your
-					site, walk and talk through what is causing issues. These
-					days this can be remote if needed (via Teamviewer, or even
-					apps like Zoom or FaceTime)
+					site, walk and talk through what is causing you issues.
+					These days this can be remote if needed (via Teamviewer, or
+					even apps like Zoom or FaceTime)
 				</p>
 				<p>
 					A usual assessment reveals two distinct (related but
@@ -126,7 +127,7 @@ export default function aboutus() {
 					<li>How much support do you need and how often.</li>
 
 					<li>
-						Very specific projects; expected costs and time lines.
+						Very specific projects; expected costs and timelines.
 					</li>
 				</ol>
 				<p>
