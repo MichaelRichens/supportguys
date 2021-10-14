@@ -162,7 +162,7 @@ header > nav a:active {
 section {
 	margin-top: 2em;
 	margin-bottom: 2em;
-	background-size: 120%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	overflow: auto;
 }

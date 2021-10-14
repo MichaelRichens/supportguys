@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import logo from "../public/images/support_guys_logo620x100.png"
+import logo from "../public/images/support_guys_logo949x150.png"
 
 export default function Header() {
 	return (

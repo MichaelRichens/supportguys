@@ -7,6 +7,7 @@ import TextAboutUsOverview from "../components/text_components/TextAboutUsOvervi
 
 export default function aboutus() {
 	const current_year = new Date().getFullYear()
+
 	return (
 		<Page
 			title="About Us"
