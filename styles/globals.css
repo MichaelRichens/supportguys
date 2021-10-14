@@ -192,24 +192,24 @@ main .content-box > h3 {
 	line-height: 1.2em;
 }
 
-main .content-box > h1 {
+main .content-box > h2 {
 	font-size: 46px;
 }
 
 @media (max-width: 1000px) {
-	main .content-box > h1 {
+	main .content-box > h2 {
 		font-size: 38px;
 	}
 }
 
 @media (max-width: 600px) {
-	main .content-box > h1 {
+	main .content-box > h2 {
 		font-size: 32px;
 	}
 }
 
 @media (max-width: 400px) {
-	main .content-box > h1 {
+	main .content-box > h2 {
 		font-size: 24px;
 	}
 }
