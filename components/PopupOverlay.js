@@ -10,9 +10,13 @@ export default function PopupOverlay(props) {
 			classNames="popup-overlay"
 			unmountOnExit
 		>
-			<div className="popup-overlay" ref={props.nodeRef} >
+			<div className="popup-overlay" ref={props.nodeRef}>
 				<nav className="close-button">
-					<button type="button" onClick={props.close} data-tip="Close">
+					<button
+						type="button"
+						onClick={props.close}
+						data-tip="Close"
+					>
 						X
 					</button>
 					<ReactTooltip place="left" delayShow={200} />
@@ -20,5 +24,5 @@ export default function PopupOverlay(props) {
 				{props.children}
 			</div>
 		</CSSTransition>
-	);
+	)
 }
