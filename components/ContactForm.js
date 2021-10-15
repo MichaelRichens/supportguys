@@ -209,6 +209,7 @@ export default function ContactForm(props) {
 					type="text"
 					placeholder="John Doe"
 					name="name"
+					autoComplete="name"
 					value={emailState.name}
 					onChange={handleInputChange}
 				/>
@@ -223,6 +224,7 @@ export default function ContactForm(props) {
 					type="text"
 					placeholder="john.doe@example.com"
 					name="email"
+					autoComplete="email"
 					value={emailState.email}
 					onChange={handleInputChange}
 				/>
@@ -236,6 +238,7 @@ export default function ContactForm(props) {
 				<input
 					type="text"
 					name="subject"
+					autoComplete="off"
 					onChange={handleInputChange}
 					value={emailState.subject}
 				/>
@@ -248,6 +251,7 @@ export default function ContactForm(props) {
 				Message:
 				<textarea
 					name="body"
+					autoComplete="off"
 					onChange={handleInputChange}
 					value={emailState.body}
 				/>
