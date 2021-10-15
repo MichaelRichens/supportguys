@@ -17,14 +17,11 @@
 .services > .top_info > h1,
 .services > .top_info > h2 {
 	text-align: left;
+	font-size: 55px;
 	color: white;
 	margin: 0;
 	padding: 0;
-}
-
-.services > .top_info > h1,
-.services > .top_info > h2 {
-	font-size: 55px;
+	padding-top: 0.8em;
 }
 
 @media (max-width: 600px) {
@@ -37,7 +34,7 @@
 
 @media (max-width: 400px) {
 	.services > .top_info > h1,
-	.services > .top_info > h1 {
+	.services > .top_info > h2 {
 		font-size: 30px;
 	}
 }

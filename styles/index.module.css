@@ -65,6 +65,9 @@
 		font-size: 40px;
 		color: #1a2b6d;
 	}
+	.home-page-about-us > p {
+		margin-top: 1em;
+	}
 }
 
 .home-page-find-out-more {

@@ -378,6 +378,15 @@ main > hr {
 	line-height: 1.5em;
 }
 
+@media (max-width: 600px) {
+	.standard-text p,
+	.standard-text ol,
+	.standard-text ul,
+	.standard-text dl {
+		line-height: 1.3em;
+	}
+}
+
 .invisible {
 	visibility: hidden;
 }
