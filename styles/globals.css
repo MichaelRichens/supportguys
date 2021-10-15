@@ -316,6 +316,7 @@ main > section:first-child {
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	max-width: 970px;
+	overflow: hidden;
 }
 
 .content-box-group > * {
@@ -339,6 +340,21 @@ main > section:first-child {
 @media (max-width: 600px) {
 	.content-box-group > * {
 		padding-left: 0.5em;
+	}
+	.content-box-group > div > div.content-box {
+		margin: 0.3em !important;
+		padding: 0.5em !important;
+	}
+}
+
+@media (max-width: 300px) {
+	.content-box-group > * {
+		padding: 0;
+		margin: 0;
+	}
+	.content-box-group > div > div.content-box {
+		margin: 0em !important;
+		padding: 0.3em !important;
 	}
 }
 

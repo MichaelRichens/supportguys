@@ -5,7 +5,7 @@ import styles from "../../styles/ContentServices.module.css"
 export default function ContentServices(props) {
 	return (
 		<section className={styles["services"]}>
-			<div className={styles["top_info"]}>
+			<section className={styles["top_info"]}>
 				{props.onOwnPage && <h1>Support Guys</h1>}
 				<h2>Our Services</h2>
 				<p>
@@ -14,8 +14,10 @@ export default function ContentServices(props) {
 					you the time and confidence to do what you do best. Here are
 					some of the many areas in which we can help your business.
 				</p>
-			</div>
-			<div className="content-box-group">
+			</section>
+			<section
+				className={"content-box-group " + styles["services-overview"]}
+			>
 				<ContentBoxShadowed>
 					<h3>Box</h3>
 					<p>
@@ -76,7 +78,7 @@ export default function ContentServices(props) {
 						volutpat hendrerit. Praesent laoreet tempus sagittis.
 					</p>
 				</ContentBoxShadowed>
-			</div>
+			</section>
 		</section>
 	)
 }
