@@ -19,6 +19,7 @@
 .services > .top_info > h1 {
 	font-size: 40px;
 	padding-top: 0.2em;
+	text-align: right;
 }
 
 .services > .top_info > h2 {
@@ -51,4 +52,16 @@
 
 .services > .top_info + div {
 	margin-top: -10em;
+	margin-left: 10%;
+}
+
+@media (max-width: 750px) {
+	.services > .top_info + div {
+		margin-left: 5%;
+	}
+}
+@media (max-width: 650px) {
+	.services > .top_info + div {
+		margin-left: 0;
+	}
 }
