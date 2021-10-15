@@ -13,7 +13,7 @@
 
 	.home-page-intro > div:first-child {
 		margin-right: 5%;
-		min-width: 400px;
+		min-width: 500px;
 	}
 }
 
@@ -23,13 +23,14 @@
 	}
 
 	.home-page-intro > div:first-child {
-		min-width: 300px;
+		min-width: 350px;
 	}
 }
 
 @media (max-width: 400px) {
 	.home-page-intro > div:first-child {
 		margin-top: 1em;
+		line-height: 1.3em;
 	}
 
 	.home-page-intro > div:first-child {
