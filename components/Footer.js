@@ -102,8 +102,9 @@ export default function Footer() {
 							</Link>
 						</dt>
 						<dd>
-							Supplying and supporting Kerio Connet mailserver and
-							other Kerio and GFI business software.
+							Supplying and supporting Kerio Connet mailserver,
+							Control Firewall, and other Kerio and GFI business
+							software.
 						</dd>
 					</dl>
 				</nav>
