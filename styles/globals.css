@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: Quicksand, Arial, sans-serif;
+	font-size: 16px;
 	font-weight: 400;
 	max-width: 2000px;
 	margin-left: auto;
@@ -27,6 +28,14 @@ h3 {
 
 * {
 	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.clickable {
+	cursor: pointer;
 }
 
 button {
@@ -168,11 +177,7 @@ main a:active {
 	background-color: transparent;
 }
 
-main > hr {
-	border-top: 4px #1a2b6d solid;
-}
-
-section {
+main > section {
 	margin-top: 2em;
 	margin-bottom: 2em;
 	background-size: cover;
@@ -180,14 +185,18 @@ section {
 	overflow: hidden;
 }
 
+@media (max-width: 400px) {
+	main > section {
+		background-image: none !important;
+	}
+}
+
 main > section:first-child {
 	margin-top: 0;
 }
 
-@media (max-width: 400px) {
-	section {
-		background-image: none !important;
-	}
+main > hr {
+	border-top: 4px #1a2b6d solid;
 }
 
 .text-over-image {
@@ -218,9 +227,6 @@ main > section:first-child {
 }
 
 @media (max-width: 400px) {
-	section {
-		background-image: none !important;
-	}
 	.text-over-image {
 		color: black;
 	}
@@ -252,45 +258,6 @@ main > section:first-child {
 
 .content-box > h2 {
 	font-size: 46px;
-}
-
-.standard-text {
-	margin-left: 15%;
-	margin-right: 30%;
-}
-
-@media (max-width: 1200px) {
-	.standard-text {
-		margin-left: 10%;
-		margin-right: 20%;
-	}
-}
-
-@media (max-width: 700px) {
-	.standard-text {
-		margin-left: 10%;
-		margin-right: 10%;
-	}
-}
-
-@media (max-width: 500px) {
-	.standard-text {
-		margin-left: 5%;
-		margin-right: 5%;
-	}
-}
-
-.standard-text > h1,
-.standard-text > h2,
-.standard-text > h3 {
-	color: #1a2b6d;
-}
-
-.standard-text p,
-.standard-text ol,
-.standard-text ul,
-.standard-text dl {
-	line-height: 1.5em;
 }
 
 @media (max-width: 1000px) {
@@ -359,8 +326,43 @@ main > section:first-child {
 	}
 }
 
-footer {
-	text-align: center;
+.standard-text {
+	margin-left: 15%;
+	margin-right: 30%;
+}
+
+@media (max-width: 1200px) {
+	.standard-text {
+		margin-left: 10%;
+		margin-right: 20%;
+	}
+}
+
+@media (max-width: 700px) {
+	.standard-text {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+@media (max-width: 500px) {
+	.standard-text {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
+.standard-text > h1,
+.standard-text > h2,
+.standard-text > h3 {
+	color: #1a2b6d;
+}
+
+.standard-text p,
+.standard-text ol,
+.standard-text ul,
+.standard-text dl {
+	line-height: 1.5em;
 }
 
 .invisible {
@@ -416,4 +418,111 @@ footer {
 
 .popup-overlay > .close-button > button {
 	color: red;
+}
+
+footer {
+	background-image: linear-gradient(170deg, #6699cc, #1a2b6d);
+}
+footer,
+footer h1,
+footer h2,
+footer h3,
+footer a,
+footer a:visited {
+	color: white;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+footer h3 {
+	font-size: 30px;
+	text-align: center;
+}
+
+@media (max-width: 450px) {
+	footer {
+		font-size: 14px;
+	}
+	footer h3 {
+		font-size: 24px;
+	}
+}
+
+footer h3 > a:hover {
+	color: lightgray;
+}
+
+footer > section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+footer > section > * {
+	flex: 1;
+	text-align: center;
+	min-width: 200px;
+}
+
+footer dl {
+	width: 100%;
+	padding: 0.3em;
+	margin: 0;
+}
+
+footer dl > dt {
+	float: left;
+	width: 30%;
+	padding: 0;
+	margin: 0.2em 5% 0.2em 0;
+	text-align: right;
+}
+
+footer dl > dd {
+	float: left;
+	width: 65%;
+	padding: 0;
+	margin: 0.2em 0;
+	text-align: left;
+}
+
+footer dl > dt::after {
+	content: " :";
+}
+
+@media (max-width: 1200px) {
+	footer dl > dt::after {
+		content: ":";
+	}
+}
+
+@media (max-width: 1000px) {
+	footer > section > * {
+		margin-left: 0.4em;
+	}
+	footer dl > dt {
+		float: none;
+		text-align: left;
+		color: lightblue;
+	}
+	footer dl > dt > a {
+		color: lightblue;
+	}
+
+	footer dl > dd {
+		float: none;
+		margin-bottom: 1em;
+	}
+}
+
+footer dl > dd > ul {
+	padding: 0;
+	margin: 0;
+}
+
+footer dl > dd > ul > li {
+	margin: 0;
+	padding: 0;
 }

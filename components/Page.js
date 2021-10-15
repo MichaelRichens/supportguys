@@ -20,10 +20,7 @@ export default function Page(props) {
 			url: `${process.env.NEXT_PUBLIC_DOMAIN}/`,
 			image: {
 				"@type": "ImageObject",
-				url: `${
-					process.env.NEXT_PUBLIC_DOMAIN +
-					process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_LOGO_PATH
-				}`,
+				url: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_LOGO_PATH}`,
 				height: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_LOGO_HEIGHT}`,
 				width: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_LOGO_WIDTH}`
 			},
@@ -32,13 +29,10 @@ export default function Page(props) {
 				name: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_NAME}`,
 				description: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_NAME}`,
 				url: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_URL}/`,
-				telephone: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_PHONE}`,
+				telephone: `${process.env.NEXT_PUBLIC_PHONE_INT}`,
 				image: {
 					"@type": "ImageObject",
-					url: `${
-						process.env.NEXT_PUBLIC_DOMAIN +
-						process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_LOGO_PATH
-					}`,
+					url: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_LOGO_PATH}`,
 					height: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_LOGO_HEIGHT}`,
 					width: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_LOGO_WIDTH}`
 				},
@@ -46,16 +40,16 @@ export default function Page(props) {
 					{
 						"@type": "ContactPoint",
 						contactType: "customer service",
-						telephone: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_PHONE}`
+						telephone: `${process.env.NEXT_PUBLIC_PHONE_INT}`
 					}
 				],
 				address: {
 					"@type": "PostalAddress",
 					addressCountry: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_COUNTRY}`,
-					streetAddress: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_STREET}`,
-					addressLocality: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_LOCALITY}`,
-					addressRegion: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_REGION}`,
-					postalCode: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_POSTCODE}`
+					streetAddress: `${process.env.NEXT_PUBLIC_ADDRESS_STREET}`,
+					addressLocality: `${process.env.NEXT_PUBLIC_ADDRESS_LOCAILTY}`,
+					addressRegion: `${process.env.NEXT_PUBLIC_ADDRESS_REGION}`,
+					postalCode: `${process.env.NEXT_PUBLIC_ADDRESS_POSTCODE}`
 				}
 			}
 		})
