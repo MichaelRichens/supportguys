@@ -6,8 +6,11 @@ export default function ContentServices(props) {
 	return (
 		<section className={styles["services"]}>
 			<section className={styles["top_info"]}>
-				{props.onOwnPage && <h1>Support Guys</h1>}
-				<h2>Our Services</h2>
+				{props.onOwnPage ? (
+					<h1>Our Services</h1>
+				) : (
+					<h2>Our Services</h2>
+				)}
 				<p>
 					Sometimes we all need some Support. We aim to help you get
 					the most from your IT infrastructure and devices, and give
@@ -18,64 +21,61 @@ export default function ContentServices(props) {
 			<section
 				className={"content-box-group " + styles["services-overview"]}
 			>
-				<ContentBoxShadowed>
-					<h3>Box</h3>
+				<ContentBoxShadowed moroInfoHref="/disaster_recovery">
+					<h3>Disaster Recovery</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Nullam in neque est. Maecenas quis nisl pellentesque,
-						blandit urna id, dictum lorem. Curabitur et ipsum ante.
-						Maecenas pellentesque vestibulum erat, in ornare enim
-						volutpat hendrerit. Praesent laoreet tempus sagittis.
+						Being prepared for the worst is essential in business.
+						How could you recover from theft, data loss or a fire?
+						We can help develop and implement a plan for if the
+						worst happens.
 					</p>
 				</ContentBoxShadowed>
-				<ContentBoxShadowed>
-					<h3>Box</h3>
+				<ContentBoxShadowed moroInfoHref="/networking_and_wireless">
+					<h3>Networking and Wireless</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Nullam in neque est. Maecenas quis nisl pellentesque,
-						blandit urna id, dictum lorem. Curabitur et ipsum ante.
-						Maecenas pellentesque vestibulum erat, in ornare enim
-						volutpat hendrerit. Praesent laoreet tempus sagittis.
+						Networks get expanded as your business grows, new
+						devices are added, then suddenly a problem. Analysis and
+						simplifying your network can remove bottlenecks and
+						improve performance.
 					</p>
 				</ContentBoxShadowed>
-				<ContentBoxShadowed>
-					<h3>Box</h3>
+				<ContentBoxShadowed moroInfoHref="firewall_and_security">
+					<h3>Firewall and Security</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Nullam in neque est. Maecenas quis nisl pellentesque,
-						blandit urna id, dictum lorem. Curabitur et ipsum ante.
-						Maecenas pellentesque vestibulum erat, in ornare enim
-						volutpat hendrerit. Praesent laoreet tempus sagittis.
+						A firewall is like your front door, it keeps your
+						network safe from attack. A dedicated firewall gives
+						your business control, and logging of what goes in and
+						our of your network. We can help with planning and
+						deployment.
 					</p>
 				</ContentBoxShadowed>
-				<ContentBoxShadowed>
-					<h3>Box</h3>
+				<ContentBoxShadowed moroInfoHref="incident_support">
+					<h3>Incident Response</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Nullam in neque est. Maecenas quis nisl pellentesque,
-						blandit urna id, dictum lorem. Curabitur et ipsum ante.
-						Maecenas pellentesque vestibulum erat, in ornare enim
-						volutpat hendrerit. Praesent laoreet tempus sagittis.
+						An incident response plan is a documented, written plan
+						to deal with a cybersecurity incident like a data breach
+						or cyber attack. Properly creating and managing an
+						incident response plan involves regular updates and
+						training.
 					</p>
 				</ContentBoxShadowed>
-				<ContentBoxShadowed>
-					<h3>Box</h3>
+				<ContentBoxShadowed moroInfoHref="backup_solutions">
+					<h3>Backup Solutions</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Nullam in neque est. Maecenas quis nisl pellentesque,
-						blandit urna id, dictum lorem. Curabitur et ipsum ante.
-						Maecenas pellentesque vestibulum erat, in ornare enim
-						volutpat hendrerit. Praesent laoreet tempus sagittis.
+						We all know that our data must be backed up, but how
+						where and when? We can help you form a concise and
+						planned backup strategy. Utilisiing the best of on-prem
+						and cloud solutions, making sure your data is safe.
 					</p>
 				</ContentBoxShadowed>
-				<ContentBoxShadowed>
-					<h3>Box</h3>
+				<ContentBoxShadowed moroInfoHref="slow_computers">
+					<h3>Slow Computers?</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Nullam in neque est. Maecenas quis nisl pellentesque,
-						blandit urna id, dictum lorem. Curabitur et ipsum ante.
-						Maecenas pellentesque vestibulum erat, in ornare enim
-						volutpat hendrerit. Praesent laoreet tempus sagittis.
+						Is Jane asking why word takes 15 mins to open a small
+						document? How much productivity is lost to waiting and
+						watching the spinning wheel? We can help with assessing
+						your Macs to ensure your staff are not held back by slow
+						hardware.
 					</p>
 				</ContentBoxShadowed>
 			</section>

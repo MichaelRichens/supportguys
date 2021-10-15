@@ -1,5 +1,6 @@
 .content-box-shadowed {
 	position: relative;
+	height: 490px;
 }
 
 .content-box-shadowed > div {
@@ -12,13 +13,20 @@
 	z-index: 2;
 	top: 0;
 	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.content-box-shadowed > div:first-child h3 {
+	font-size: 28px;
 }
 
 .content-box-shadowed > div:nth-child(2) {
 	z-index: 1;
 	border: 3px #ddeef9 solid;
-	top: 20px;
-	left: 20px;
+	top: 10px;
+	left: 15px;
 	background-color: transparent;
 }
 
@@ -26,4 +34,9 @@
 	.content-box-shadowed > div:nth-child(2) {
 		display: none;
 	}
+}
+
+a.more-info {
+	color: red;
+	text-decoration: none;
 }

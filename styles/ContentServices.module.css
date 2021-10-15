@@ -16,23 +16,19 @@
 
 .services > .top_info > h1,
 .services > .top_info > h2 {
+	text-align: left;
 	color: white;
 	margin: 0;
 	padding: 0;
 }
 
-.services > .top_info > h1 {
-	font-size: 40px;
-	padding-top: 0.2em;
-	text-align: right;
-	margin-bottom: 0;
-}
-
+.services > .top_info > h1,
 .services > .top_info > h2 {
 	font-size: 55px;
 }
 
 @media (max-width: 600px) {
+	.services > .top_info > h1,
 	.services > .top_info > h2 {
 		font-size: 40px;
 		text-align: center;
@@ -40,10 +36,7 @@
 }
 
 @media (max-width: 400px) {
-	.services > .top_info > h1 {
-		font-size: 30px;
-		text-align: center;
-	}
+	.services > .top_info > h1,
 	.services > .top_info > h1 {
 		font-size: 30px;
 	}
@@ -53,11 +46,11 @@
 	max-width: 500px;
 	font-weight: 400;
 	margin-top: 0;
-	padding-bottom: 10em;
+	padding-bottom: 12em;
 }
 
 .services > .services-overview {
-	margin-top: -10em;
+	margin-top: -15em;
 	margin-left: 10%;
 }
 

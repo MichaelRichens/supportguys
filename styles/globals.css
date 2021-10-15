@@ -20,7 +20,8 @@ h6 {
 }
 
 h1,
-h2 {
+h2,
+h3 {
 	font-weight: 400;
 }
 
@@ -321,7 +322,7 @@ main > section:first-child {
 
 .content-box-group > * {
 	width: 280px;
-	height: 500px;
+	height: 400px;
 	padding: 2em;
 	margin: 1em;
 }
