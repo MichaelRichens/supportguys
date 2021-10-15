@@ -6,8 +6,10 @@ import TextContactDetails from "./content_components/TextContactDetails"
 import styles from "../styles/Footer.module.css"
 
 export default function Footer() {
+	const current_year = new Date().getFullYear()
+
 	return (
-		<footer id="footer">
+		<footer className={styles.footer}>
 			<section>
 				<section className={styles.contact}>
 					<h3>
@@ -45,6 +47,12 @@ export default function Footer() {
 					</dl>
 				</nav>
 			</section>
+			<small className={styles.copyright}>
+				&copy;2021
+				{current_year > 2021 ? ` - ${current_year} ` : " "}Support Guys
+				is a trading division of MacUpgrades / Second Chance PC Ltd.
+				Company number: 4331031. Registered for VAT: GB 783705210.
+			</small>
 		</footer>
 	)
 }

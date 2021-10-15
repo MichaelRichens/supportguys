@@ -49,7 +49,7 @@ export default function contactus() {
 					{new Date().getFullYear() < 2023
 						? " return to normality and beyond. "
 						: " do what it does best. "}
-					Wether it be an emergency support request or planning the
+					Whether it be an emergency support request or planning the
 					next stage of your business growth, we are at your service.
 					Let us share our 60 years of combined IT knowledge to help
 					your business thrive.
