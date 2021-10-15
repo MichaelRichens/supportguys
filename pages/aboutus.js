@@ -3,8 +3,8 @@ import Link from "next/link"
 import ContentBoxTitle from "../components/ContentBoxTitle"
 import Page from "../components/Page"
 
-import TextAboutUsOverview from "../components/text_components/TextAboutUsOverview"
-import TextAboutUsCambs from "../components/text_components/TextAboutUsCambs"
+import TextAboutUsOverview from "../components/content_components/TextAboutUsOverview"
+import TextAboutUsCambs from "../components/content_components/TextAboutUsCambs"
 
 export default function aboutus() {
 	const current_year = new Date().getFullYear()
