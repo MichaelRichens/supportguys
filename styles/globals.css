@@ -316,6 +316,18 @@ main > hr {
 	}
 }
 
+@media (max-width: 575px) {
+	.content-box-group {
+		display: block;
+	}
+	.content-box-group > * {
+		position: static;
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
 @media (max-width: 300px) {
 	.content-box-group > * {
 		padding: 0;

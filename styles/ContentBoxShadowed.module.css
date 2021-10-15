@@ -2,7 +2,26 @@
 	position: relative;
 	height: 490px;
 }
-
+@media (max-width: 575px) {
+	.content-box-shadowed {
+		height: 300px;
+	}
+}
+@media (max-width: 400px) {
+	.content-box-shadowed {
+		height: 350px;
+	}
+}
+@media (max-width: 350px) {
+	.content-box-shadowed {
+		height: 400px;
+	}
+}
+@media (max-width: 300px) {
+	.content-box-shadowed {
+		height: 500px;
+	}
+}
 .content-box-shadowed > div {
 	position: absolute;
 	width: inherit;
