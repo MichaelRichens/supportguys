@@ -6,6 +6,7 @@ import PopupOverlay from "../components/PopupOverlay"
 import { useSharedIsContactFormOpen } from "../shared/useSharedIsContactFormOpen"
 
 import styles from "../styles/contactus.module.css"
+import TextContactDetails from "../components/content_components/TextContactDetails"
 
 export default function contactus() {
 	const nodeRef = useRef(null)
@@ -45,7 +46,7 @@ export default function contactus() {
 				<h1>Get in Touch</h1>
 				<p>
 					We're here to help you and your business
-					{new Date().getFullYear() < 2022
+					{new Date().getFullYear() < 2023
 						? " return to normality and beyond. "
 						: " do what it does best. "}
 					Wether it be an emergency support request or planning the
@@ -53,6 +54,14 @@ export default function contactus() {
 					Let us share our 60 years of combined IT knowledge to help
 					your business thrive.
 				</p>
+			</section>
+			<section>
+				<h2>Contact Us</h2>
+				<div>
+					<section className="content-box">
+						<TextContactDetails />
+					</section>
+				</div>
 			</section>
 			<PopupOverlay
 				nodeRef={nodeRef}
