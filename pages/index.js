@@ -4,6 +4,7 @@ import FindOutMore from "../components/FindOutMore"
 
 import TextAboutUsOverview from "../components/content_components/TextAboutUsOverview"
 import TextAboutUsCambs from "../components/content_components/TextAboutUsCambs"
+import ContentServices from "../components/content_components/ContentServices"
 
 export default function Home() {
 	return (
@@ -22,7 +23,7 @@ export default function Home() {
 			</section>
 			<FindOutMore href="/aboutus" />
 			<section
-				className="text-over-image"
+				className="text-over-image home-page-about-us"
 				style={{
 					backgroundImage: "url(/images/cambridge_skyline.webp)"
 				}}
@@ -30,6 +31,7 @@ export default function Home() {
 				<h2>About Us</h2>
 				<TextAboutUsCambs />
 			</section>
+			<ContentServices />
 		</Page>
 	)
 }
