@@ -199,21 +199,16 @@ main > hr {
 	border-top: 4px #1a2b6d solid;
 }
 
-.text-over-image {
-	color: white;
-}
-
+.text-over-image > h1,
 .text-over-image > h2 {
 	text-align: center;
 	font-size: 68px;
-	color: white;
 	font-weight: bold;
 }
 
 .text-over-image > p {
 	font-size: 23px;
 	font-weight: bold;
-	width: 50%;
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
@@ -226,19 +221,24 @@ main > hr {
 	}
 }
 
+@media (max-width: 500px) {
+	.text-over-image > p {
+		line-height: 1em;
+	}
+}
+
 @media (max-width: 400px) {
-	.text-over-image {
-		color: black;
-	}
-
+	.text-over-image > h1,
 	.text-over-image > h2 {
-		color: #1a2b6d;
+		margin-top: 0.3em;
+		margin-bottom: 0.2em;
 	}
-
 	.text-over-image > p {
 		width: 95%;
 		font-weight: 400;
 		font-size: 18px;
+		margin-top: 0;
+		text-align: left;
 	}
 }
 

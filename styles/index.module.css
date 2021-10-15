@@ -43,6 +43,11 @@
 .home-page-about-us {
 	margin-bottom: 0em;
 	min-height: 600px;
+	color: white;
+}
+
+.home-page-about-us > h2 {
+	color: white;
 }
 
 .home-page-about-us > p {
@@ -52,15 +57,13 @@
 @media (max-width: 400px) {
 	.home-page-about-us {
 		min-height: initial;
+		color: black;
 	}
 	.home-page-about-us > h2 {
 		margin-top: 0.3em;
 		margin-bottom: 0.2em;
 		font-size: 40px;
-	}
-	.home-page-about-us > p {
-		margin-top: 0;
-		text-align: left;
+		color: #1a2b6d;
 	}
 }
 
