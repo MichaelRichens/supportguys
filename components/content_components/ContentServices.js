@@ -39,7 +39,7 @@ export default function ContentServices(props) {
 						improve performance.
 					</p>
 				</ContentBoxShadowed>
-				<ContentBoxShadowed moroInfoHref="firewall_and_security">
+				<ContentBoxShadowed moroInfoHref="/firewall_and_security">
 					<h3>Firewall and Security</h3>
 					<p>
 						A firewall is like your front door, it keeps your
@@ -49,7 +49,7 @@ export default function ContentServices(props) {
 						deployment.
 					</p>
 				</ContentBoxShadowed>
-				<ContentBoxShadowed moroInfoHref="incident_support">
+				<ContentBoxShadowed moroInfoHref="/incident_support">
 					<h3>Incident Response</h3>
 					<p>
 						An incident response plan is a documented, written plan
@@ -59,7 +59,7 @@ export default function ContentServices(props) {
 						training.
 					</p>
 				</ContentBoxShadowed>
-				<ContentBoxShadowed moroInfoHref="backup_solutions">
+				<ContentBoxShadowed moroInfoHref="/backup_solutions">
 					<h3>Backup Solutions</h3>
 					<p>
 						We all know that our data must be backed up, but how
@@ -68,7 +68,7 @@ export default function ContentServices(props) {
 						and cloud solutions, making sure your data is safe.
 					</p>
 				</ContentBoxShadowed>
-				<ContentBoxShadowed moroInfoHref="slow_computers">
+				<ContentBoxShadowed moroInfoHref="/slow_computers">
 					<h3>Slow Computers?</h3>
 					<p>
 						Is Jane asking why word takes 15 mins to open a small

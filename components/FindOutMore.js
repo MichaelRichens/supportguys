@@ -10,7 +10,7 @@ export default function FindOutMore(props) {
 					<a>+</a>
 				</Link>
 				<Link href={props.href}>
-					<a>Find Out More</a>
+					{props.text ? <a>{props.text}</a> : <a>Find Out More</a>}
 				</Link>
 			</nav>
 		</nav>
