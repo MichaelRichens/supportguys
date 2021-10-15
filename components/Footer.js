@@ -3,13 +3,32 @@ import Link from "next/link"
 
 import ContactForm from "../components/ContactForm"
 import PopupOverlay from "../components/PopupOverlay"
+import { useSharedIsContactFormOpen } from "../shared/useSharedIsContactFormOpen"
 
 export default function Footer() {
 	const nodeRef = useRef(null)
 	const [isContactFormOpen, setContactFormOpen] = useState(false)
+	const { sharedIsContactFormOpen, setSharedIsContactFormOpen } =
+		useSharedIsContactFormOpen()
 
 	function toggleContactForm() {
-		setContactFormOpen((prev) => !prev)
+		setContactFormOpen((prev) => {
+			if (prev) {
+				setSharedIsContactFormOpen(false)
+				return false
+			} else {
+				if (sharedIsContactFormOpen) {
+					return false
+				}
+				setSharedIsContactFormOpen(true)
+				return true
+			}
+		})
+	}
+
+	function closeContactForm() {
+		setSharedIsContactFormOpen(false)
+		setContactFormOpen(false)
 	}
 
 	return (
@@ -17,11 +36,9 @@ export default function Footer() {
 			<PopupOverlay
 				nodeRef={nodeRef}
 				isOpen={isContactFormOpen}
-				close={() => setContactFormOpen(false)}
+				close={() => closeContactForm()}
 			>
-				<ContactForm
-					closeContactForm={() => setContactFormOpen((prev) => false)}
-				/>
+				<ContactForm closeContactForm={() => closeContactForm()} />
 			</PopupOverlay>
 			<p>Footer</p>
 			<nav>
