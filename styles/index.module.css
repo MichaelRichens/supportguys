@@ -45,6 +45,19 @@
 	min-height: 600px;
 }
 
+.home-page-about-us > p {
+	margin-top: 10em;
+}
+
+@media (max-width: 400px) {
+	.home-page-about-us {
+		min-height: initial;
+	}
+	.home-page-about-us > p {
+		margin-top: 0;
+	}
+}
+
 .home-page-find-out-more {
 	display: flex;
 	flex-direction: column;
