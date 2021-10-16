@@ -36,3 +36,67 @@
 		margin-bottom: 0.3em;
 	}
 }
+
+.contact-methods h2,
+.contact-methods h3 {
+	text-align: center;
+}
+
+.contact-methods h2 {
+	font-size: 40px;
+	margin-bottom: 0.2em;
+}
+
+.contact-methods h3 {
+	font-size: 26px;
+}
+
+@media (max-width: 500px) {
+	.contact-methods h2 {
+		font-size: 28px;
+	}
+	.contact-methods h3 {
+		font-size: 21px;
+		margin-bottom: 0.4em;
+	}
+}
+
+.contact-methods > div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.contact-details {
+	flex: 3;
+	margin-left: 0.5em;
+	margin-right: 0.25em;
+}
+
+.contact-now {
+	flex: 2;
+	margin-left: 0.25em;
+	margin-right: 0.5em;
+}
+
+.contact-now > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30%;
+}
+
+.contact-now button {
+	font-size: 28px;
+}
+
+@media (max-width: 850px) {
+	.contact-now button {
+		font-size: 20px;
+	}
+}
+@media (max-width: 650px) {
+	.contact-methods > div {
+		flex-direction: column-reverse;
+	}
+}

@@ -67,3 +67,19 @@
 		font-size: 14px;
 	}
 }
+
+.mailto {
+	text-align: left;
+	margin-top: 1.5em;
+}
+
+.mailto > a,
+.mailto > a:visited {
+	color: white;
+	text-decoration: underline;
+}
+
+.mailto > a:hover {
+	text-decoration: none;
+	color: lightgray;
+}

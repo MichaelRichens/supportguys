@@ -55,12 +55,23 @@ export default function contactus() {
 					your business thrive.
 				</p>
 			</section>
-			<section>
+			<section className={styles["contact-methods"]}>
 				<h2>Contact Us</h2>
 				<div>
-					<section className="content-box">
+					<section
+						className={`content-box ${styles["contact-details"]}`}
+					>
+						<h3>Contact Details</h3>
 						<TextContactDetails />
 					</section>
+					<nav className={`content-box ${styles["contact-now"]}`}>
+						<h3>Email Us</h3>
+						<div>
+							<button type="button" onClick={toggleContactForm}>
+								Click to Email!
+							</button>
+						</div>
+					</nav>
 				</div>
 			</section>
 			<PopupOverlay
@@ -70,9 +81,6 @@ export default function contactus() {
 			>
 				<ContactForm closeContactForm={() => closeContactForm()} />
 			</PopupOverlay>
-			<button type="button" onClick={toggleContactForm}>
-				Email
-			</button>
 		</Page>
 	)
 }

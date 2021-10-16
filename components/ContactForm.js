@@ -1,5 +1,5 @@
-import { produceWithPatches } from "immer"
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
+import Link from "next/link"
 import { useImmerReducer } from "use-immer"
 
 import { useFlashMessages } from "../shared/useFlashMessages"
@@ -259,6 +259,12 @@ export default function ContactForm(props) {
 			<button type="submit" onClick={handleSubmit}>
 				Send Email
 			</button>
+			<p className={styles.mailto}>
+				Or email us directly at:{" "}
+				<Link href="mailto:info@supportguys.co.uk">
+					info@supportguys.co.uk
+				</Link>
+			</p>
 		</form>
 	)
 }
