@@ -1,12 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import styles from "../styles/Header.module.css"
 import logo from "../public/images/support_guys_logo949x150.webp"
 
 export default function Header() {
 	return (
-		<header>
-			<div className="logo-container">
+		<header className={styles.header}>
+			<div className={styles["logo-container"]}>
 				<Link href="/">
 					<a>
 						<Image src={logo} quality="100" />
@@ -33,7 +34,7 @@ export default function Header() {
 					<a>Plans and Costs</a>
 				</Link>
 				<Link href="/whats_this_for">
-					<a className="urgent">Support Now!</a>
+					<a className={styles.urgent}>Support Now!</a>
 				</Link>
 				<Link href="/ticket">
 					<a>Tickets</a>
