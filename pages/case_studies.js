@@ -123,6 +123,43 @@ export default function case_studies() {
 					niggles and eventually upgrades 5 years later.
 				</p>
 			</section>
+			<section className="standard-text">
+				<h2>Education - Music Production Labs</h2>
+				<h3 className="subheading">
+					Client: Large secondary school Music department, with
+					limited hardware support.
+				</h3>
+				{/* "The kids were learning and so speed is not a bottleneck." - don't understand this sentence, is it meant to sat it was a bottleneck.  
+				If not, probably just replace it with things that actually were problems... */}
+				<p>
+					A customer called about a single project, replacing the hard
+					drives on more than 20 iMac 2012 computers. These did
+					everything the school needed as they were used for entry
+					level lessons in Logic, Garageband and Motion. The kids were
+					learning and so speed is not a bottleneck. These were imaged
+					each term as the classes moved around, but the hard drives
+					were starting to fail and so the imaging was taking longer
+					and longer, and the Macs were getting less use as they were
+					frustrating everyone taking 5 mins to boot at the start of a
+					lesson.
+				</p>
+				<p>
+					These were completed in 3 days onsite. We replaced the hard
+					drives with small SSDs. This reduced their boot times to 10
+					seconds, making the machines excellent tools for the
+					students needs.
+				</p>
+			</section>
+			<section className="standard-text">
+				<h2>Conclusion</h2>
+				<p>
+					Whether it be a one off single project, or the beginning of
+					a long lasting support contract, we at Support Guys are here
+					for you. Our aim is to make your IT work for you so you can
+					concentrate on what you do best. Please get in touch to see
+					how we can help.
+				</p>
+			</section>
 		</Page>
 	)
 }
