@@ -1,3 +1,5 @@
+// TODO maybe here, or maybe on a meet the team style page, perhaps something a bit more personal, along the lines of we got into doing this
+// sort of work as a natural evolution of macupgrades. not sure, but it would give us a bit more depth - we're not just a brand new startup
 import Link from "next/link"
 
 import ContentBoxTitle from "../components/ContentBoxTitle"

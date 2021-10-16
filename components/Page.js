@@ -1,6 +1,7 @@
 import Head from "next/head"
+import { useEffect } from "react"
 import { useRouter } from "next/router"
-import Image from "next/image"
+import smartquotes from "smartquotes"
 
 import Header from "./Header"
 import Footer from "./Footer"
@@ -56,6 +57,9 @@ export default function Page(props) {
 	}
 	const [flashMessages, setFlashMessages] = useFlashMessages()
 
+	useEffect(() => {
+		smartquotes().listen()
+	}, [])
 	return (
 		<>
 			<FlashMessages messages={flashMessages} />

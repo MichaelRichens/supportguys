@@ -292,6 +292,12 @@ main > hr {
 	color: #1a2b6d;
 }
 
+.standard-text > h2 + h3 {
+	color: black;
+	font-family: Quicksand, Arial, sans-serif;
+	font-weight: bold;
+}
+
 .standard-text p,
 .standard-text ol,
 .standard-text ul,
