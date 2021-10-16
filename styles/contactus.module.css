@@ -65,16 +65,19 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
+	justify-content: center;
 }
 
 .contact-details {
 	flex: 3;
+	max-width: 900px;
 	margin-left: 0.5em;
 	margin-right: 0.25em;
 }
 
 .contact-now {
 	flex: 2;
+	max-width: 600px;
 	margin-left: 0.25em;
 	margin-right: 0.5em;
 }
@@ -98,5 +101,14 @@
 @media (max-width: 650px) {
 	.contact-methods > div {
 		flex-direction: column-reverse;
+	}
+
+	.contact-details {
+		margin-left: 0.25em;
+	}
+	.contact-now {
+		margin-right: 0.25em;
+		margin-bottom: 0.4em;
+		max-width: initial;
 	}
 }
