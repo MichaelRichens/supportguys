@@ -30,10 +30,10 @@ export default function Header() {
 				<Link href="/case_studies">
 					<a>Case Studies</a>
 				</Link>
-				<Link href="/pricing">
+				<Link href="/plans_and_costs">
 					<a>Plans and Costs</a>
 				</Link>
-				<Link href="/whats_this_for">
+				<Link href="/support_now">
 					<a className={styles.urgent}>Support Now!</a>
 				</Link>
 				<Link href="/ticket">

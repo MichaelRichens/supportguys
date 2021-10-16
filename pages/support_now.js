@@ -1,6 +1,6 @@
 import Page from "../components/Page"
 
-export default function case_studies() {
+export default function support_now() {
 	return (
 		<Page title={""} metaDescription="">
 			todo
