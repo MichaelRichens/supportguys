@@ -304,6 +304,15 @@ main > hr {
 	}
 }
 
+@media (max-width: 400px) {
+	.standard-text p,
+	.standard-text ol,
+	.standard-text ul,
+	.standard-text dl {
+		line-height: 1.1em;
+	}
+}
+
 .invisible {
 	visibility: hidden;
 }
