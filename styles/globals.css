@@ -322,6 +322,8 @@ main > hr {
 	font-size: 85%;
 }
 
+/*	Keep popup-overlay styles here - have to keep transition styles here anyway, 
+	and it seems to mess up when they get split*/
 .popup-overlay {
 	z-index: 5000;
 	position: fixed;
@@ -332,9 +334,9 @@ main > hr {
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
-	border: 10px double cyan;
+	border: 10px double #f2f2f2;
 	border-radius: 1em;
-	background-color: #333;
+	background-color: #1c2936;
 	color: white;
 }
 
