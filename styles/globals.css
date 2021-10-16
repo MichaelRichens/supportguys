@@ -191,6 +191,10 @@ main > hr {
 }
 
 @media (max-width: 400px) {
+	.content-box {
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+	}
 	.content-box > h2 {
 		font-size: 24px;
 	}
@@ -218,8 +222,8 @@ main > hr {
 		padding-left: 1em;
 	}
 	.content-box-group > div > div.content-box {
-		margin: 0.5em !important;
-		padding: 1em !important;
+		padding-left: 1em !important;
+		padding-right: 1em !important;
 	}
 }
 

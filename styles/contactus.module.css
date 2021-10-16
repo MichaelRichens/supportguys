@@ -73,6 +73,7 @@
 	max-width: 900px;
 	margin-left: 0.5em;
 	margin-right: 0.25em;
+	font-size: 24px;
 }
 
 .contact-details dl > dt {
@@ -83,6 +84,7 @@
 	width: 27%;
 	float: left;
 	margin-bottom: 1em;
+	text-align: right;
 }
 
 .contact-details dl > dt::after {
@@ -100,6 +102,11 @@
 .contact-details dl > dd > ul {
 	margin: 0;
 	padding: 0;
+}
+
+.contact-details dl > dt:nth-of-type(even),
+.contact-details dl > dd:nth-of-type(even) {
+	color: #1a2b6d;
 }
 
 .contact-now {
@@ -120,12 +127,18 @@
 	font-size: 28px;
 }
 
+@media (max-width: 950px) {
+	.contact-details {
+		font-size: 18px;
+	}
+}
+
 @media (max-width: 850px) {
 	.contact-now button {
 		font-size: 20px;
 	}
 }
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 	.contact-methods > div {
 		flex-direction: column-reverse;
 	}
@@ -147,12 +160,22 @@
 	}
 	.contact-details dl > dt {
 		margin-bottom: 0;
+		text-align: center;
+		font-weight: bold;
+		font-variant: initial;
 	}
 	.contact-details dl > dt::after {
-		content: ":";
+		content: initial;
 	}
 	.contact-details dl > dd {
 		margin-bottom: 0.5em;
 		color: #1a2b6d;
+		font-size: 16px;
+		line-height: 1.4em;
+	}
+
+	.contact-details dl > dt:nth-of-type(even),
+	.contact-details dl > dd:nth-of-type(even) {
+		color: initial;
 	}
 }
