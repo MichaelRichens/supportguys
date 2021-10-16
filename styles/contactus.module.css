@@ -75,6 +75,33 @@
 	margin-right: 0.25em;
 }
 
+.contact-details dl > dt {
+	margin: 0;
+	margin-right: 3%;
+	padding: 0;
+	font-variant: small-caps;
+	width: 27%;
+	float: left;
+	margin-bottom: 1em;
+}
+
+.contact-details dl > dt::after {
+	content: " - ";
+}
+
+.contact-details dl > dd {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 70%;
+	margin-bottom: 1em;
+}
+
+.contact-details dl > dd > ul {
+	margin: 0;
+	padding: 0;
+}
+
 .contact-now {
 	flex: 2;
 	max-width: 600px;
@@ -102,7 +129,6 @@
 	.contact-methods > div {
 		flex-direction: column-reverse;
 	}
-
 	.contact-details {
 		margin-left: 0.25em;
 	}
@@ -110,5 +136,23 @@
 		margin-right: 0.25em;
 		margin-bottom: 0.4em;
 		max-width: initial;
+	}
+}
+
+@media (max-width: 400px) {
+	.contact-details dl > dt,
+	.contact-details dl > dd {
+		width: 100%;
+		float: none;
+	}
+	.contact-details dl > dt {
+		margin-bottom: 0;
+	}
+	.contact-details dl > dt::after {
+		content: ":";
+	}
+	.contact-details dl > dd {
+		margin-bottom: 0.5em;
+		color: #1a2b6d;
 	}
 }
