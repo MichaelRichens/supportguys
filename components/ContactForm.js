@@ -261,8 +261,8 @@ export default function ContactForm(props) {
 			</button>
 			<p className={styles.mailto}>
 				Or email us directly at:{" "}
-				<Link href="mailto:info@supportguys.co.uk">
-					info@supportguys.co.uk
+				<Link href={"mailto:" + process.env.NEXT_PUBLIC_EMAIL}>
+					{process.env.NEXT_PUBLIC_EMAIL}
 				</Link>
 			</p>
 		</form>
