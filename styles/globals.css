@@ -286,13 +286,14 @@ main > hr {
 	}
 }
 
-.standard-text > h1,
-.standard-text > h2,
-.standard-text > h3 {
-	color: #1a2b6d;
+.standard-text > h2 {
+	font-size: 28px;
+	margin-bottom: 0.3em;
 }
 
-.standard-text > h2 + h3 {
+.standard-text h3.subheading {
+	margin-top: 0;
+	margin-bottom: 0.3em;
 	color: black;
 	font-family: Quicksand, Arial, sans-serif;
 	font-weight: bold;
@@ -303,6 +304,12 @@ main > hr {
 .standard-text ul,
 .standard-text dl {
 	line-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+	.standard-text > h2 {
+		font-size: 24px;
+	}
 }
 
 @media (max-width: 600px) {

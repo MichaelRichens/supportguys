@@ -22,7 +22,7 @@ export default function case_studies() {
 			</section>
 			<section className="standard-text">
 				<h2>Packaging Producer</h2>
-				<h3>
+				<h3 className="subheading">
 					{/* What the fuck is this meant to mean and where should the punctuation go
 					text provided was: Client; Large; industrial; design; commercially sensitive. */}
 					Client: Large, industrial, design, commercially sensitive.
@@ -93,7 +93,9 @@ export default function case_studies() {
 			</section>
 			<section className="standard-text">
 				<h2>Air Conditioning Specialists</h2>
-				<h3>Client: Small, specialised, technical services.</h3>
+				<h3 className="subheading">
+					Client: Small, specialised, technical services.
+				</h3>
 				<p>
 					Customer called as their PC server had suffered a
 					catastrophic hard drive failure, and thier associated PCs
