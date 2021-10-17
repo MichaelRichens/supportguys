@@ -14,7 +14,7 @@ export default function plans_and_costs() {
 			<section
 				style={{
 					backgroundImage:
-						"url(/images/plans_and_costs_image_placeholder.jpg)"
+						"url(/images/backgrounds/plans_and_costs_image_placeholder.jpg)"
 				}}
 			>
 				<ContentBoxTitle marginTop="27%">

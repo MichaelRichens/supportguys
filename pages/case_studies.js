@@ -13,7 +13,7 @@ export default function case_studies() {
 			<section
 				style={{
 					backgroundImage:
-						"url(/images/case_studies_image_placeholder.jpg)"
+						"url(/images/backgrounds/case_studies_image_placeholder.jpg)"
 				}}
 			>
 				<ContentBoxTitle marginTop="27%">

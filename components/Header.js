@@ -34,7 +34,7 @@ export default function Header() {
 					<a>Plans and Costs</a>
 				</Link>
 				<Link href="/support_now">
-					<a className={styles.urgent}>Support Now!</a>
+					<a className={styles.urgent}>Get Support Now!</a>
 				</Link>
 				<Link href="/ticket">
 					<a>Tickets</a>

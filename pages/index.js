@@ -17,7 +17,8 @@ export default function Home() {
 			<section
 				className={styles["home-page-intro"]}
 				style={{
-					backgroundImage: "url(/images/homepage_image.webp)"
+					backgroundImage:
+						"url(/images/backgrounds/homepage_image.webp)"
 				}}
 			>
 				<ContentBoxMain
@@ -32,7 +33,8 @@ export default function Home() {
 			<section
 				className={"text-over-image " + styles["home-page-about-us"]}
 				style={{
-					backgroundImage: "url(/images/cambridge_skyline.webp)"
+					backgroundImage:
+						"url(/images/backgrounds/cambridge_skyline.webp)"
 				}}
 			>
 				<h2>About Us</h2>

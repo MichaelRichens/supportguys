@@ -18,7 +18,8 @@ export default function aboutus() {
 		>
 			<section
 				style={{
-					backgroundImage: "url(/images/aboutus_image.webp)"
+					backgroundImage:
+						"url(/images/backgrounds/aboutus_image.webp)"
 				}}
 			>
 				<ContentBoxTitle marginTop="27%">
