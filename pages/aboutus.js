@@ -101,7 +101,7 @@ export default function aboutus() {
 					even better...
 				</p>
 				<p>
-					Wether you are planning for the future or need help now, we
+					Whether you are planning for the future or need help now, we
 					at Support Guys can help.
 				</p>
 			</section>

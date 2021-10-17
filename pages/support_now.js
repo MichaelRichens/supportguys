@@ -69,7 +69,7 @@ export default function support_now() {
 					We hear you. You've got a problem and it needs solving now.
 				</h2>
 				<p>
-					Wether you have a support contract with us or are a new
+					Whether you have a support contract with us or are a new
 					customer with an issue we are here to help. Please get in
 					contact on {process.env.NEXT_PUBLIC_PHONE}, or send us an{" "}
 					<span className="clickable" onClick={toggleContactForm}>
