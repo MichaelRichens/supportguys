@@ -40,7 +40,7 @@ export default function contactus() {
 				className={`text-over-image ${styles["contactus-intro"]}`}
 				style={{
 					backgroundImage:
-						"url(/images/contactus_image_placeholder.jpg)"
+						"url(/images/backgrounds/contactus_image_placeholder.jpg)"
 				}}
 			>
 				<h1>Get in Touch</h1>
