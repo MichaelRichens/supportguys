@@ -182,17 +182,11 @@ main > hr {
 	}
 }
 
-.content-box,
-.content-box-page-main {
+.content-box {
 	background-color: #f2f2f2;
 	color: black;
 	padding: 1em 3em;
 	line-height: 1.8em;
-}
-
-.content-box-page-main {
-	padding-left: 20%;
-	padding-right: 20%;
 }
 
 .content-box > h1,

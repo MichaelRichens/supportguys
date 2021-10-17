@@ -1,5 +1,5 @@
 import Page from "../components/Page"
-import ContentPage from "../components/ContentPage"
+import ServicePage from "../components/ServicePage"
 
 export default function disaster_recovery() {
 	const current_year = new Date().getFullYear()
@@ -10,18 +10,19 @@ export default function disaster_recovery() {
 				current_year - 2001
 			} years experience.`}
 		>
-			<ContentPage
+			<ServicePage
 				pageTitle="Disaster Recovery"
 				backgroundImage="/images/backgrounds/disaster_recovery_image_placeholder.jpg"
+				imageBoxHeight="300px"
+				titleBoxHeight="150px"
+				titleBoxWidth="50%"
 			>
-				<section>
-					<p>
-						Yes, its quite unlikely that your office will burn down.
-						But as your business grows and expands a disaster
-						recovery plan becomes more important.
-					</p>
-				</section>
-			</ContentPage>
+				<p>
+					Yes, its quite unlikely that your office will burn down. But
+					as your business grows and expands a disaster recovery plan
+					becomes more important.
+				</p>
+			</ServicePage>
 		</Page>
 	)
 }
