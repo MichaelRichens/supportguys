@@ -32,6 +32,20 @@ h3 {
 
 ul {
 	list-style-type: none;
+	padding-left: 0;
+}
+
+ul.bullet {
+	list-style-type: circle;
+	padding-left: 1em;
+}
+
+ul.bullet > li {
+	margin-bottom: 0.5em;
+}
+
+ul.bullet > li:last-child {
+	margin-bottom: initial;
 }
 
 .clickable {

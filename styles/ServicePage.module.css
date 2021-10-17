@@ -82,10 +82,6 @@
 	margin-bottom: 1em;
 }
 
-.service-page-content ul {
-	padding-left: 0;
-}
-
 @media (max-width: 600px) {
 	.service-page-content {
 		padding-left: 15%;
