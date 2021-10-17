@@ -1,5 +1,6 @@
 // TODO once have several pages up with different sized titles, need to check and rework media queries since the
 // styling requires a fair amount of hardcoding of sizes
+import Link from "next/link"
 
 import styles from "../styles/ServicePage.module.css"
 
@@ -45,7 +46,12 @@ export default function ServicePage(props) {
 				style={{ paddingTop: contentPaddingTop }}
 			>
 				<div className={styles["line-decorator"]}></div>
-				<div className={styles["content"]}>{props.children}</div>
+				<div className={styles["content"]}>
+					{props.children}
+					<nav className={styles.backlink}>
+						<Link href="/services">Back to Services</Link>
+					</nav>
+				</div>
 			</div>
 		</article>
 	)

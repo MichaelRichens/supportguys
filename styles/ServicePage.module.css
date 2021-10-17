@@ -82,6 +82,14 @@
 	margin-bottom: 1em;
 }
 
+.service-page-content > .content .backlink {
+	text-align: center;
+}
+
+.service-page-content > .content .backlink a {
+	font-size: 20px;
+}
+
 @media (max-width: 600px) {
 	.service-page-content {
 		padding-left: 15%;
@@ -89,6 +97,9 @@
 	}
 	.service-page-content > .line-decorator {
 		display: none;
+	}
+	.service-page-content > .content .backlink a {
+		font-size: 18px;
 	}
 }
 @media (max-width: 500px) {

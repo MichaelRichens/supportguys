@@ -70,7 +70,7 @@ export default function firewall_and_security() {
 				<p>
 					If you would like to find out more about firewalls and how
 					we can help secure your businesses network, please{" "}
-					<Link href="contactus">get in touch</Link> to arrange a
+					<Link href="/contactus">get in touch</Link> to arrange a
 					consultation and networking review.
 				</p>
 			</ServicePage>
