@@ -2,6 +2,8 @@
 // styling requires a fair amount of hardcoding of sizes
 import Link from "next/link"
 
+import FindOutMore from "./FindOutMore"
+
 import styles from "../styles/ServicePage.module.css"
 
 export default function ServicePage(props) {
@@ -48,6 +50,7 @@ export default function ServicePage(props) {
 				<div className={styles["line-decorator"]}></div>
 				<div className={styles["content"]}>
 					{props.children}
+					<FindOutMore href="/contactus" text="Contact Us" />
 					<nav className={styles.backlink}>
 						<Link href="/services">Back to Services</Link>
 					</nav>

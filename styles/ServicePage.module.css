@@ -86,7 +86,7 @@
 	text-align: center;
 }
 
-.service-page-content > .content .backlink a {
+.service-page-content > .content .backlink > a {
 	font-size: 20px;
 }
 
