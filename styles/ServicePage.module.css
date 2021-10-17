@@ -64,3 +64,7 @@
 	border-bottom: 3px #1a2b6d solid;
 	margin-right: 2em;
 }
+
+.service-page-content ul {
+	padding-left: 0;
+}
