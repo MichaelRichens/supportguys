@@ -15,8 +15,6 @@ export default function disaster_recovery() {
 			<ServicePage
 				pageTitle="Disaster Recovery"
 				backgroundImage="/images/backgrounds/disaster_recovery_image_placeholder.jpg"
-				imageBoxHeight="300px"
-				titleBoxHeight="150px"
 				titleBoxWidth="50%"
 			>
 				<p>
