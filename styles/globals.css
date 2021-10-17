@@ -79,19 +79,33 @@ details > summary > * {
 }
 
 main a,
-a:visited {
+a:visited,
+main .clickable {
 	color: #0e4c92;
+	cursor: pointer;
+	text-decoration: underline;
 }
 
-main a:hover {
+main a:hover,
+main .clickable:hover {
 	color: #1a2b6d;
 	background-color: lightgray;
 	transition: all 300ms;
 }
 
-main a:active {
+main a:active,
+main .clickable:active {
 	color: orange;
 	background-color: transparent;
+}
+
+main a.unstyle,
+main a.unstyle:visited,
+main a.unstyle:hover,
+main a.unstyle:active {
+	color: initial;
+	background-color: initial;
+	text-decoration: initial;
 }
 
 main > section {

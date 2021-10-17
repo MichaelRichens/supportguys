@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import styles from "../styles/Header.module.css"
-import logo from "../public/images/support_guys_logo949x150.webp"
+import logo from "../public/images/logos/support_guys_logo949x150.webp"
 
 export default function Header() {
 	return (

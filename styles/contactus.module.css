@@ -104,9 +104,9 @@
 	padding: 0;
 }
 
-.contact-details dl > dt:nth-of-type(even),
-.contact-details dl > dd:nth-of-type(even) {
-	color: #1a2b6d;
+.contact-details dl > dt,
+.contact-details dl > dd {
+	text-decoration: none;
 }
 
 .contact-now {
