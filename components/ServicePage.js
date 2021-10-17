@@ -45,7 +45,7 @@ export default function ServicePage(props) {
 				style={{ paddingTop: contentPaddingTop }}
 			>
 				<div className={styles["line-decorator"]}></div>
-				<div>{props.children}</div>
+				<div className={styles["content"]}>{props.children}</div>
 			</div>
 		</article>
 	)
