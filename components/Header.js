@@ -36,7 +36,7 @@ export default function Header() {
 				<Link href="/support_now">
 					<a className={styles.urgent}>Get Support Now!</a>
 				</Link>
-				<Link href="/ticket">
+				<Link href="/tickets">
 					<a>Tickets</a>
 				</Link>
 			</nav>

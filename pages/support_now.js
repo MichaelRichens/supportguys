@@ -77,7 +77,7 @@ export default function support_now() {
 					</span>{" "}
 					and our team can walk you through the process. Or if you are
 					an account customer you can use the{" "}
-					<Link href="/ticket">ticket system</Link>.
+					<Link href="/tickets">ticket system</Link>.
 				</p>
 			</section>
 			<section className="standard-text">
