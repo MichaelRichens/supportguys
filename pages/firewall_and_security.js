@@ -1,4 +1,3 @@
-// TODO is "firewall" sigular or plural (in titles)
 //  TDOD don't like suggested image
 import Link from "next/link"
 
@@ -8,24 +7,24 @@ import ServicePage from "../components/ServicePage"
 export default function firewall_and_security() {
 	return (
 		<Page
-			title={"Firewall and Network Security"}
+			title={"Firewalls and Network Security"}
 			metaDescription="Support Guys are a GFI Gold reseller, and provide experienced installation and support of Kerio Control firewalls to SME customers."
 		>
 			<ServicePage
-				pageTitle="Firewall and Network Security"
+				pageTitle="Firewalls and Network Security"
 				backgroundImage="/images/backgrounds/firewall_and_security_image_placeholder.jpg"
 				titleBoxWidth="65%"
 			>
 				<p>
-					A firewall is the front door to your network, your first
-					line of defence against threats to your network and data.
-					Like a door, there are many types and many options.
-					Certainly in today's climate, businesses need to ensure that
-					customer and company data is protected by as many layers of
-					protection as possible, guaranteeing all traffic is logged
-					and trackable. GDPR regulations put the onus on businesses
-					to protect customer data, so a firewall is essential for
-					where Personally Identifiable Information is stored.
+					A firewall is a door to your network, your first line of
+					defence against threats to your network and data. Like a
+					door, there are many types and many options. Certainly in
+					today's climate, businesses need to ensure that customer and
+					company data is protected by as many layers of protection as
+					possible, guaranteeing all traffic is logged and trackable.
+					GDPR regulations put the onus on businesses to protect
+					customer data, so a firewall is essential for where
+					Personally Identifiable Information is stored.
 				</p>
 				<p>
 					Support Guys are a GFI Gold reseller and we recommend and

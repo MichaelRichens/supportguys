@@ -40,7 +40,7 @@ export default function ContentServices(props) {
 					</p>
 				</ContentBoxShadowed>
 				<ContentBoxShadowed moroInfoHref="/firewall_and_security">
-					<h3>Firewall and Security</h3>
+					<h3>Firewalls and Security</h3>
 					<p>
 						A firewall is like your front door, it keeps your
 						network safe from attack. A dedicated firewall gives
