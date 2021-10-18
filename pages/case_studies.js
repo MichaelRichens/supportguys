@@ -97,7 +97,7 @@ export default function case_studies() {
 				</h3>
 				<p>
 					Customer called as their PC server had suffered a
-					catastrophic hard drive failure, and thier associated PCs
+					catastrophic hard drive failure, and their associated PCs
 					had stopped working as they were all bound to the Active
 					Directory Domain.
 				</p>
