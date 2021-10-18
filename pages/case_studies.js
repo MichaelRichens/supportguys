@@ -77,10 +77,10 @@ export default function case_studies() {
 					drives were failing. A couple of mission critical Macs
 					(which were running Parallels for specific software which is
 					only available in Windows) were woefully under specified in
-					RAM and also had failing hard drives. These were upgraded,
-					suitably sized SSDs installed and enough RAM to run a
-					virtualised OS and the required software was installed. Data
-					was migrated onto the new drives with minimal downtime.
+					RAM and also had failing hard drives. These were upgraded;
+					suitably sized SSDs, and enough RAM to run a virtualised OS
+					and the required software, were installed. Data was migrated
+					onto the new drives with minimal downtime.
 				</p>
 				<p>
 					This has been a year long iteration to uncover and counter
