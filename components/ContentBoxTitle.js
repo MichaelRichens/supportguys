@@ -3,7 +3,7 @@ import styles from "../styles/ContentBoxTitle.module.css"
 export default function ContentBoxTitle(props) {
 	const backgroundColorStyle = props.backgroundColor
 		? props.backgroundColor
-		: "initial"
+		: ""
 	return (
 		<div
 			className={"content-box " + styles["content-box-title"]}
