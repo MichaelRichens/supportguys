@@ -116,6 +116,15 @@ export default function slow_computers() {
 					difference to your employees productivity, without the
 					expense of replacing an entire suite of machines.
 				</p>
+				<p>
+					If you have an individual machine you want to upgrade or
+					repair, try our{" "}
+					<Link href="https://www.macupgrades.co.uk">
+						MacUpgrades
+					</Link>{" "}
+					sister site for a wealth of machine specific information and
+					upgrades.
+				</p>
 			</ServicePage>
 		</Page>
 	)
