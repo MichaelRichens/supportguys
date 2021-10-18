@@ -1,4 +1,3 @@
-// TODO check the blue colours with gavin in the footer - not close match for design
 import Link from "next/link"
 
 import TextContactDetails from "./content_components/TextContactDetails"
