@@ -44,7 +44,7 @@ export default function TextContactDetails() {
 				<dd>
 					<ul>
 						<li>{process.env.NEXT_PUBLIC_ADDRESS_STREET}</li>
-						<li>{process.env.NEXT_PUBLIC_ADDRESS_LOCAILTY}</li>
+						<li>{process.env.NEXT_PUBLIC_ADDRESS_LOCALITY}</li>
 						<li>{process.env.NEXT_PUBLIC_ADDRESS_REGION}</li>
 						<li>{process.env.NEXT_PUBLIC_ADDRESS_POSTCODE}</li>
 						<li>{process.env.NEXT_PUBLIC_ADDRESS_COUNTRY}</li>

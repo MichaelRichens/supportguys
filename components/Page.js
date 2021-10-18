@@ -48,7 +48,7 @@ export default function Page(props) {
 					"@type": "PostalAddress",
 					addressCountry: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_COUNTRY}`,
 					streetAddress: `${process.env.NEXT_PUBLIC_ADDRESS_STREET}`,
-					addressLocality: `${process.env.NEXT_PUBLIC_ADDRESS_LOCAILTY}`,
+					addressLocality: `${process.env.NEXT_PUBLIC_ADDRESS_LOCALITY}`,
 					addressRegion: `${process.env.NEXT_PUBLIC_ADDRESS_REGION}`,
 					postalCode: `${process.env.NEXT_PUBLIC_ADDRESS_POSTCODE}`
 				}
@@ -62,7 +62,6 @@ export default function Page(props) {
 	}, [])
 	return (
 		<>
-			<FlashMessages messages={flashMessages} />
 			<Head>
 				<title>
 					{process.env.NEXT_PUBLIC_NAME +
@@ -100,7 +99,9 @@ export default function Page(props) {
 					rel="stylesheet"
 				/>
 			</Head>
-			<Header />
+			<Header>
+				<FlashMessages messages={flashMessages} />
+			</Header>
 			<main>{props.children}</main>
 			<Footer />
 		</>

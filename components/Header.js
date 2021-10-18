@@ -5,8 +5,9 @@ import styles from "../styles/Header.module.css"
 // TODO change logo to jpg format and update here and in .env file
 
 import logo from "../public/images/logos/support_guys_logo949x150.webp"
+import { produceWithPatches } from "immer"
 
-export default function Header() {
+export default function Header(props) {
 	return (
 		<header className={styles.header}>
 			<div className={styles["logo-container"]}>
@@ -47,6 +48,7 @@ export default function Header() {
 					<a>Tickets</a>
 				</Link>
 			</nav>
+			{props.children}
 		</header>
 	)
 }
