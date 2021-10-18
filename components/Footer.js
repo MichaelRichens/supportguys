@@ -1,3 +1,5 @@
+// TODO Social section
+
 import Link from "next/link"
 
 import TextContactDetails from "./content_components/TextContactDetails"
