@@ -35,16 +35,23 @@ ul {
 	padding-left: 0;
 }
 
+ol {
+	padding-left: 2em;
+}
+
 ul.bullet {
 	list-style-type: circle;
 	padding-left: 1em;
 }
 
-ul.bullet > li {
+ul.bullet > li,
+ol > li {
 	margin-bottom: 0.5em;
 }
 
-ul.bullet > li:last-child {
+ul.bullet,
+ol > li:last-child,
+ol > li:last-child {
 	margin-bottom: initial;
 }
 
