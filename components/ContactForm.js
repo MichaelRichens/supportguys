@@ -1,3 +1,5 @@
+// TODO update the macupgrades.co.uk script once support guys email box is online
+
 import React, { useEffect } from "react"
 import Link from "next/link"
 import { useImmerReducer } from "use-immer"
