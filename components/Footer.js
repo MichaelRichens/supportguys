@@ -14,7 +14,7 @@ export default function Footer() {
 			<section>
 				<section className={styles.contact}>
 					<h3>
-						<Link href="/contactus">Contact Us</Link>
+						<Link href="/contact_us">Contact Us</Link>
 					</h3>
 					<TextContactDetails />
 				</section>

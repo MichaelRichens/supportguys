@@ -23,10 +23,10 @@ export default function Header() {
 				<Link href="/">
 					<a>Home</a>
 				</Link>
-				<Link href="/contactus">
+				<Link href="/contact_us">
 					<a>Contact Us</a>
 				</Link>
-				<Link href="/aboutus">
+				<Link href="/about_us">
 					<a>About Us</a>
 				</Link>
 				<Link href="/services">

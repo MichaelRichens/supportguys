@@ -48,7 +48,7 @@ export default function ServicePage(props) {
 				<div className={styles["line-decorator"]}></div>
 				<div className={styles["content"]}>
 					{props.children}
-					<FindOutMore href="/contactus" text="Contact Us" />
+					<FindOutMore href="/contact_us" text="Contact Us" />
 					<nav className={styles.backlink}>
 						<Link href="/services">Back to Services</Link>
 					</nav>

@@ -8,7 +8,7 @@ import Page from "../components/Page"
 import TextAboutUsOverview from "../components/content_components/TextAboutUsOverview"
 import TextAboutUsCambs from "../components/content_components/TextAboutUsCambs"
 
-export default function aboutus() {
+export default function about_us() {
 	const current_year = new Date().getFullYear()
 
 	return (
@@ -19,7 +19,7 @@ export default function aboutus() {
 			<section
 				style={{
 					backgroundImage:
-						"url(/images/backgrounds/aboutus_image.jpg)"
+						"url(/images/backgrounds/about_us_image.jpg)"
 				}}
 			>
 				<ContentBoxTitle marginTop="27%">
@@ -108,7 +108,7 @@ export default function aboutus() {
 			<section className="standard-text">
 				<h2>Next Steps</h2>
 				<p>
-					Just <Link href="/contactus">get in touch</Link> with our
+					Just <Link href="/contact_us">get in touch</Link> with our
 					team to begin the process.
 				</p>
 				<p>

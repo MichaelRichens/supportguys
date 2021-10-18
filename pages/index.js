@@ -29,7 +29,7 @@ export default function Home() {
 					<TextAboutUsOverview />
 				</ContentBoxMain>
 			</section>
-			<FindOutMore href="/aboutus" />
+			<FindOutMore href="/about_us" />
 			<section
 				className={"text-over-image " + styles["home-page-about-us"]}
 				style={{
@@ -53,7 +53,7 @@ export default function Home() {
 						for your business.
 					</p>
 				</ContentBoxMain>
-				<FindOutMore href="/contactus" text="Contact Us Today" />
+				<FindOutMore href="/contact_us" text="Contact Us Today" />
 			</section>
 		</Page>
 	)

@@ -8,10 +8,10 @@ import ContactForm from "../components/ContactForm"
 import PopupOverlay from "../components/PopupOverlay"
 import { useSharedIsContactFormOpen } from "../shared/useSharedIsContactFormOpen"
 
-import styles from "../styles/contactus.module.css"
+import styles from "../styles/contact_us.module.css"
 import TextContactDetails from "../components/content_components/TextContactDetails"
 
-export default function contactus() {
+export default function contact_us() {
 	const nodeRef = useRef(null)
 	const [isContactFormOpen, setContactFormOpen] = useState(false)
 	const { sharedIsContactFormOpen, setSharedIsContactFormOpen } =
@@ -40,10 +40,10 @@ export default function contactus() {
 	return (
 		<Page title="Contact Us">
 			<section
-				className={`text-over-image ${styles["contactus-intro"]}`}
+				className={`text-over-image ${styles["contact-us-intro"]}`}
 				style={{
 					backgroundImage:
-						"url(/images/backgrounds/contactus_image.jpg)"
+						"url(/images/backgrounds/contact_us_image.jpg)"
 				}}
 			>
 				<h1>Get in Touch</h1>
