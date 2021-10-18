@@ -54,6 +54,12 @@
 }
 
 @media (max-width: 650px) {
+	.title-container {
+		height: 200px !important;
+	}
+	.title-container > div {
+		top: 100px !important;
+	}
 	.title-container > div > h1 {
 		font-size: 30px;
 	}

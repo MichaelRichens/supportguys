@@ -14,7 +14,7 @@ export default function disaster_recovery() {
 				pageTitle="Disaster Recovery"
 				backgroundImage="/images/backgrounds/disaster_recovery_image.jpg"
 				titleBoxWidth="50%"
-				imageBoxHeight="600"
+				imageBoxHeight="500"
 			>
 				<p>
 					Yes, its quite unlikely that your office will burn down. But
