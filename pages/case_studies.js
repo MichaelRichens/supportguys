@@ -32,7 +32,7 @@ export default function case_studies() {
 					connecting their two sites, as the central database was
 					running slowly for the remote users. They had installed a
 					short haul data service (SHDS), which had been left as raw
-					SPF sockets, with the supplier telling them "it's all
+					SFP sockets, with the supplier telling them "it's all
 					working; over to you!" They engaged us to take it from
 					there.
 				</p>
@@ -73,12 +73,12 @@ export default function case_studies() {
 				</p>
 				<p>
 					During our time on site other problem areas became apparent.
-					Several Macs were running very very slowly as their hard
+					Several Macs were running very very slowly, as their hard
 					drives were failing. A couple of mission critical Macs
 					(which were running Parallels for specific software which is
 					only available in Windows) were woefully under specified in
 					RAM and also had failing hard drives. These were upgraded,
-					suitably sized SSDs installed and RAM enough to run a
+					suitably sized SSDs installed and enough RAM to run a
 					virtualised OS and the required software was installed. Data
 					was migrated onto the new drives with minimal downtime.
 				</p>
