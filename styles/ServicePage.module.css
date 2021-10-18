@@ -43,11 +43,17 @@
 
 @media (max-width: 1000px) {
 	.title-container > div > h1 {
-		font-size: 40px;
+		font-size: 38px;
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+	.title-container > div > h1 {
+		font-size: 34px;
+	}
+}
+
+@media (max-width: 650px) {
 	.title-container > div > h1 {
 		font-size: 30px;
 	}
