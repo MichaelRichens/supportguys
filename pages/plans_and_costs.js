@@ -1,6 +1,4 @@
-// TODO think about the background image for this page, didn't have a good first impression when I first looked at the page...
-// Looked like a mess of text all jumbled in with the title, and took a while to figure out wtf was going on with it.
-// Maybe a picture of a happy accountant using a Mac or something? :)
+// TODO think about the background image for this page
 // TODO we talk about how we are different and are up front about costs, then give the costs for non-contracted rates (also need to flag these as more than cotracted rates more)
 // then we spend multiple paragraphs waffling, then our cotracted rates section basically says "it depends"
 // I don't think we've justified the first paragraph about being different.
