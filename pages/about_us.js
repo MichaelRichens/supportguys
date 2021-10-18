@@ -2,11 +2,13 @@
 // sort of work as a natural evolution of macupgrades. not sure, but it would give us a bit more depth - we're not just a brand new startup
 import Link from "next/link"
 
-import ContentBoxTitle from "../components/ContentBoxTitle"
+import ContentBoxMain from "../components/ContentBoxMain"
 import Page from "../components/Page"
 
 import TextAboutUsOverview from "../components/content_components/TextAboutUsOverview"
 import TextAboutUsCambs from "../components/content_components/TextAboutUsCambs"
+
+import stylesMainPage from "../styles/stylesMainPage.module.css"
 
 export default function about_us() {
 	const current_year = new Date().getFullYear()
@@ -17,24 +19,29 @@ export default function about_us() {
 			metaDescription="Support Guys bring two decades of Apple Mac experience to support our SME customers in ensuring your IT setup is resilient and trouble free."
 		>
 			<section
+				className={stylesMainPage["page-intro"]}
 				style={{
 					backgroundImage:
 						"url(/images/backgrounds/about_us_image.jpg)"
 				}}
 			>
-				<ContentBoxTitle marginTop="27%">
-					<h1>About Support Guys</h1>
-				</ContentBoxTitle>
+				<ContentBoxMain
+					title="About Support Guys"
+					marginLeft="auto"
+					marginRight="10%"
+					h1={true}
+				>
+					<TextAboutUsCambs />
+				</ContentBoxMain>
 			</section>
 			<section className="standard-text">
 				<h2>Location and working Areas</h2>
-				<TextAboutUsCambs />
 				<p>
 					Support Guys works with customers, usually within an area of
 					2 hours travel from our Cambridge location, although we have
 					gone the length and breadth of the country to our clients
 					sites. Remote support is available to all customers where
-					phyiscal access is not required.
+					physical access is not required.
 				</p>
 			</section>
 			<section className="standard-text">

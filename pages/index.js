@@ -7,6 +7,7 @@ import TextAboutUsCambs from "../components/content_components/TextAboutUsCambs"
 import ContentServices from "../components/content_components/ContentServices"
 
 import styles from "../styles/index.module.css"
+import stylesMainPage from "../styles/stylesMainPage.module.css"
 
 export default function Home() {
 	return (
@@ -15,7 +16,7 @@ export default function Home() {
 			metaDescription="Support Guys bring two decades of Apple Mac experience to support our SME customers in ensuring your IT setup is resilient and trouble free."
 		>
 			<section
-				className={styles["home-page-intro"]}
+				className={stylesMainPage["page-intro"]}
 				style={{
 					backgroundImage:
 						"url(/images/backgrounds/homepage_image.jpg)"
@@ -25,6 +26,7 @@ export default function Home() {
 					title="Tailored Mac Support for your Business"
 					marginLeft="auto"
 					marginRight="10%"
+					h1={true}
 				>
 					<TextAboutUsOverview />
 				</ContentBoxMain>

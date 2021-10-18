@@ -2,6 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 
 import styles from "../styles/Header.module.css"
+// TODO change logo to jpg format and update here and in .env file
+
 import logo from "../public/images/logos/support_guys_logo949x150.webp"
 
 export default function Header() {

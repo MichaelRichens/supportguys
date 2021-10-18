@@ -1,25 +1,40 @@
+// TODO run the top text box past someone - made it up because I needed something to fill the space...
 // TODO can't find proper image for this page - still using placeholder
 // TODO see comments inline for things that need clarification
 // TODO once fixed issues, get Doug to read it through - I don't understand a lot of it and have edited a fair bit
 
 import Page from "../components/Page"
-import ContentBoxTitle from "../components/ContentBoxTitle"
+import ContentBoxMain from "../components/ContentBoxMain"
+
+import stylesMainPage from "../styles/stylesMainPage.module.css"
 
 export default function case_studies() {
 	return (
 		<Page
 			title={"Case Studies"}
-			metaDescription="Support Guys provide Mac focussed IT support to a variety of SME and other clients, helping with netowrking, disaster planning, and hardware upgrades."
+			metaDescription="Support Guys provide Mac focussed IT support to a variety of SME and other clients, helping with networking, disaster planning, and hardware upgrades."
 		>
 			<section
+				className={stylesMainPage["page-intro"]}
 				style={{
 					backgroundImage:
 						"url(/images/backgrounds/case_studies_image_placeholder.jpg)"
 				}}
 			>
-				<ContentBoxTitle marginTop="27%">
-					<h1>Case Studies / Previous Work</h1>
-				</ContentBoxTitle>
+				<ContentBoxMain
+					title="Case Studies / Previous Work"
+					marginLeft="auto"
+					marginRight="10%"
+					h1={true}
+				>
+					<p>
+						Some examples of previous work we have done with a range
+						of different clients with very different needs. Every
+						business' needs are different. We are here to work with
+						you; to solve problems that you have, so you can get on
+						with running your business.
+					</p>
+				</ContentBoxMain>
 			</section>
 			<section className="standard-text">
 				<h2>Packaging Producer</h2>

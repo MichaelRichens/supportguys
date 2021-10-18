@@ -6,20 +6,28 @@
 // I don't think we've justified the first paragraph about being different.
 // Sort out above before continuing
 import Page from "../components/Page"
-import ContentBoxTitle from "../components/ContentBoxTitle"
+import ContentBoxMain from "../components/ContentBoxMain"
+
+import stylesMainPage from "../styles/stylesMainPage.module.css"
 
 export default function plans_and_costs() {
 	return (
 		<Page title={""} metaDescription="">
 			<section
+				className={stylesMainPage["page-intro"]}
 				style={{
 					backgroundImage:
 						"url(/images/backgrounds/plans_and_costs_image_placeholder.jpg)"
 				}}
 			>
-				<ContentBoxTitle marginTop="27%">
-					<h1>Plans and Costs</h1>
-				</ContentBoxTitle>
+				<ContentBoxMain
+					title="Plans and Costs"
+					marginLeft="auto"
+					marginRight="10%"
+					h1={true}
+				>
+					<p>TODO Intro paragraph.</p>
+				</ContentBoxMain>
 			</section>
 			<section className="standard-text">
 				<h2>Clear Upfront Pricing Information</h2>

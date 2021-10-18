@@ -224,17 +224,20 @@ main > hr {
 	line-height: 1.2em;
 }
 
+.content-box > h1,
 .content-box > h2 {
 	font-size: 46px;
 }
 
 @media (max-width: 1000px) {
+	.content-box > h1,
 	.content-box > h2 {
 		font-size: 38px;
 	}
 }
 
 @media (max-width: 600px) {
+	.content-box > h1,
 	.content-box > h2 {
 		font-size: 32px;
 	}
@@ -245,6 +248,7 @@ main > hr {
 		padding-left: 1.5em;
 		padding-right: 1.5em;
 	}
+	.content-box > h1,
 	.content-box > h2 {
 		font-size: 24px;
 	}
@@ -310,33 +314,38 @@ main > hr {
 	}
 }
 
-.standard-text {
+.standard-text,
+.standard-text-large {
 	margin-left: 15%;
 	margin-right: 30%;
 }
 
 @media (max-width: 1200px) {
-	.standard-text {
+	.standard-text,
+	.standard-text-large {
 		margin-left: 10%;
 		margin-right: 20%;
 	}
 }
 
 @media (max-width: 700px) {
-	.standard-text {
+	.standard-text,
+	.standard-text-large {
 		margin-left: 10%;
 		margin-right: 10%;
 	}
 }
 
 @media (max-width: 500px) {
-	.standard-text {
+	.standard-text,
+	.standard-text-large {
 		margin-left: 5%;
 		margin-right: 5%;
 	}
 }
 
-.standard-text > h2 {
+.standard-text > h2,
+.standard-text-large p {
 	font-size: 28px;
 	margin-bottom: 0.3em;
 }
@@ -352,12 +361,17 @@ main > hr {
 .standard-text p,
 .standard-text ol,
 .standard-text ul,
-.standard-text dl {
+.standard-text dl,
+.standard-text-large p,
+.standard-text-large ol,
+.standard-text-large ul,
+.standard-text-large dl {
 	line-height: 1.5em;
 }
 
 @media (max-width: 600px) {
-	.standard-text > h2 {
+	.standard-text > h2,
+	.standard-text-large p {
 		font-size: 24px;
 	}
 }
@@ -366,7 +380,11 @@ main > hr {
 	.standard-text p,
 	.standard-text ol,
 	.standard-text ul,
-	.standard-text dl {
+	.standard-text dl,
+	.standard-text-large p,
+	.standard-text-large ol,
+	.standard-text-large ul,
+	.standard-text-large dl {
 		line-height: 1.3em;
 	}
 }
@@ -375,7 +393,11 @@ main > hr {
 	.standard-text p,
 	.standard-text ol,
 	.standard-text ul,
-	.standard-text dl {
+	.standard-text dl,
+	.standard-text-large p,
+	.standard-text-large ol,
+	.standard-text-large ul,
+	.standard-text-large dl {
 		line-height: 1.1em;
 	}
 }

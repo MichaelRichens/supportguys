@@ -1,0 +1,42 @@
+.page-intro > div:first-child {
+	margin-top: 6em;
+	margin-left: auto;
+	margin-right: 10%;
+	width: 30%;
+	min-width: 600px;
+}
+
+@media (max-width: 1000px) {
+	.page-intro > div:first-child {
+		margin-top: 4em;
+	}
+
+	.page-intro > div:first-child {
+		margin-right: 5%;
+		min-width: 500px;
+	}
+}
+
+@media (max-width: 600px) {
+	.page-intro > div:first-child {
+		margin-top: 3em;
+	}
+
+	.page-intro > div:first-child {
+		min-width: 350px;
+	}
+}
+
+@media (max-width: 400px) {
+	.page-intro > div:first-child {
+		margin-top: 1em;
+		line-height: 1.3em;
+	}
+
+	.page-intro > div:first-child {
+		min-width: initial;
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

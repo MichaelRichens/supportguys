@@ -13,10 +13,12 @@ import Link from "next/link"
 import Image from "next/image"
 
 import Page from "../components/Page"
-import ContentBoxTitle from "../components/ContentBoxTitle"
+import ContentBoxMain from "../components/ContentBoxMain"
 import ContactForm from "../components/ContactForm"
 import PopupOverlay from "../components/PopupOverlay"
 import { useSharedIsContactFormOpen } from "../shared/useSharedIsContactFormOpen"
+
+import stylesMainPage from "../styles/stylesMainPage.module.css"
 
 import macupgrades_logo from "../public/images/logos/macupgrades_logo.gif"
 
@@ -55,29 +57,35 @@ export default function support_now() {
 				<ContactForm closeContactForm={() => closeContactForm()} />
 			</PopupOverlay>
 			<section
+				className={stylesMainPage["page-intro"]}
 				style={{
 					backgroundImage:
-						"url(/images/backgrounds/cambridge_skyline.webp)"
+						"url(/images/backgrounds/cambridge_skyline.jpg)"
 				}}
 			>
-				<ContentBoxTitle marginTop="30%">
-					<h1>Get Support Now!</h1>
-				</ContentBoxTitle>
+				<ContentBoxMain
+					title="Get Support Now!"
+					marginLeft="auto"
+					marginRight="10%"
+					h1={true}
+				>
+					<p>
+						Whether you have a support contract with us or are a new
+						customer with an issue we are here to help. Please get
+						in contact on {process.env.NEXT_PUBLIC_PHONE}, or send
+						us an{" "}
+						<span className="clickable" onClick={toggleContactForm}>
+							email
+						</span>{" "}
+						and our team can walk you through the process. Or if you
+						are an account customer you can use the{" "}
+						<Link href="/tickets">ticket system</Link>.
+					</p>
+				</ContentBoxMain>
 			</section>
-			<section className="standard-text">
-				<h2>
-					We hear you. You've got a problem and it needs solving now.
-				</h2>
+			<section className="standard-text-large">
 				<p>
-					Whether you have a support contract with us or are a new
-					customer with an issue we are here to help. Please get in
-					contact on {process.env.NEXT_PUBLIC_PHONE}, or send us an{" "}
-					<span className="clickable" onClick={toggleContactForm}>
-						email
-					</span>{" "}
-					and our team can walk you through the process. Or if you are
-					an account customer you can use the{" "}
-					<Link href="/tickets">ticket system</Link>.
+					We hear you. You've got a problem and it needs solving now.
 				</p>
 			</section>
 			<section className="standard-text">
