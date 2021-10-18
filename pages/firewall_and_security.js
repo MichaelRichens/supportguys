@@ -1,4 +1,5 @@
 // TODO is "firewall" sigular or plural (in titles)
+//  TDOD don't like suggested image
 import Link from "next/link"
 
 import Page from "../components/Page"

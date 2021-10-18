@@ -49,7 +49,7 @@ export default function ContentServices(props) {
 						deployment.
 					</p>
 				</ContentBoxShadowed>
-				<ContentBoxShadowed moroInfoHref="/incident_support">
+				<ContentBoxShadowed moroInfoHref="/incident_response">
 					<h3>Incident Response</h3>
 					<p>
 						An incident response plan is a documented, written plan
