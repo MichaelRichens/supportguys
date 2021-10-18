@@ -30,7 +30,7 @@ export default function networking_and_wireless() {
 					everything works. You need to think about bottlenecks and
 					where your data flows, and having a 100 MegaBit leased line
 					(which you upgraded just last year as everyone said the
-					internet was slow) running from a 10 year old Draytek router
+					internet was slow) running from a 10 year old DrayTek router
 					is just never going to deliver... but so many small
 					businesses do it because it <em>is</em> working, and they
 					don't want to touch it.
@@ -58,7 +58,7 @@ export default function networking_and_wireless() {
 					completing!
 				</p>
 				<p>
-					Our "goto" networking brand of choice is Ubiquity - we've
+					Our 'goto' networking brand of choice is Ubiquiti - we've
 					found their range to be scalable, reliable, and good value.
 				</p>
 				<p>

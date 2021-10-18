@@ -10,7 +10,12 @@ export default function Header() {
 			<div className={styles["logo-container"]}>
 				<Link href="/">
 					<a>
-						<Image src={logo} quality="100" />
+						<Image
+							src={logo}
+							quality="100"
+							height="150"
+							width="949"
+						/>
 					</a>
 				</Link>
 			</div>
