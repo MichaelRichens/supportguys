@@ -14,15 +14,15 @@ export default function slow_computers() {
 			} years experience in improving the performance of Apple Mac computers.`}
 		>
 			<ServicePage
-				pageTitle="Slow Computer?"
+				pageTitle="Slow Computers?"
 				backgroundImage="/images/backgrounds/slow_computer_image.jpg"
 				titleBoxWidth="50%"
 				imageBoxHeight="450"
 			>
 				<p>
-					One of the biggest bug bears we see here at Support Guys are
-					complaints of slow computers. It is important to work out
-					the where, why, and how of these situations.
+					One of the biggest bug bears we see here at Support Guys,
+					are complaints about slow computers. It is important to work
+					out the where, why, and how of these situations.
 				</p>
 				<p>
 					Slow computers can be caused by software, networking or
