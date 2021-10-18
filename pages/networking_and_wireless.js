@@ -1,3 +1,5 @@
+// TODO can't find proper image for this page - still using placeholder
+
 import Page from "../components/Page"
 import ServicePage from "../components/ServicePage"
 
