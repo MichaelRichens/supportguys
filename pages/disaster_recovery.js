@@ -14,8 +14,9 @@ export default function disaster_recovery() {
 		>
 			<ServicePage
 				pageTitle="Disaster Recovery"
-				backgroundImage="/images/backgrounds/disaster_recovery_image_placeholder.jpg"
+				backgroundImage="/images/backgrounds/disaster_recovery_image.jpg"
 				titleBoxWidth="50%"
+				imageBoxHeight="600"
 			>
 				<p>
 					Yes, its quite unlikely that your office will burn down. But
