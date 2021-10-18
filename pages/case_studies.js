@@ -24,41 +24,28 @@ export default function case_studies() {
 			<section className="standard-text">
 				<h2>Packaging Producer</h2>
 				<h3 className="subheading">
-					{/* What the fuck is this meant to mean and where should the punctuation go
-					text provided was: Client; Large; industrial; design; commercially sensitive. */}
-					Client: Large, industrial, design, commercially sensitive.
+					Client: Industrial-scale design and print, highly downtime
+					sensitive.
 				</h3>
-				{/* TODO don't understand if 1st paragraph is talking about an upgrade to 2nd paragraph, or if 2nd paragraph is the result of 1st paragraph 
-				- "what was hoped for" would be better as "all that could be wished" or similar if the former*/}
 				<p>
-					Initial call out was to connect two sites via a site to site
+					The customer had undertaken the replacement of their old VPN
+					connecting their two sites, as the central database was
+					running slowly for the remote users. They had installed a
 					short haul data service (SHDS), which had been left as raw
-					SPF sockets and told "it’s all working; over to you!" This
-					was to replace a site to site VPN, as the central database
-					was running slowly for the remote users.
+					SPF sockets, with the supplier telling them "it's all
+					working; over to you!" They engaged us to take it from
+					there.
 				</p>
 				<p>
-					Working with 10 year old routers; and networks either side
-					which had been bolted onto and expanded and added to and it
-					worked; almost. The performance was not what was hoped for.
-				</p>
-				<p>
-					During our time on site other problem areas became apparent.
-					Several Macs were running very very slowly as their hard
-					drives were failing. A couple of mission critical Macs
-					(which were running Parallels for specific software which is
-					only available in Windows) were woefully under specified in
-					RAM and also had failing hard drives. These were upgraded,
-					suitably sized SSDs installed and RAM enough to run a
-					virtualised OS and the required software was installed. Data
-					was migrated onto the new drives with minimal downtime.
-				</p>
-				<p>
-					A continuing niggle was their database server, which was
-					running slow on client machines - lots of end users
-					reporting massive delays on changing layouts and general
-					use, which the database designer could not fathom as
-					everything was optimised on the server.
+					We configured the connection for their needs, but the
+					performance was not what was hoped for. A continuing niggle
+					was their database server, which was running slowly on
+					client machines - lots of end users reporting massive delays
+					on changing layouts and general use, which the database
+					designer could not fathom as everything was optimised on the
+					server. Since this had been the driving force behind fitting
+					the SHDS, the client was understandably eager to resolve the
+					issue.
 				</p>
 				<p>
 					A full site inspection revealed that hubs and switches were
@@ -81,8 +68,19 @@ export default function case_studies() {
 				</p>
 				<p>
 					Demand for reliable WiFi was made and implemented using
-					Ubiquity Access Points, making the WiFi reliable and able to
+					Ubiquiti Access Points, making the WiFi reliable and able to
 					cope with increased demand.
+				</p>
+				<p>
+					During our time on site other problem areas became apparent.
+					Several Macs were running very very slowly as their hard
+					drives were failing. A couple of mission critical Macs
+					(which were running Parallels for specific software which is
+					only available in Windows) were woefully under specified in
+					RAM and also had failing hard drives. These were upgraded,
+					suitably sized SSDs installed and RAM enough to run a
+					virtualised OS and the required software was installed. Data
+					was migrated onto the new drives with minimal downtime.
 				</p>
 				<p>
 					This has been a year long iteration to uncover and counter
