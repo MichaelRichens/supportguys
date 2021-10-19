@@ -1,4 +1,4 @@
-A basic skeleton of a simple site. Some site specific info can be configured in .env
+A simple site for supportguys.co.uk, done in React/Next.js
 
 npm run dev will serve on [http://localhost:3000](http://localhost:3000)
 
