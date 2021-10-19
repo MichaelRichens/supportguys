@@ -63,7 +63,7 @@ export default function disaster_recovery() {
 					which members of staff are responsible for each step of the
 					plan, and to make sure that each member of the team can be
 					as productive and efficient as possible in bringing systems
-					back up, inline with the business' priorities.
+					back up, inline with the business's priorities.
 				</p>
 				<p>
 					Contact our experts today to develop your disaster recovery

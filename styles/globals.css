@@ -47,7 +47,7 @@ ol {
 
 ul.bullet {
 	list-style-type: circle;
-	padding-left: 1em;
+	padding-left: 1.2em;
 }
 
 ul.bullet > li,
@@ -350,11 +350,24 @@ main > hr {
 	margin-bottom: 0.3em;
 }
 
+.standard-text h3 {
+	font-size: 25px;
+}
+
 .standard-text h3.subheading {
 	margin-top: 0;
 	margin-bottom: 0.3em;
 	color: black;
 	font-family: Quicksand, Arial, sans-serif;
+	font-weight: bold;
+}
+
+.standard-text h4 {
+	font-size: 20px;
+}
+
+.standard-text h5 {
+	font-size: 18px;
 	font-weight: bold;
 }
 

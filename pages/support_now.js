@@ -91,11 +91,14 @@ export default function support_now() {
 			<section className="standard-text">
 				<h2>Initial costs for Incident</h2>
 				<p>
-					Remote support incidents are £
-					{process.env.NEXT_PUBLIC_COST_REMOTE_SUPPORT} + vat per
-					incident. Depending on the nature of the issue this may or
-					may not resolve the fault, but we will be able to give you a
-					clearer idea of the severity and the likely costs of
+					Remote support incidents are
+					{" " +
+						process.env
+							.NEXT_PUBLIC_COST_UNCONTRACTED_REMOTE_SUPPORT +
+						" "}
+					per incident. Depending on the nature of the issue this may
+					or may not resolve the fault, but we will be able to give
+					you a clearer idea of the severity and the likely costs of
 					resolution after the first session. For non-account
 					customers, payment is via Credit or Debit card. Incidents
 					outside of normal business hours will be billed at the

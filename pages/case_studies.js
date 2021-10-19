@@ -30,7 +30,7 @@ export default function case_studies() {
 					<p>
 						Some examples of previous work we have done with a range
 						of different clients with very different needs. Every
-						business' needs are different. We are here to work with
+						business's needs are different. We are here to work with
 						you; to solve problems that you have, so you can get on
 						with running your business.
 					</p>
