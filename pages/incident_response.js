@@ -15,7 +15,6 @@ export default function incident_response() {
 				pageTitle="Incident Response"
 				backgroundImage="/images/backgrounds/incident_response_image_placeholder.jpg"
 				titleBoxWidth="50%"
-				imageBoxHeight="500"
 			>
 				<p>
 					Incident response is about making and having a plan before
