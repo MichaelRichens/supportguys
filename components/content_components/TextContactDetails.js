@@ -1,10 +1,12 @@
 import { useState, useRef } from "react"
+import Link from "next/link"
 
 import ContactForm from "../../components/ContactForm"
 import PopupOverlay from "../../components/PopupOverlay"
 import { useSharedIsContactFormOpen } from "../../shared/useSharedIsContactFormOpen"
 
 export default function TextContactDetails() {
+	const jsEnabled = typeof window !== "undefined"
 	const nodeRef = useRef(null)
 	const [isContactFormOpen, setContactFormOpen] = useState(false)
 	const { sharedIsContactFormOpen, setSharedIsContactFormOpen } =
@@ -34,12 +36,28 @@ export default function TextContactDetails() {
 			<dl>
 				<dt>Tel</dt>
 				<dd>{process.env.NEXT_PUBLIC_PHONE}</dd>
-				<dt className="clickable" onClick={toggleContactForm}>
-					email
-				</dt>
-				<dd className="clickable" onClick={toggleContactForm}>
-					{process.env.NEXT_PUBLIC_EMAIL}
-				</dd>
+				{jsEnabled ? (
+					<>
+						<dt className="clickable" onClick={toggleContactForm}>
+							email
+						</dt>
+						<dd className="clickable" onClick={toggleContactForm}>
+							{process.env.NEXT_PUBLIC_EMAIL}
+						</dd>
+					</>
+				) : (
+					<>
+						<dt>email</dt>
+						<dd>
+							<Link
+								href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+							>
+								{process.env.NEXT_PUBLIC_EMAIL}
+							</Link>
+						</dd>
+					</>
+				)}
+
 				<dt>Address</dt>
 				<dd>
 					<ul>
