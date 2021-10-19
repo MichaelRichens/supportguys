@@ -60,13 +60,13 @@ export default function support_now() {
 				className={stylesMainPage["page-intro"]}
 				style={{
 					backgroundImage:
-						"url(/images/backgrounds/cambridge_skyline.jpg)"
+						"url(/images/backgrounds/support_now_image_placeholder.jpg)"
 				}}
 			>
 				<ContentBoxMain
 					title="Get Support Now!"
-					marginLeft="auto"
-					marginRight="10%"
+					marginRight="5%"
+					marginTop="5%"
 					h1={true}
 				>
 					<p>
@@ -83,13 +83,11 @@ export default function support_now() {
 					</p>
 				</ContentBoxMain>
 			</section>
-			<section className="standard-text-large">
-				<p>
-					We hear you. You've got a problem and it needs solving now.
-				</p>
-			</section>
 			<section className="standard-text">
-				<h2>Initial costs for Incident</h2>
+				<h2>
+					We hear you. You've got a problem and it needs solving now.
+				</h2>
+				<h3>Initial costs for Incident</h3>
 				<p>
 					Remote support incidents are
 					{" " +
@@ -104,9 +102,7 @@ export default function support_now() {
 					outside of normal business hours will be billed at the
 					agreed contract rate.
 				</p>
-			</section>
-			<section className="standard-text">
-				<h2>Download remote support software for your computer</h2>
+				<h3>Download remote support software for your computer</h3>
 				<p>
 					A lot of issues can be resolved remotely, using tools such
 					as Team Viewer and Sygma. These tools allow us to see your

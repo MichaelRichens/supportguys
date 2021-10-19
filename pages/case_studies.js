@@ -23,8 +23,7 @@ export default function case_studies() {
 			>
 				<ContentBoxMain
 					title="Case Studies / Previous Work"
-					marginLeft="auto"
-					marginRight="10%"
+					marginLeft="10%"
 					h1={true}
 				>
 					<p>

@@ -380,19 +380,14 @@ main > hr {
 .standard-text p,
 .standard-text ol,
 .standard-text ul,
-.standard-text dl,
-.standard-text-large p,
-.standard-text-large ol,
-.standard-text-large ul,
-.standard-text-large dl {
+.standard-text dl {
 	line-height: 1.5em;
 	margin-top: 0.8em;
 	margin-bottom: 0.8em;
 }
 
 @media (max-width: 600px) {
-	.standard-text > h2,
-	.standard-text-large p {
+	.standard-text > h2 {
 		font-size: 24px;
 	}
 }
@@ -401,11 +396,7 @@ main > hr {
 	.standard-text p,
 	.standard-text ol,
 	.standard-text ul,
-	.standard-text dl,
-	.standard-text-large p,
-	.standard-text-large ol,
-	.standard-text-large ul,
-	.standard-text-large dl {
+	.standard-text dl {
 		line-height: 1.3em;
 	}
 }
@@ -414,11 +405,7 @@ main > hr {
 	.standard-text p,
 	.standard-text ol,
 	.standard-text ul,
-	.standard-text dl,
-	.standard-text-large p,
-	.standard-text-large ol,
-	.standard-text-large ul,
-	.standard-text-large dl {
+	.standard-text dl {
 		line-height: 1.1em;
 	}
 }
