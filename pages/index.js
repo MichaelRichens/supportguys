@@ -45,7 +45,7 @@ export default function Home() {
 			<ContentServices />
 			<hr />
 			<section className={styles["home-page-find-out-more"]}>
-				<ContentBoxMain title="Ready to find out more?">
+				<ContentBoxMain title="Ready to find out more?" marginTop="0">
 					<p>
 						Time for the next steps. Lets work together to identify
 						ways we can help you resolve your IT and Mac problems

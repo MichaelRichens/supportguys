@@ -9,7 +9,10 @@ export default function ContentBoxMain(props) {
 			style={{
 				marginTop: `${props.marginTop ? props.marginTop : "6em"}`,
 				marginLeft: `${props.marginLeft ? props.marginLeft : "auto"}`,
-				marginRight: `${props.marginRight ? props.marginRight : "auto"}`
+				marginRight: `${
+					props.marginRight ? props.marginRight : "auto"
+				}`,
+				maxWidth: `${props.maxWidth ? props.maxWidth : "800px"}`
 			}}
 		>
 			{props.h1 ? <h1>{props.title}</h1> : <h2>{props.title}</h2>}

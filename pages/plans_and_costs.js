@@ -182,18 +182,23 @@ export default function plans_and_costs() {
 					of 6 months with re-assessment periodically.
 				</p>
 			</section>
-			<section class="standard-text">
-				<h2>Start Your Journey With Us</h2>
-				<p>
-					We look forward to working with you and helping you and your
-					business get the best possible return on your IT. To get
-					started and book an initial assessment, give us a call on
-					{" " + process.env.NEXT_PUBLIC_PHONE + " "}or send us an{" "}
-					<span className="clickable" onClick={toggleContactForm}>
-						email
-					</span>
-					.
-				</p>
+			<section>
+				<ContentBoxMain
+					title="Start Your Journey With Us"
+					marginTop="0"
+				>
+					<p>
+						We look forward to working with you and helping you and
+						your business get the best possible return on your IT.
+						To get started and book an initial assessment, give us a
+						call on
+						{" " + process.env.NEXT_PUBLIC_PHONE + " "}or send us an{" "}
+						<span className="clickable" onClick={toggleContactForm}>
+							email
+						</span>
+						.
+					</p>
+				</ContentBoxMain>
 			</section>
 			<PopupOverlay
 				nodeRef={nodeRef}
