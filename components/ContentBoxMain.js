@@ -5,7 +5,8 @@ import styles from "../styles/ContentBoxMain.module.css"
 // title - contents of the title area
 // marginTop - spacing above the box. Default: "6em"
 // marginLeft & marginRight - for positioning (there's a maxWidth as well).  Defaults on both: "auto" (which centers box)
-// maxWidth - controlling max size.  Note .page-intro class has descendent media queries that reduce max-width at low viewport width.  Default 800px
+// maxWidth - controlling max size.  Note .page-intro class (common container for this component) has descendent media queries
+// 	 that reduce width directly at low viewport width.  Default 800px
 // h1 - when true, title is wrapped in <h1>, when false uses <h2>.  Default false
 // decoratorRight when true the horizontal line appears on the right of the props.children, otherwise to the left.  Default: false
 export default function ContentBoxMain(props) {
