@@ -1,6 +1,7 @@
 //TODO this page doesn't really work.  Not putting contact form on page for Reasons, but the page loses balence without it.
 // - maybe could put some ticketing stuff on page as well?
 //TODO add social media links
+//TODO add google maps at bottom
 import { useState, useRef } from "react"
 
 import Page from "../components/Page"
