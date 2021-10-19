@@ -22,7 +22,7 @@ export default function about_us() {
 				className={stylesMainPage["page-intro"]}
 				style={{
 					backgroundImage:
-						"url(/images/backgrounds/about_us_image.jpg)"
+						"url(/images/backgrounds/cambridge_skyline.jpg)"
 				}}
 			>
 				<ContentBoxMain
