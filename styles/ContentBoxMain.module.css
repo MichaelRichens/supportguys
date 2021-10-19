@@ -20,6 +20,15 @@
 	border-top: 3px #1a2b6d solid;
 }
 
+.text-container-with-line-decorator-reversed {
+	flex-direction: row-reverse;
+}
+
+.text-container-with-line-decorator-reversed > .decorator {
+	margin-left: 10%;
+	margin-right: 0;
+}
+
 @media (max-width: 1000px) {
 	.content-box-main h1,
 	.content-box-main h2 {

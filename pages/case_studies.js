@@ -25,6 +25,7 @@ export default function case_studies() {
 					title="Case Studies / Previous Work"
 					marginLeft="10%"
 					h1={true}
+					decoratorRight={true}
 				>
 					<p>
 						Some examples of previous work we have done with a range
