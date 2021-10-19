@@ -162,8 +162,10 @@ main > section:first-of-type {
 	}
 }
 
-main > hr {
+main hr {
 	border-top: 4px #1a2b6d solid;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .text-over-image > h1,

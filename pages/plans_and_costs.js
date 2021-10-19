@@ -50,39 +50,40 @@ export default function plans_and_costs() {
 					<ContentBoxMain
 						title="Plans and Costs"
 						h1={true}
-					></ContentBoxMain>
+						marginRight="10%"
+					>
+						<h2>Clear Upfront Pricing Information</h2>
+						<p>
+							If you don't have a contract with us, we can work
+							with you on an ad hoc basis at the following rates:
+						</p>
+						<h3>Non-contract rates</h3>
+						<ul class="bullet">
+							<li>
+								Day Rate -
+								{" " +
+									process.env
+										.NEXT_PUBLIC_COST_UNCONTRACTED_DAY_RATE +
+									" "}
+							</li>
+							<li>
+								Remote Support Session -
+								{" " +
+									process.env
+										.NEXT_PUBLIC_COST_UNCONTRACTED_REMOTE_SUPPORT +
+									" "}
+							</li>
+							<li>
+								Initial Assessment -
+								{" " +
+									process.env
+										.NEXT_PUBLIC_COST_INITIAL_ASSESSMENT +
+									" "}
+							</li>
+						</ul>
+					</ContentBoxMain>
 				</section>
-				<section className="standard-text">
-					<h2>Clear Upfront Pricing Information</h2>
-					<p>
-						If you don't have a contract with us, we can work with
-						you on an ad hoc basis at the following rates:
-					</p>
-					<h3>Non-contract rates</h3>
-					<ul class="bullet">
-						<li>
-							Day Rate -
-							{" " +
-								process.env
-									.NEXT_PUBLIC_COST_UNCONTRACTED_DAY_RATE +
-								" "}
-						</li>
-						<li>
-							Remote Support Session -
-							{" " +
-								process.env
-									.NEXT_PUBLIC_COST_UNCONTRACTED_REMOTE_SUPPORT +
-								" "}
-						</li>
-						<li>
-							Initial Assessment -
-							{" " +
-								process.env
-									.NEXT_PUBLIC_COST_INITIAL_ASSESSMENT +
-								" "}
-						</li>
-					</ul>
-				</section>
+
 				<section className="standard-text">
 					<h2>Support Contracts</h2>
 					<h3>Every business's needs are different</h3>
