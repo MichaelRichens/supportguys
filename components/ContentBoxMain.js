@@ -3,7 +3,7 @@ import styles from "../styles/ContentBoxMain.module.css"
 export default function ContentBoxMain(props) {
 	return (
 		<div
-			className={`content-box ${
+			className={`content-box ${styles["content-box-main"]} ${
 				!props.children ? styles["title-only"] : ""
 			}`}
 			style={{

@@ -129,18 +129,12 @@ export default function plans_and_costs() {
 						</p>
 					</li>
 					<li>
-						<h5>
-							Very specific projects; expected costs and time
-							lines
-						</h5>
+						<h5>Specific projects</h5>
 						<p>Examples Include:</p>
 						<ul class="bullet">
 							<li>Upgrade Staff Macs.</li>
-
-							<li>
-								Install new fileshare or migrate to new
-								hardware.
-							</li>
+							<li>Migrate to new hardware.</li>
+							<li>Install new fileshare.</li>
 							<li>Network redesign.</li>
 							<li>New WiFi infrastructure.</li>
 							<li>Disaster Recovery Plan.</li>
@@ -154,11 +148,11 @@ export default function plans_and_costs() {
 							are often less time consuming or expensive than
 							people think. Sometimes simple steps can have
 							massive benefits. Very often upgrades, which were
-							quoted in the thousands years ago, when everything
-							was set up, are now in the £100s (examples being
+							quoted in the thousands when everything was set up
+							years ago, are now in the £100s (examples being
 							things like Gigabit switches, 10G switches and LAGs
 							to connect servers, and managed WiFi services).
-							Making the cost saving in frustrated lost time very
+							Making the cost saving in frustrating lost time very
 							much worth the outlay. Investing in upgrades to
 							existing computers (such as iMacs) can greatly
 							increase productivity without the cost of replacing
