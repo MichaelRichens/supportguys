@@ -1,3 +1,6 @@
+// Once viewport is below 400px, stylesheet will kick in and override titleBoxHeight and contentPaddingTop, so there is a limit to how much content
+// can be put in the box without display problems.  Font size is also reduced at this point however to try to mitigate this.
+
 import Link from "next/link"
 
 import FindOutMore from "./FindOutMore"
