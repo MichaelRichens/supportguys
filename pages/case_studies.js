@@ -1,5 +1,4 @@
-// TODO run the top text box past someone - made it up because I needed something to fill the space...
-// TODO get Doug to check over last 2 case studies - heavily edited
+// TODO get that paragraph starting "The previous support company" in case study 2 fixed
 
 import Page from "../components/Page"
 import ContentBoxMain from "../components/ContentBoxMain"

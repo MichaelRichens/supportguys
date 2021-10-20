@@ -1,7 +1,3 @@
-// TODO removed out of hours text since it said nothing useful - was it meant to?
-// TODO are the remote support tools we link to one or the other or both.  Do we have a preference? If so why might you want to go with the other one anyway?
-// TODO get this read over by someone when done - changed a lot
-
 import { useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
