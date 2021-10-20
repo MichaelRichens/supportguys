@@ -13,6 +13,7 @@
 	left: 0;
 	right: 0;
 	min-width: 300px;
+	max-width: 100%;
 }
 
 .title-container > div:first-child {
