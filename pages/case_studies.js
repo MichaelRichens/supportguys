@@ -16,7 +16,7 @@ export default function case_studies() {
 				className={stylesMainPage["page-intro"]}
 				style={{
 					backgroundImage:
-						"url(/images/backgrounds/case_studies_image_placeholder.jpg)"
+						"url(/images/backgrounds/case_studies_image.jpg)"
 				}}
 			>
 				<ContentBoxMain

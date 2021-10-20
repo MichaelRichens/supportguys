@@ -12,7 +12,7 @@ export default function incident_response() {
 		>
 			<ServicePage
 				pageTitle="Incident Response"
-				backgroundImage="/images/backgrounds/incident_response_image_placeholder.jpg"
+				backgroundImage="/images/backgrounds/incident_response_image.jpg"
 				titleBoxWidth="50%"
 			>
 				<p>

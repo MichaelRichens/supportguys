@@ -11,7 +11,7 @@ export default function networking_and_wireless() {
 		>
 			<ServicePage
 				pageTitle="Networking and Wireless"
-				backgroundImage="/images/backgrounds/networking_and_wireless_image_placeholder.jpg"
+				backgroundImage="/images/backgrounds/networking_and_wireless_image.jpg"
 				titleBoxWidth="60%"
 			>
 				<p>
