@@ -1,3 +1,5 @@
+// TODO is a 100 MegaBit leased line all that impressive?  Sounds like its meant to be.
+
 import Page from "../components/Page"
 import ServicePage from "../components/ServicePage"
 
