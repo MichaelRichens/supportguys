@@ -1,12 +1,7 @@
-//TODO - really want cambridge image background for this page?
-//TODO - mentioned "use the chat system" - removed since I didn't think we were having one - check
-//TDOD - can we just expect people to understand what a remote support incident is without explanation - we sem to go straight into giving costs for that.
-// Then go on to explain why it can help in the download software section.  Better ordering.
-// Also, what if they want someone to come out onsite on an emergency basis?
-//TODO - how long a is the remote support session you get for £60 + vat ??
-//TODO - need to differentiate bettwer whether that £60 is non account customer rate,
-// seems not since we mention out of hours being according to rate - need to be more explicit
-//TODO are the remote support tools we link to one or the other or both.  Do we have a preference? If so why might you want to go with the other one anyway?
+// TODO what if they want someone to come out onsite on an emergency basis?  Whould we quote a price?
+// TODO removed out of hours text since it said nothing useful - was it meant to?
+// TODO are the remote support tools we link to one or the other or both.  Do we have a preference? If so why might you want to go with the other one anyway?
+// TODO get this read over by someone when done - changed a lot
 
 import { useState, useRef } from "react"
 import Link from "next/link"
@@ -87,9 +82,15 @@ export default function support_now() {
 				<h2>
 					We hear you. You've got a problem and it needs solving now.
 				</h2>
+				<p>
+					Whether you currently have a support contract with us or
+					not, you can raise a remote support incident with us. We can
+					provide you with support by phone and using remote support
+					tools.
+				</p>
 				<h3>Initial costs for Incident</h3>
 				<p>
-					Remote support incidents are
+					If you do not have a support contract with us, the cost is
 					{" " +
 						process.env
 							.NEXT_PUBLIC_COST_UNCONTRACTED_REMOTE_SUPPORT +
@@ -98,30 +99,28 @@ export default function support_now() {
 					or may not resolve the fault, but we will be able to give
 					you a clearer idea of the severity and the likely costs of
 					resolution after the first session. For non-account
-					customers, payment is via Credit or Debit card. Incidents
-					outside of normal business hours will be billed at the
-					agreed contract rate.
+					customers, payment is via Credit or Debit card.
 				</p>
 				<h3>Download remote support software for your computer</h3>
 				<p>
 					A lot of issues can be resolved remotely, using tools such
-					as Team Viewer and Sygma. These tools allow us to see your
-					screen and operate your computer remotely, and get a quick
-					handle on the issue.
+					as Team Viewer and Sygma Connect. These tools allow us to
+					see your screen and operate your computer remotely, and get
+					a quick handle on the issue.
 				</p>
 				<p>
 					Remote access can reduce costs and improve recovery times.
-					All our tools are user authenticated and secure, with the
-					user (you) authorising every access to your system.
+					All our recommended tools are user authenticated and secure,
+					with the user (you) authorising every access to your system.
 					Sometimes issues can be resolved without a site visit. Other
 					times a site visit will be necessary, and we can give you a
-					plan and expected costs once we've made our assesssment.
+					plan and expected costs once we've made our assessment.
 				</p>
 				<p>Download the Remote access tools here:</p>
 				<ul>
 					<li>
 						<Link href="https://www.sygmaconnect.com/en/home/download-version.php">
-							SYGMA
+							Sygma Connect
 						</Link>
 					</li>
 					<li>
