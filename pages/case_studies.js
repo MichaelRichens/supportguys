@@ -1,7 +1,5 @@
 // TODO run the top text box past someone - made it up because I needed something to fill the space...
-// TODO can't find proper image for this page - still using placeholder
-// TODO see comments inline for things that need clarification
-// TODO once fixed issues, get Doug to read it through - I don't understand a lot of it and have edited a fair bit
+// TODO get Doug to check over last 2 case studies - heavily edited
 
 import Page from "../components/Page"
 import ContentBoxMain from "../components/ContentBoxMain"
@@ -116,7 +114,6 @@ export default function case_studies() {
 					had stopped working as they were all bound to the Active
 					Directory Domain.
 				</p>
-				{/*TODO I cannot figure out what is going on in the below sentence after "hardware and" */}
 				<p>
 					The previous support company (which they were paying a
 					substantial amount per month) now wanted a large amount to
@@ -125,16 +122,15 @@ export default function case_studies() {
 					reported before the fall over.
 				</p>
 				<p>
-					{/* TODO from "Setting up and implementing a VPN" this needs to be spaced out a bit - 
-					feels like paragraph transitions to bullet points not sentences */}
-					We were able to supply and install a number of Macs with
-					upgraded hard drives and max RAM to run their massive
-					spreadsheets and technical documents. Replacing their Domain
+					We were able to supply and install a number of Macs, with
+					upgraded hard drives and max RAM, to run their massive
+					spreadsheets and technical documents. Replacing their domain
 					controller with a Mac running macOS Server gave them
 					visibility of their backups and data use, and allowed cloud
-					backups. Setting up and implementing a VPN for work from
-					home staff. Continuing support over the years for small
-					niggles and eventually upgrades 5 years later.
+					backups. We set up and implementing a VPN for work from home
+					staff, and have provided continuing support over several
+					years for small niggles. And more recently for a computer
+					upgrade cycle.
 				</p>
 			</section>
 			<section className="standard-text">
@@ -143,25 +139,26 @@ export default function case_studies() {
 					Client: Large secondary school Music department, with
 					limited hardware support.
 				</h3>
-				{/* "The kids were learning and so speed is not a bottleneck." - don't understand this sentence, is it meant to sat it was a bottleneck.  
-				If not, probably just replace it with things that actually were problems... */}
 				<p>
 					A customer called about a single project, replacing the hard
-					drives on more than 20 iMac 2012 computers. These did
-					everything the school needed as they were used for entry
-					level lessons in Logic, Garageband and Motion. The kids were
-					learning and so speed is not a bottleneck. These were imaged
-					each term as the classes moved around, but the hard drives
-					were starting to fail and so the imaging was taking longer
-					and longer, and the Macs were getting less use as they were
-					frustrating everyone taking 5 mins to boot at the start of a
-					lesson.
+					drives on more than 20 iMac 2012 computers. These were used
+					for entry level lessons in Logic, GarageBand and Motion. The
+					requirements were strictly entry-level, so the Macs should
+					have been adequate for running the software.
 				</p>
 				<p>
-					These were completed in 3 days onsite. We replaced the hard
-					drives with small SSDs. This reduced their boot times to 10
-					seconds, making the machines excellent tools for the
-					students needs.
+					However boot up times were extremely slow, frustrating
+					students. And the Macs were imaged each term as the classes
+					moved around, and this was taking longer and longer,
+					frustrating staff. The Macs were seeing less and less use,
+					and the school wanted to solve the issue without replacing
+					the machines.
+				</p>
+				<p>
+					The upgrades were completed in 3 days on-site. We replaced
+					the hard drives with small SSDs. This reduced their boot
+					times to 10 seconds, making the machines excellent tools for
+					the students needs.
 				</p>
 			</section>
 			<section className="standard-text">
