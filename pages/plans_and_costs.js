@@ -115,7 +115,7 @@ export default function plans_and_costs() {
 					An on-site assessment typically reveals two distinct
 					(related but separate) requirements:
 				</p>
-				<ol type="I">
+				<ol type="i">
 					<li>
 						<h5>How much support do you need and how often?</h5>
 						<p>
