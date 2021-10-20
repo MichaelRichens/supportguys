@@ -7,19 +7,18 @@ import styles from "../styles/Header.module.css"
 
 import logo from "../public/images/logos/support_guys_logo900x140.png"
 
-const menu = [
-	{ title: "Home", path: "/" },
-	{ title: "Contact Us", path: "/contact_us" },
-	{ title: "About Us", path: "/about_us" },
-	{ title: "Services", path: "/services" },
-	{ title: "Case Studies<", path: "/case_studies" },
-	{ title: "Plans and Costs", path: "/plans_and_costs" },
-	{ title: "Get Support Now", path: "/support_now" },
-	{ title: "Tickets", path: "/tickets" }
-]
-
 export default function Header(props) {
 	const router = useRouter()
+	const menu = [
+		{ title: "Home", path: "/" },
+		{ title: "Contact Us", path: "/contact_us" },
+		{ title: "About Us", path: "/about_us" },
+		{ title: "Services", path: "/services" },
+		{ title: "Case Studies", path: "/case_studies" },
+		{ title: "Plans and Costs", path: "/plans_and_costs" },
+		{ title: "Get Support Now", path: "/support_now" },
+		{ title: "Tickets", path: "/tickets" }
+	]
 
 	return (
 		<header className={styles.header}>
@@ -42,7 +41,7 @@ export default function Header(props) {
 							<a
 								className={`${
 									router.pathname === item.path
-										? styles["active"]
+										? styles["current"]
 										: ""
 								}`}
 							>

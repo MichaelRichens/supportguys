@@ -66,24 +66,24 @@
 	text-decoration: none;
 }
 
-.header > nav a.active {
+.header > nav a.current {
 	color: cyan;
 }
 
-.header > nav a.active:hover,
-.header > nav a.active:active {
+.header > nav a.current:hover,
+.header > nav a.current:active {
 	color: cyan;
 	cursor: default;
 	margin-bottom: 0;
 }
 
 .header > nav a:hover {
-	color: orange;
+	color: #91bad6;
 	transition: color 200ms;
 }
 
 .header > nav a:active {
-	color: darkorange;
+	color: #528aae;
 	margin-bottom: -2px;
 	transition: all 100ms;
 }
