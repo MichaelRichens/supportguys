@@ -12,7 +12,7 @@ export default function firewall_and_security() {
 		>
 			<ServicePage
 				pageTitle="Firewalls and Network Security"
-				backgroundImage="/images/backgrounds/firewall_and_security_image_placeholder.jpg"
+				backgroundImage="/images/backgrounds/firewall_and_security_image.jpg"
 				titleBoxWidth="65%"
 			>
 				<p>

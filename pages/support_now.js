@@ -55,7 +55,7 @@ export default function support_now() {
 				className={stylesMainPage["page-intro"]}
 				style={{
 					backgroundImage:
-						"url(/images/backgrounds/support_now_image_placeholder.jpg)"
+						"url(/images/backgrounds/support_now_image.jpg)"
 				}}
 			>
 				<ContentBoxMain
