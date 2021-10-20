@@ -36,18 +36,14 @@ export default function Header(props) {
 			</div>
 			<nav>
 				{menu.map((item, index) => {
-					return (
+					return router.pathname !== item.path ? (
 						<Link key={index} href={item.path}>
-							<a
-								className={`${
-									router.pathname === item.path
-										? styles.current
-										: ""
-								}`}
-							>
-								{item.title}
-							</a>
+							<a>{item.title}</a>
 						</Link>
+					) : (
+						<span key={index} className={styles.current}>
+							{item.title}
+						</span>
 					)
 				})}
 			</nav>

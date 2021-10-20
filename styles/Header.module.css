@@ -66,15 +66,8 @@
 	text-decoration: none;
 }
 
-.header > nav a.current {
+.header > nav .current {
 	color: cyan;
-}
-
-.header > nav a.current:hover,
-.header > nav a.current:active {
-	color: cyan;
-	cursor: default;
-	margin-bottom: 0;
 }
 
 .header > nav a:hover {
