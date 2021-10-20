@@ -1,3 +1,5 @@
+// TODO replace all images with placeholder in their name
+
 import ContentBoxMain from "../components/ContentBoxMain"
 import Page from "../components/Page"
 import FindOutMore from "../components/FindOutMore"
