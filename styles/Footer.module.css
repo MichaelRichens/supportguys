@@ -71,6 +71,14 @@
 	content: " :";
 }
 
+.footer dl > dt.logo {
+	margin-top: 10px;
+}
+
+.footer dl > dt.logo::after {
+	content: "";
+}
+
 .footer dl > dd > ul {
 	padding: 0;
 	margin: 0;

@@ -1,10 +1,14 @@
 // TODO Social section
 
 import Link from "next/link"
+import Image from "next/image"
 
 import TextContactDetails from "./content_components/TextContactDetails"
 
 import styles from "../styles/Footer.module.css"
+
+import macupgrades_logo_h18 from "../public/images/logos/macupgrades_logo104x18.png"
+import appcentre_logo_h18 from "../public/images/logos/appcentre_logo105x18.png"
 
 export default function Footer() {
 	const current_year = new Date().getFullYear()
@@ -24,20 +28,32 @@ export default function Footer() {
 				<nav className={styles.contact}>
 					<h3>Our Other Brands</h3>
 					<dl>
-						<dt>
+						<dt className={styles.logo}>
 							<Link href="https://www.macupgrades.co.uk/store/">
-								MacUpgrades
+								<a>
+									<Image
+										src={macupgrades_logo_h18}
+										width="104"
+										height="18"
+									/>
+								</a>
 							</Link>
 						</dt>
 						<dd>
 							Repair and Upgrades for Macintosh Computers since
 							2005, specialising in board level repairs and
-							detailed compatability guidance.
+							detailed compatibility guidance.
 						</dd>
 
-						<dt>
+						<dt className={styles.logo}>
 							<Link href="https://www.appcentre.co.uk/softstore/">
-								AppCentre
+								<a>
+									<Image
+										src={appcentre_logo_h18}
+										width="105"
+										height="18"
+									/>
+								</a>
 							</Link>
 						</dt>
 						<dd>

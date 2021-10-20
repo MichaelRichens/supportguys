@@ -15,7 +15,7 @@ import { useSharedIsContactFormOpen } from "../shared/useSharedIsContactFormOpen
 
 import stylesMainPage from "../styles/stylesMainPage.module.css"
 
-import macupgrades_logo from "../public/images/logos/macupgrades_logo.gif"
+import macupgrades_logo from "../public/images/logos/macupgrades_logo230x40.png"
 
 export default function support_now() {
 	const nodeRef = useRef(null)
@@ -146,7 +146,11 @@ export default function support_now() {
 				<div style={{ display: "flex", justifyContent: "center" }}>
 					<Link href="https://www.macupgrades.co.uk/store/">
 						<a className="unstyle">
-							<Image src={macupgrades_logo} />
+							<Image
+								src={macupgrades_logo}
+								width="230"
+								height="40"
+							/>
 						</a>
 					</Link>
 				</div>
