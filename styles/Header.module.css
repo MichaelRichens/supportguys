@@ -66,8 +66,15 @@
 	text-decoration: none;
 }
 
-.header > nav a.urgent {
-	color: red;
+.header > nav a.active {
+	color: cyan;
+}
+
+.header > nav a.active:hover,
+.header > nav a.active:active {
+	color: cyan;
+	cursor: default;
+	margin-bottom: 0;
 }
 
 .header > nav a:hover {

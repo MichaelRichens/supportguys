@@ -1,11 +1,26 @@
-import Image from "next/image"
+import React from "react"
 import Link from "next/link"
+import { useRouter } from "next/router"
+import Image from "next/image"
 
 import styles from "../styles/Header.module.css"
 
 import logo from "../public/images/logos/support_guys_logo900x140.png"
 
+const menu = [
+	{ title: "Home", path: "/" },
+	{ title: "Contact Us", path: "/contact_us" },
+	{ title: "About Us", path: "/about_us" },
+	{ title: "Services", path: "/services" },
+	{ title: "Case Studies<", path: "/case_studies" },
+	{ title: "Plans and Costs", path: "/plans_and_costs" },
+	{ title: "Get Support Now", path: "/support_now" },
+	{ title: "Tickets", path: "/tickets" }
+]
+
 export default function Header(props) {
+	const router = useRouter()
+
 	return (
 		<header className={styles.header}>
 			<div className={styles["logo-container"]}>
@@ -21,30 +36,21 @@ export default function Header(props) {
 				</Link>
 			</div>
 			<nav>
-				<Link href="/">
-					<a>Home</a>
-				</Link>
-				<Link href="/contact_us">
-					<a>Contact Us</a>
-				</Link>
-				<Link href="/about_us">
-					<a>About Us</a>
-				</Link>
-				<Link href="/services">
-					<a>Services</a>
-				</Link>
-				<Link href="/case_studies">
-					<a>Case Studies</a>
-				</Link>
-				<Link href="/plans_and_costs">
-					<a>Plans and Costs</a>
-				</Link>
-				<Link href="/support_now">
-					<a className={styles.urgent}>Get Support Now!</a>
-				</Link>
-				<Link href="/tickets">
-					<a>Tickets</a>
-				</Link>
+				{menu.map((item, index) => {
+					return (
+						<Link key={index} href={item.path}>
+							<a
+								className={`${
+									router.pathname === item.path
+										? styles["active"]
+										: ""
+								}`}
+							>
+								{item.title}
+							</a>
+						</Link>
+					)
+				})}
 			</nav>
 			{props.children}
 		</header>
