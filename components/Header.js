@@ -41,7 +41,7 @@ export default function Header(props) {
 							<a
 								className={`${
 									router.pathname === item.path
-										? styles["current"]
+										? styles.current
 										: ""
 								}`}
 							>
