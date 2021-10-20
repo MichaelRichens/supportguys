@@ -51,7 +51,7 @@
 		align-items: center;
 	}
 	.header > nav {
-		justify-content: space-around;
+		justify-content: space-evenly;
 		width: 100%;
 	}
 
