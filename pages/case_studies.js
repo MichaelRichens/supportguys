@@ -27,10 +27,10 @@ export default function case_studies() {
 				>
 					<p>
 						Some examples of previous work we have done with a range
-						of different clients with very different needs. Every
-						business's needs are different. We are here to work with
-						you; to solve problems that you have, so you can get on
-						with running your business.
+						of clients with very different needs. Every business's
+						needs are unique. We are here to work with you; to solve
+						problems that you have, so you can get on with running
+						your business.
 					</p>
 				</ContentBoxMain>
 			</section>
@@ -114,6 +114,7 @@ export default function case_studies() {
 					had stopped working as they were all bound to the Active
 					Directory Domain.
 				</p>
+				{}
 				<p>
 					The previous support company (which they were paying a
 					substantial amount per month) now wanted a large amount to
@@ -127,7 +128,7 @@ export default function case_studies() {
 					spreadsheets and technical documents. Replacing their domain
 					controller with a Mac running macOS Server gave them
 					visibility of their backups and data use, and allowed cloud
-					backups. We set up and implementing a VPN for work from home
+					backups. We set up and implemented a VPN for work from home
 					staff, and have provided continuing support over several
 					years for small niggles. And more recently for a computer
 					upgrade cycle.

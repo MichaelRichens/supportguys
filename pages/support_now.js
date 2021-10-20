@@ -1,4 +1,3 @@
-// TODO what if they want someone to come out onsite on an emergency basis?  Whould we quote a price?
 // TODO removed out of hours text since it said nothing useful - was it meant to?
 // TODO are the remote support tools we link to one or the other or both.  Do we have a preference? If so why might you want to go with the other one anyway?
 // TODO get this read over by someone when done - changed a lot
@@ -16,6 +15,8 @@ import { useSharedIsContactFormOpen } from "../shared/useSharedIsContactFormOpen
 import stylesMainPage from "../styles/stylesMainPage.module.css"
 
 import macupgrades_logo from "../public/images/logos/macupgrades_logo230x40.png"
+import teamviewer_logo from "../public/images/logos/teamviewer_logo220x50.png"
+import sygmaconnect_logo from "../public/images/logos/sygmaconnect_logo158x50.png"
 
 export default function support_now() {
 	const nodeRef = useRef(null)
@@ -86,7 +87,9 @@ export default function support_now() {
 					Whether you currently have a support contract with us or
 					not, you can raise a remote support incident with us. We can
 					provide you with support by phone and using remote support
-					tools.
+					tools. Or we can book you in for an on-site assessment or
+					visit to better understand the issue.{" "}
+					<Link href="/contact_us">Contact us</Link> for details.
 				</p>
 				<h3>Initial costs for Incident</h3>
 				<p>
@@ -95,11 +98,15 @@ export default function support_now() {
 						process.env
 							.NEXT_PUBLIC_COST_UNCONTRACTED_REMOTE_SUPPORT +
 						" "}
-					per incident. Depending on the nature of the issue this may
-					or may not resolve the fault, but we will be able to give
-					you a clearer idea of the severity and the likely costs of
-					resolution after the first session. For non-account
-					customers, payment is via Credit or Debit card.
+					per remote support incident, or{" "}
+					{" " +
+						process.env.NEXT_PUBLIC_COST_UNCONTRACTED_DAY_RATE +
+						" "}{" "}
+					for a day on-site with you. Depending on the nature of the
+					issue this may or may not resolve the fault, but we will be
+					able to give you a clearer idea of the severity and the
+					likely costs of resolution after the first session. For
+					non-account customers, payment is via Credit or Debit card.
 				</p>
 				<h3>Download remote support software for your computer</h3>
 				<p>
@@ -116,16 +123,20 @@ export default function support_now() {
 					times a site visit will be necessary, and we can give you a
 					plan and expected costs once we've made our assessment.
 				</p>
-				<p>Download the Remote access tools here:</p>
-				<ul>
+				<p>Download the remote access tools here:</p>
+				<ul className="logo-list">
 					<li>
 						<Link href="https://www.sygmaconnect.com/en/home/download-version.php">
-							Sygma Connect
+							<a className="image-link">
+								<Image src={sygmaconnect_logo} />
+							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href="https://www.teamviewer.com/download/">
-							TEAM VIEWER
+							<a className="image-link">
+								<Image src={teamviewer_logo} />
+							</a>
 						</Link>
 					</li>
 				</ul>
@@ -145,12 +156,8 @@ export default function support_now() {
 				</p>
 				<div style={{ display: "flex", justifyContent: "center" }}>
 					<Link href="https://www.macupgrades.co.uk/store/">
-						<a className="unstyle">
-							<Image
-								src={macupgrades_logo}
-								width="230"
-								height="40"
-							/>
+						<a className="image-link">
+							<Image src={macupgrades_logo} />
 						</a>
 					</Link>
 				</div>

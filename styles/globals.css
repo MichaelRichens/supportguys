@@ -126,15 +126,6 @@ main .clickable:active {
 	background-color: transparent;
 }
 
-main a.unstyle,
-main a.unstyle:visited,
-main a.unstyle:hover,
-main a.unstyle:active {
-	color: initial;
-	background-color: initial;
-	text-decoration: initial;
-}
-
 main > section {
 	margin-top: 2em;
 	margin-bottom: 2em;
@@ -432,6 +423,24 @@ main hr {
 .validation-warning {
 	color: red;
 	font-size: 85%;
+}
+
+.logo-list > li {
+	margin-bottom: 1em;
+	margin-left: 2em;
+}
+
+.logo-list > li:last-child {
+	margin-bottom: 0;
+}
+
+a.image-link,
+a.image-link:visited,
+a.image-link:hover,
+a.image-link:active {
+	color: initial;
+	background-color: initial;
+	text-decoration: initial;
 }
 
 /*	Keep popup-overlay styles here - have to keep transition styles here anyway, 
