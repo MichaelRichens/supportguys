@@ -5,7 +5,9 @@ import Link from "next/link"
 
 import styles from "../styles/ContactForm.module.css"
 
-import EmailContext from "../context/EmailContext"
+import EmailContext, {
+	emailMagicServerPlaceholder
+} from "../context/EmailContext"
 import ValidationWarning from "./ValidationWarning"
 import { useSharedFlashMessages } from "../shared/useSharedFlashMessages"
 
@@ -102,23 +104,48 @@ export default function ContactForm() {
 	// Apart from email, only validation warnings are for empty, which is only wanted on submit,
 	// so just remove warning whenever a change is made
 
+	//the screwing around with emailMagicServerPlaceholder is a hack, see note comments in EmailContext.js
+	// - only relevant when this component has just been hard refreshed
+	const clientSide = typeof window !== "undefined" //doubt this check is needed, but might as well
+
 	useEffect(() => {
-		localStorage.setItem("contact_form_name", emailState.name)
+		if (emailState.name === emailMagicServerPlaceholder) {
+			emailState.name =
+				(clientSide && localStorage.getItem("contact_form_name")) || ""
+		} else {
+			localStorage.setItem("contact_form_name", emailState.name)
+		}
 		emailDispatch({ type: "nameWarn", value: "" })
 	}, [emailState.name])
 
 	useEffect(() => {
-		localStorage.setItem("contact_form_subject", emailState.subject)
+		if (emailState.subject === emailMagicServerPlaceholder) {
+			emailState.subject =
+				(clientSide && localStorage.getItem("contact_form_subject")) ||
+				""
+		} else {
+			localStorage.setItem("contact_form_subject", emailState.subject)
+		}
 		emailDispatch({ type: "subjectWarn", value: "" })
 	}, [emailState.subject])
 
 	useEffect(() => {
-		localStorage.setItem("contact_form_body", emailState.body)
+		if (emailState.body === emailMagicServerPlaceholder) {
+			emailState.body =
+				(clientSide && localStorage.getItem("contact_form_body")) || ""
+		} else {
+			localStorage.setItem("contact_form_body", emailState.body)
+		}
 		emailDispatch({ type: "bodyWarn", value: "" })
 	}, [emailState.body])
 
 	useEffect(() => {
-		localStorage.setItem("contact_form_email", emailState.email)
+		if (emailState.email === emailMagicServerPlaceholder) {
+			emailState.email =
+				(clientSide && localStorage.getItem("contact_form_email")) || ""
+		} else {
+			localStorage.setItem("contact_form_email", emailState.email)
+		}
 		emailDispatch({ type: "emailWarn", value: "" })
 		let timer = null
 		if (emailState.email) {

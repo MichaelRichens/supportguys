@@ -6,14 +6,28 @@ export default EmailContext
 
 const clientSide = typeof window !== "undefined"
 
+// Some mucking around here, since we want to get any data stored in localStorage but maybe (probably are) running on the server here if the page has just been
+// hard refreshed
+// Put in a magic value, that we check for in a UseEffect in ContactForm.js, and pull from localStorage there
+// (it does take a few seconds, hence using a human readable value)
+export const emailMagicServerPlaceholder = "..Please Wait.."
+
 export const initialEmailState = {
-	name: (clientSide && localStorage.getItem("contact_form_name")) || "",
+	name:
+		(clientSide && localStorage.getItem("contact_form_name")) ||
+		emailMagicServerPlaceholder,
 	nameWarn: "",
-	email: (clientSide && localStorage.getItem("contact_form_email")) || "",
+	email:
+		(clientSide && localStorage.getItem("contact_form_email")) ||
+		emailMagicServerPlaceholder,
 	emailWarn: "",
-	subject: (clientSide && localStorage.getItem("contact_form_subject")) || "",
+	subject:
+		(clientSide && localStorage.getItem("contact_form_subject")) ||
+		emailMagicServerPlaceholder,
 	subjectWarn: "",
-	body: (clientSide && localStorage.getItem("contact_form_body")) || "",
+	body:
+		(clientSide && localStorage.getItem("contact_form_body")) ||
+		emailMagicServerPlaceholder,
 	bodyWarn: "",
 	contactFormOpen: false
 }
