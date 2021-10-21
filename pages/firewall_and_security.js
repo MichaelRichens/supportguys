@@ -1,4 +1,3 @@
-//  TDOD don't like suggested image
 import Link from "next/link"
 
 import Page from "../components/Page"
@@ -37,25 +36,32 @@ export default function firewall_and_security() {
 					what is going on, with integrated Antivirus to reduce your
 					exposure to viruses.
 				</p>
-				<ul className="bullet">
-					<li>
-						Configure your firewall with easy-to-use traffic rules,
-						controlling inbound and outbound communications by URL,
-						application, traffic type, and more.
-					</li>
-					<li>
-						Intrusion detection and prevention using the Snort
-						system, which constantly monitors inbound and outbound
-						network communications for suspicious activity. Log or
-						block the communications depending on severity.
-					</li>
-					<li>
-						Prevent viruses, worms, Trojans and spyware from
-						operating on your network. Kerio Control goes beyond
-						just checking files for malicious code; it scans your
-						network traffic for potential attacks.
-					</li>
-				</ul>
+				<figure>
+					<figcaption>
+						<h4>Features of Kerio Control firewall</h4>
+					</figcaption>
+					<ul className="bullet">
+						<li>
+							Configure your firewall with easy-to-use traffic
+							rules, controlling inbound and outbound
+							communications by URL, application, traffic type,
+							and more.
+						</li>
+						<li>
+							Intrusion detection and prevention using the Snort
+							system, which constantly monitors inbound and
+							outbound network communications for suspicious
+							activity. Log or block the communications depending
+							on severity.
+						</li>
+						<li>
+							Prevent viruses, worms, Trojans and spyware from
+							operating on your network. Kerio Control goes beyond
+							just checking files for malicious code; it scans
+							your network traffic for potential attacks.
+						</li>
+					</ul>
+				</figure>
 				<p>
 					A decent firewall can help you prevent phishing scams,
 					malware attacks and even stop some ransomware.

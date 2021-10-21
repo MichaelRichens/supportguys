@@ -50,11 +50,11 @@ export default function networking_and_wireless() {
 					it all.
 				</p>
 				<p>
-					We can work with you onsite to setup a decent WiFi network
-					which covers everywhere you need and give decent bandwidth,
-					and configure different networks to allow staff to use the
-					internet and not interfere with business critical systems -
-					no more Netflix stopping the lunchtime offsite backup from
+					We can work with you on-site to setup a fast, reliable WiFi
+					network which covers everywhere you need. We can configure
+					different networks to allow staff to use the internet and
+					not interfere with business critical systems - no more
+					Netflix stopping the lunchtime off-site backup from
 					completing!
 				</p>
 				<p>
