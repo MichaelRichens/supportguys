@@ -1,14 +1,12 @@
 .find-out-more {
-	text-align: right;
+	display: flex;
+	justify-content: space-around;
 	height: 3em;
 	margin-top: 2em;
-	position: relative;
 	width: 100%;
 }
 
 .find-out-more > nav {
-	position: absolute;
-	right: 5em;
 	display: flex;
 	align-content: center;
 }
@@ -44,4 +42,12 @@
 .find-out-more > nav:hover > a:last-child {
 	background-color: navy;
 	transition: all 200ms;
+}
+
+@media (max-width: 450px) {
+	.find-out-more > nav > a:last-child {
+		font-size: 15px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
 }

@@ -55,8 +55,8 @@ export default function Home() {
 						or are wanting to prevent one, our team will be there
 						for your business.
 					</p>
+					<FindOutMore href="/contact_us" text="Contact Us Today" />
 				</ContentBoxMain>
-				<FindOutMore href="/contact_us" text="Contact Us Today" />
 			</section>
 		</Page>
 	)
