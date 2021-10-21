@@ -1,43 +1,27 @@
-import { useState, useRef } from "react"
+import { useContext, useRef } from "react"
 
-import ContactForm from "../../components/ContactForm"
-import PopupOverlay from "../../components/PopupOverlay"
-import { useSharedIsContactFormOpen } from "../../shared/useSharedIsContactFormOpen"
+import ContactForm from "../ContactForm"
+import PopupOverlay from "../PopupOverlay"
+import EmailContext from "../EmailContext"
 
 export default function TextContactDetails() {
-	const nodeRef = useRef(null)
-	const [isContactFormOpen, setContactFormOpen] = useState(false)
-	const { sharedIsContactFormOpen, setSharedIsContactFormOpen } =
-		useSharedIsContactFormOpen()
+	const { emailDispatch } = useContext(EmailContext)
 
-	function toggleContactForm() {
-		setContactFormOpen((prev) => {
-			if (prev) {
-				setSharedIsContactFormOpen(false)
-				return false
-			} else {
-				if (sharedIsContactFormOpen) {
-					return false
-				}
-				setSharedIsContactFormOpen(true)
-				return true
-			}
-		})
-	}
-
-	function closeContactForm() {
-		setSharedIsContactFormOpen(false)
-		setContactFormOpen(false)
-	}
 	return (
 		<>
 			<dl>
 				<dt>Tel</dt>
 				<dd>{process.env.NEXT_PUBLIC_PHONE}</dd>
-				<dt className="clickable" onClick={toggleContactForm}>
+				<dt
+					className="clickable"
+					onClick={() => emailDispatch({ type: "formToggle" })}
+				>
 					email
 				</dt>
-				<dd className="clickable" onClick={toggleContactForm}>
+				<dd
+					className="clickable"
+					onClick={() => emailDispatch({ type: "formToggle" })}
+				>
 					{process.env.NEXT_PUBLIC_EMAIL}
 				</dd>
 				<dt>Address</dt>
@@ -51,13 +35,6 @@ export default function TextContactDetails() {
 					</ul>
 				</dd>
 			</dl>
-			<PopupOverlay
-				nodeRef={nodeRef}
-				isOpen={isContactFormOpen}
-				close={() => closeContactForm()}
-			>
-				<ContactForm closeContactForm={() => closeContactForm()} />
-			</PopupOverlay>
 		</>
 	)
 }

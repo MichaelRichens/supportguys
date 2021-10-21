@@ -2,41 +2,16 @@
 // - maybe could put some ticketing stuff on page as well?
 //TODO add social media links
 //TODO add google maps at bottom
-import { useState, useRef } from "react"
+import { useContext, useRef } from "react"
 
 import Page from "../components/Page"
-import ContactForm from "../components/ContactForm"
-import PopupOverlay from "../components/PopupOverlay"
-import { useSharedIsContactFormOpen } from "../shared/useSharedIsContactFormOpen"
+import EmailContext from "../components/EmailContext"
 
 import styles from "../styles/contact_us.module.css"
 import TextContactDetails from "../components/content_components/TextContactDetails"
 
 export default function contact_us() {
-	const nodeRef = useRef(null)
-	const [isContactFormOpen, setContactFormOpen] = useState(false)
-	const { sharedIsContactFormOpen, setSharedIsContactFormOpen } =
-		useSharedIsContactFormOpen()
-
-	function toggleContactForm() {
-		setContactFormOpen((prev) => {
-			if (prev) {
-				setSharedIsContactFormOpen(false)
-				return false
-			} else {
-				if (sharedIsContactFormOpen) {
-					return false
-				}
-				setSharedIsContactFormOpen(true)
-				return true
-			}
-		})
-	}
-
-	function closeContactForm() {
-		setSharedIsContactFormOpen(false)
-		setContactFormOpen(false)
-	}
+	const { emailDispatch } = useContext(EmailContext)
 
 	return (
 		<Page title="Contact Us">
@@ -71,20 +46,18 @@ export default function contact_us() {
 					<nav className={`content-box ${styles["contact-now"]}`}>
 						<h3>Email Us</h3>
 						<div>
-							<button type="button" onClick={toggleContactForm}>
+							<button
+								type="button"
+								onClick={() =>
+									emailDispatch({ type: "formToggle" })
+								}
+							>
 								Click to Email!
 							</button>
 						</div>
 					</nav>
 				</div>
 			</section>
-			<PopupOverlay
-				nodeRef={nodeRef}
-				isOpen={isContactFormOpen}
-				close={() => closeContactForm()}
-			>
-				<ContactForm closeContactForm={() => closeContactForm()} />
-			</PopupOverlay>
 		</Page>
 	)
 }

@@ -1,12 +1,10 @@
-import { useState, useRef } from "react"
+import { useContext } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
+import EmailContext from "../components/EmailContext"
 import Page from "../components/Page"
 import ContentBoxMain from "../components/ContentBoxMain"
-import ContactForm from "../components/ContactForm"
-import PopupOverlay from "../components/PopupOverlay"
-import { useSharedIsContactFormOpen } from "../shared/useSharedIsContactFormOpen"
 
 import stylesMainPage from "../styles/stylesMainPage.module.css"
 
@@ -15,39 +13,10 @@ import teamviewer_logo from "../public/images/logos/teamviewer_logo220x50.png"
 import sygmaconnect_logo from "../public/images/logos/sygmaconnect_logo158x50.png"
 
 export default function support_now() {
-	const nodeRef = useRef(null)
-	const [isContactFormOpen, setContactFormOpen] = useState(false)
-	const { sharedIsContactFormOpen, setSharedIsContactFormOpen } =
-		useSharedIsContactFormOpen()
+	const { emailDispatch } = useContext(EmailContext)
 
-	function toggleContactForm() {
-		setContactFormOpen((prev) => {
-			if (prev) {
-				setSharedIsContactFormOpen(false)
-				return false
-			} else {
-				if (sharedIsContactFormOpen) {
-					return false
-				}
-				setSharedIsContactFormOpen(true)
-				return true
-			}
-		})
-	}
-
-	function closeContactForm() {
-		setSharedIsContactFormOpen(false)
-		setContactFormOpen(false)
-	}
 	return (
 		<Page title={""} metaDescription="">
-			<PopupOverlay
-				nodeRef={nodeRef}
-				isOpen={isContactFormOpen}
-				close={() => closeContactForm()}
-			>
-				<ContactForm closeContactForm={() => closeContactForm()} />
-			</PopupOverlay>
 			<section
 				className={stylesMainPage["page-intro"]}
 				style={{
@@ -66,7 +35,12 @@ export default function support_now() {
 						new customer with an issue, we are here to help. Please
 						get in contact on {process.env.NEXT_PUBLIC_PHONE}, or
 						send us an{" "}
-						<span className="clickable" onClick={toggleContactForm}>
+						<span
+							className="clickable"
+							onClick={() =>
+								emailDispatch({ type: "formToggle" })
+							}
+						>
 							email
 						</span>{" "}
 						and our team can walk you through the process. Or if you

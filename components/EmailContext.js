@@ -12,11 +12,18 @@ export const initialEmailState = {
 	subject: "",
 	subjectWarn: "",
 	body: "",
-	bodyWarn: ""
+	bodyWarn: "",
+	contactFormOpen: false
 }
 
 export function emailReducer(draft, action) {
 	switch (action.type) {
+		case "formClose":
+			draft.contactFormOpen = false
+			return
+		case "formToggle":
+			draft.contactFormOpen = !draft.contactFormOpen
+			return
 		case "sent":
 			draft.name = ""
 			draft.nameWarn = ""
@@ -26,6 +33,7 @@ export function emailReducer(draft, action) {
 			draft.subjectWarn = ""
 			draft.body = ""
 			draft.bodyWarn = ""
+			draft.contactFormOpen = false
 			return
 		case "name":
 			draft.name = action.value

@@ -66,7 +66,6 @@ export default function ContactForm(props) {
 							})
 						)
 						emailDispatch({ type: "sent" })
-						props.closeContactForm()
 					} else {
 						console.error(res)
 						setFlashMessages((prev) =>

@@ -1,39 +1,13 @@
-import { useState, useRef } from "react"
-import Link from "next/link"
+import { useContext } from "react"
 
 import Page from "../components/Page"
 import ContentBoxMain from "../components/ContentBoxMain"
-import ContactForm from "../components/ContactForm"
-import PopupOverlay from "../components/PopupOverlay"
-import { useSharedIsContactFormOpen } from "../shared/useSharedIsContactFormOpen"
+import EmailContext from "../components/EmailContext"
 
 import stylesMainPage from "../styles/stylesMainPage.module.css"
 
 export default function plans_and_costs() {
-	const nodeRef = useRef(null)
-	const [isContactFormOpen, setContactFormOpen] = useState(false)
-	const { sharedIsContactFormOpen, setSharedIsContactFormOpen } =
-		useSharedIsContactFormOpen()
-
-	function toggleContactForm() {
-		setContactFormOpen((prev) => {
-			if (prev) {
-				setSharedIsContactFormOpen(false)
-				return false
-			} else {
-				if (sharedIsContactFormOpen) {
-					return false
-				}
-				setSharedIsContactFormOpen(true)
-				return true
-			}
-		})
-	}
-
-	function closeContactForm() {
-		setSharedIsContactFormOpen(false)
-		setContactFormOpen(false)
-	}
+	const { emailDispatch } = useContext(EmailContext)
 
 	return (
 		<Page title={""} metaDescription="">
@@ -55,7 +29,7 @@ export default function plans_and_costs() {
 						you on an ad hoc basis at the following rates:
 					</p>
 					<h3>Non-contract rates</h3>
-					<ul class="bullet">
+					<ul className="bullet">
 						<li>
 							Day Rate -
 							{" " +
@@ -131,7 +105,7 @@ export default function plans_and_costs() {
 					<li>
 						<h5>Specific projects</h5>
 						<p>Examples Include:</p>
-						<ul class="bullet">
+						<ul className="bullet">
 							<li>Upgrade Staff Macs.</li>
 							<li>Migrate to new hardware.</li>
 							<li>Install new fileshare.</li>
@@ -187,20 +161,18 @@ export default function plans_and_costs() {
 						To get started and book an initial assessment, give us a
 						call on
 						{" " + process.env.NEXT_PUBLIC_PHONE + " "}or send us an{" "}
-						<span className="clickable" onClick={toggleContactForm}>
+						<span
+							className="clickable"
+							onClick={() =>
+								emailDispatch({ type: "formToggle" })
+							}
+						>
 							email
 						</span>
 						.
 					</p>
 				</ContentBoxMain>
 			</section>
-			<PopupOverlay
-				nodeRef={nodeRef}
-				isOpen={isContactFormOpen}
-				close={() => closeContactForm()}
-			>
-				<ContactForm closeContactForm={() => closeContactForm()} />
-			</PopupOverlay>
 		</Page>
 	)
 }

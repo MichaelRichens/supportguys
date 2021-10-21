@@ -29,7 +29,7 @@ export default function incident_response() {
 					pricing, and design information). Security incidents come in
 					many types - here are some examples:
 				</p>
-				<ul class="bullet">
+				<ul className="bullet">
 					<li>
 						A disgruntled staff member changing passwords on
 						important databases or accounts.
