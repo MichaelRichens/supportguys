@@ -5,7 +5,7 @@ import smartquotes from "smartquotes"
 
 import Header from "./Header"
 import Footer from "./Footer"
-import { useFlashMessages } from "../shared/useFlashMessages"
+import { useSharedFlashMessages } from "../shared/useSharedFlashMessages"
 import FlashMessages from "./FlashMessages"
 
 export default function Page(props) {
@@ -55,7 +55,7 @@ export default function Page(props) {
 			}
 		})
 	}
-	const [flashMessages, setFlashMessages] = useFlashMessages()
+	const { flashMessages } = useSharedFlashMessages()
 
 	useEffect(() => {
 		smartquotes().listen()

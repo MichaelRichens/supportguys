@@ -7,11 +7,11 @@ import styles from "../styles/ContactForm.module.css"
 
 import EmailContext from "./EmailContext"
 import ValidationWarning from "./ValidationWarning"
-import { useFlashMessages } from "../shared/useFlashMessages"
+import { useSharedFlashMessages } from "../shared/useSharedFlashMessages"
 
 export default function ContactForm(props) {
 	const { emailState, emailDispatch } = useContext(EmailContext)
-	const [flashMessages, setFlashMessages] = useFlashMessages()
+	const { setFlashMessages } = useSharedFlashMessages()
 	const validationTimeout = 1500
 
 	function handleInputChange(e) {
