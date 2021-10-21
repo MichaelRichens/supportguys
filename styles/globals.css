@@ -518,6 +518,12 @@ a.image-link:active {
 	color: red;
 }
 
+@media (max-width: 650px) {
+	.popup-overlay {
+		width: 95%;
+	}
+}
+
 @media (max-width: 400px) {
 	.popup-overlay,
 	.popup-overlay-enter-active,
