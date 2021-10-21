@@ -29,9 +29,10 @@ export default function Home() {
 					h1={true}
 				>
 					<TextAboutUsOverview />
+					<FindOutMore href="/about_us" />
 				</ContentBoxMain>
 			</section>
-			<FindOutMore href="/about_us" />
+
 			<section
 				className={"text-over-image " + styles["home-page-about-us"]}
 				style={{

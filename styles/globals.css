@@ -159,6 +159,10 @@ main hr {
 	margin-right: 5%;
 }
 
+main > section.text-over-image {
+	margin-top: 0;
+}
+
 .text-over-image > h1,
 .text-over-image > h2 {
 	text-align: center;
