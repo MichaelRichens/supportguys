@@ -58,11 +58,21 @@ export default function Header(props) {
 					className={styles.email}
 					onClick={() => emailDispatch({ type: "formToggle" })}
 				>
-					<Image src={emailIcon} data-tip="Email Us" />
+					<Image
+						src={emailIcon}
+						data-tip="Email Us"
+						data-for="emailUs"
+					/>
 				</span>
 			</nav>
-
-			<ReactTooltip place="top" delayShow={20} />
+			<ReactTooltip
+				id="emailUs"
+				place="left"
+				type="light"
+				border={true}
+				borderColor="#1a2b6d"
+				delayShow={20}
+			/>
 			{props.children}
 			<PopupOverlay
 				nodeRef={nodeRef}

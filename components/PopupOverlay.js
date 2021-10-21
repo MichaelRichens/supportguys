@@ -17,10 +17,18 @@ export default function PopupOverlay(props) {
 						type="button"
 						onClick={props.close}
 						data-tip="Close"
+						data-for="popupClose"
 					>
 						X
 					</button>
-					<ReactTooltip place="left" delayShow={200} />
+					<ReactTooltip
+						id="popupClose"
+						place="left"
+						type="light"
+						border={true}
+						borderColor="#1a2b6d"
+						delayShow={100}
+					/>
 				</nav>
 				{props.children}
 			</div>
