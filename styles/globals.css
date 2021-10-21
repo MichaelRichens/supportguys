@@ -448,7 +448,9 @@ a.image-link:active {
 }
 
 /*	Keep popup-overlay styles here - have to keep transition styles here anyway, 
-	and it seems to mess up when they get split*/
+	and it seems to mess up when they get split (lose the drop in from above transition effect)
+	Update this count whenever you ignore this,  try and move some of these into a module, and end up reverting: 2
+*/
 .popup-overlay {
 	z-index: 5000;
 	position: fixed;
@@ -464,6 +466,26 @@ a.image-link:active {
 	background-color: #1c2936;
 	color: white;
 	max-height: 100%;
+}
+
+.popup-overlay h1,
+.popup-overlay h2,
+.popup-overlay h3,
+.popup-overlay h4,
+.popup-overlay h5,
+.popup-overlay h6 {
+	color: white;
+}
+
+.popup-overlay a,
+.popup-overlay a:visited {
+	color: white;
+	text-decoration: underline;
+}
+
+.popup-overlay a:hover {
+	text-decoration: none;
+	color: lightgray;
 }
 
 .popup-overlay-enter {

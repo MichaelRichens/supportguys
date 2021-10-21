@@ -71,8 +71,7 @@
 }
 
 .contact-details {
-	flex: 3;
-	max-width: 900px;
+	flex: 1;
 	margin-left: 0.5em;
 	margin-right: 0.25em;
 	font-size: 24px;
@@ -112,8 +111,7 @@
 }
 
 .contact-now {
-	flex: 2;
-	max-width: 600px;
+	flex: 1;
 	margin-left: 0.25em;
 	margin-right: 0.5em;
 }
@@ -133,6 +131,9 @@
 	.contact-details {
 		font-size: 18px;
 	}
+	.contact-methods > div {
+		flex-direction: column-reverse;
+	}
 }
 
 @media (max-width: 850px) {
@@ -141,9 +142,6 @@
 	}
 }
 @media (max-width: 700px) {
-	.contact-methods > div {
-		flex-direction: column-reverse;
-	}
 	.contact-details {
 		margin-left: 0.25em;
 	}

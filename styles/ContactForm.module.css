@@ -1,11 +1,9 @@
 .contact-form {
 	padding: 1em 2em 3em;
 	text-align: right;
-	color: white;
 }
 
 .contact-form > h2 {
-	color: white !important;
 	text-align: center;
 	margin-top: 0;
 	padding-top: 0;
@@ -71,15 +69,4 @@
 .mailto {
 	text-align: left;
 	margin-top: 1.5em;
-}
-
-.mailto > a,
-.mailto > a:visited {
-	color: white;
-	text-decoration: underline;
-}
-
-.mailto > a:hover {
-	text-decoration: none;
-	color: lightgray;
 }

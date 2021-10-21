@@ -9,6 +9,7 @@ import EmailContext from "../context/EmailContext"
 
 import styles from "../styles/contact_us.module.css"
 import TextContactDetails from "../components/content_components/TextContactDetails"
+import ContactForm from "../components/ContactForm"
 
 export default function contact_us() {
 	const { emailDispatch } = useContext(EmailContext)
@@ -43,19 +44,9 @@ export default function contact_us() {
 						<h3>Contact Details</h3>
 						<TextContactDetails />
 					</section>
-					<nav className={`content-box ${styles["contact-now"]}`}>
-						<h3>Email Us</h3>
-						<div>
-							<button
-								type="button"
-								onClick={() =>
-									emailDispatch({ type: "formToggle" })
-								}
-							>
-								Click to Email!
-							</button>
-						</div>
-					</nav>
+					<div className={`content-box ${styles["contact-now"]}`}>
+						<ContactForm />
+					</div>
 				</div>
 			</section>
 		</Page>
