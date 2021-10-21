@@ -9,7 +9,7 @@ import EmailContext from "../context/EmailContext"
 import ValidationWarning from "./ValidationWarning"
 import { useSharedFlashMessages } from "../shared/useSharedFlashMessages"
 
-export default function ContactForm(props) {
+export default function ContactForm() {
 	const { emailState, emailDispatch } = useContext(EmailContext)
 	const { setFlashMessages } = useSharedFlashMessages()
 	const validationTimeout = 1500
@@ -137,7 +137,6 @@ export default function ContactForm(props) {
 				Your Name:
 				<input
 					type="text"
-					placeholder="John Doe"
 					name="name"
 					autoComplete="name"
 					value={emailState.name}
@@ -152,7 +151,7 @@ export default function ContactForm(props) {
 				Your Email:
 				<input
 					type="text"
-					placeholder="john.doe@example.com"
+					placeholder="email@example.com"
 					name="email"
 					autoComplete="email"
 					value={emailState.email}
