@@ -7,6 +7,7 @@ import ReactTooltip from "react-tooltip"
 import EmailContext from "../context/EmailContext"
 import PopupOverlay from "./PopupOverlay"
 import ContactForm from "./ContactForm"
+import NoSsr from "./NoSsr"
 
 import styles from "../styles/Header.module.css"
 
@@ -65,14 +66,16 @@ export default function Header(props) {
 					/>
 				</span>
 			</nav>
-			<ReactTooltip
-				id="emailUs"
-				place="left"
-				type="light"
-				border={true}
-				borderColor="#1a2b6d"
-				delayShow={20}
-			/>
+			<NoSsr>
+				<ReactTooltip
+					id="emailUs"
+					place="left"
+					type="light"
+					border={true}
+					borderColor="#1a2b6d"
+					delayShow={20}
+				/>
+			</NoSsr>
 			{props.children}
 			<PopupOverlay
 				nodeRef={nodeRef}
