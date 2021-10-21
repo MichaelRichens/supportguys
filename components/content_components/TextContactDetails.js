@@ -2,7 +2,7 @@ import { useContext, useRef } from "react"
 
 import ContactForm from "../ContactForm"
 import PopupOverlay from "../PopupOverlay"
-import EmailContext from "../EmailContext"
+import EmailContext from "../../context/EmailContext"
 
 export default function TextContactDetails() {
 	const { emailDispatch } = useContext(EmailContext)

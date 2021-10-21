@@ -3,7 +3,7 @@ import { useImmerReducer } from "use-immer"
 import EmailContext, {
 	emailReducer,
 	initialEmailState
-} from "../components/EmailContext"
+} from "../context/EmailContext"
 
 import "../styles/globals.css"
 

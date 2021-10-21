@@ -5,7 +5,7 @@
 import { useContext, useRef } from "react"
 
 import Page from "../components/Page"
-import EmailContext from "../components/EmailContext"
+import EmailContext from "../context/EmailContext"
 
 import styles from "../styles/contact_us.module.css"
 import TextContactDetails from "../components/content_components/TextContactDetails"

@@ -2,7 +2,7 @@ import { useContext } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
-import EmailContext from "../components/EmailContext"
+import EmailContext from "../context/EmailContext"
 import Page from "../components/Page"
 import ContentBoxMain from "../components/ContentBoxMain"
 

@@ -2,7 +2,7 @@ import { useContext } from "react"
 
 import Page from "../components/Page"
 import ContentBoxMain from "../components/ContentBoxMain"
-import EmailContext from "../components/EmailContext"
+import EmailContext from "../context/EmailContext"
 
 import stylesMainPage from "../styles/stylesMainPage.module.css"
 

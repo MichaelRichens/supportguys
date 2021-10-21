@@ -5,7 +5,7 @@ import Link from "next/link"
 
 import styles from "../styles/ContactForm.module.css"
 
-import EmailContext from "./EmailContext"
+import EmailContext from "../context/EmailContext"
 import ValidationWarning from "./ValidationWarning"
 import { useSharedFlashMessages } from "../shared/useSharedFlashMessages"
 

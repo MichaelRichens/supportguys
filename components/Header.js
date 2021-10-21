@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import Image from "next/image"
 
-import EmailContext from "./EmailContext"
+import EmailContext from "../context/EmailContext"
 import PopupOverlay from "./PopupOverlay"
 import ContactForm from "./ContactForm"
 
