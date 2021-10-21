@@ -9,7 +9,7 @@ const clientSide = typeof window !== "undefined"
 // Some mucking around here, since we want to get any data stored in localStorage but maybe (probably are) running on the server here if the page has just been
 // hard refreshed
 // Put in a magic value, that we check for in a UseEffect in ContactForm.js, and pull from localStorage there
-// (it does take a few seconds, hence using a human readable value)
+// (it does take a few seconds, hence using a human readable value - Update: not in prod it doesn't, long pause is dev only)
 export const emailMagicServerPlaceholder = "..Please Wait.."
 
 export const initialEmailState = {
