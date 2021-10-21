@@ -1,4 +1,4 @@
-// TODO get that paragraph starting "The previous support company" in case study 2 fixed
+//TODO Doug should read over last 2 case studies
 
 import Page from "../components/Page"
 import ContentBoxMain from "../components/ContentBoxMain"
@@ -113,13 +113,12 @@ export default function case_studies() {
 					had stopped working as they were all bound to the Active
 					Directory Domain.
 				</p>
-				{}
 				<p>
 					The previous support company (which they were paying a
 					substantial amount per month) now wanted a large amount to
-					replace the hardware and reinforcing the service let down
-					they were not even aware of the years of problems being
-					reported before the fall over.
+					replace the hardware. Reinforcing the service let down, they
+					were not even aware of the years of problems being reported
+					before the failure.
 				</p>
 				<p>
 					We were able to supply and install a number of Macs, with
