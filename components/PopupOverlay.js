@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { CSSTransition } from "react-transition-group"
 import ReactTooltip from "react-tooltip"
 
@@ -24,9 +23,9 @@ export default function PopupOverlay(props) {
 					<ReactTooltip
 						id="popupClose"
 						place="left"
-						type="light"
+						offset={{ top: "10", left: "15" }}
 						border={true}
-						borderColor="#1a2b6d"
+						borderColor="cyan"
 						delayShow={500}
 					/>
 				</nav>

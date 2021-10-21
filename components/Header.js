@@ -71,9 +71,10 @@ export default function Header(props) {
 				<ReactTooltip
 					id="emailUs"
 					place="left"
+					offset={{ top: "10", left: "15" }}
 					type="light"
 					border={true}
-					borderColor="#1a2b6d"
+					borderColor="cyan"
 					delayShow={100}
 				/>
 			</NoSsr>
