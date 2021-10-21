@@ -110,8 +110,12 @@ export default function ContactForm() {
 
 	useEffect(() => {
 		if (emailState.name === emailMagicServerPlaceholder) {
-			emailState.name =
-				(clientSide && localStorage.getItem("contact_form_name")) || ""
+			emailDispatch({
+				type: "name",
+				value:
+					(clientSide && localStorage.getItem("contact_form_name")) ||
+					""
+			})
 		} else {
 			localStorage.setItem("contact_form_name", emailState.name)
 		}
@@ -120,9 +124,13 @@ export default function ContactForm() {
 
 	useEffect(() => {
 		if (emailState.subject === emailMagicServerPlaceholder) {
-			emailState.subject =
-				(clientSide && localStorage.getItem("contact_form_subject")) ||
-				""
+			emailDispatch({
+				type: "subject",
+				value:
+					(clientSide &&
+						localStorage.getItem("contact_form_subject")) ||
+					""
+			})
 		} else {
 			localStorage.setItem("contact_form_subject", emailState.subject)
 		}
@@ -131,8 +139,12 @@ export default function ContactForm() {
 
 	useEffect(() => {
 		if (emailState.body === emailMagicServerPlaceholder) {
-			emailState.body =
-				(clientSide && localStorage.getItem("contact_form_body")) || ""
+			emailDispatch({
+				type: "body",
+				value:
+					(clientSide && localStorage.getItem("contact_form_body")) ||
+					""
+			})
 		} else {
 			localStorage.setItem("contact_form_body", emailState.body)
 		}
@@ -141,8 +153,13 @@ export default function ContactForm() {
 
 	useEffect(() => {
 		if (emailState.email === emailMagicServerPlaceholder) {
-			emailState.email =
-				(clientSide && localStorage.getItem("contact_form_email")) || ""
+			emailDispatch({
+				type: "email",
+				value:
+					(clientSide &&
+						localStorage.getItem("contact_form_email")) ||
+					""
+			})
 		} else {
 			localStorage.setItem("contact_form_email", emailState.email)
 		}
