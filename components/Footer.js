@@ -7,8 +7,8 @@ import TextContactDetails from "./content_components/TextContactDetails"
 
 import styles from "../styles/Footer.module.css"
 
-import macupgrades_logo_h18 from "../public/images/logos/macupgrades_logo104x18.png"
-import appcentre_logo_h18 from "../public/images/logos/appcentre_logo105x18.png"
+import macupgrades_logo_small from "../public/images/logos/macupgrades_logo144x25.png"
+import appcentre_logo_small from "../public/images/logos/appcentre_logo146x25.png"
 
 export default function Footer() {
 	const current_year = new Date().getFullYear()
@@ -32,9 +32,9 @@ export default function Footer() {
 							<Link href="https://www.macupgrades.co.uk/store/">
 								<a>
 									<Image
-										src={macupgrades_logo_h18}
-										width="104"
-										height="18"
+										src={macupgrades_logo_small}
+										width="144"
+										height="25"
 									/>
 								</a>
 							</Link>
@@ -49,9 +49,9 @@ export default function Footer() {
 							<Link href="https://www.appcentre.co.uk/softstore/">
 								<a>
 									<Image
-										src={appcentre_logo_h18}
-										width="105"
-										height="18"
+										src={appcentre_logo_small}
+										width="146"
+										height="25"
 									/>
 								</a>
 							</Link>
