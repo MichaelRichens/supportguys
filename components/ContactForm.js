@@ -59,7 +59,14 @@ export default function ContactForm(props) {
 			})
 				.then((res) => {
 					if (res.status === 200) {
+						setFlashMessages((prev) =>
+							prev.concat({
+								class: "success",
+								message: "Email Sent!"
+							})
+						)
 						emailDispatch({ type: "sent" })
+						props.closeContactForm()
 					} else {
 						console.error(res)
 						setFlashMessages((prev) =>
@@ -119,18 +126,6 @@ export default function ContactForm(props) {
 			clearTimeout(timer)
 		}
 	}, [emailState.email])
-
-	useEffect(() => {
-		if (emailState.emailsSent) {
-			setFlashMessages((prev) =>
-				prev.concat({
-					class: "success",
-					message: "Email Sent!"
-				})
-			)
-			props.closeContactForm()
-		}
-	}, [emailState.emailsSent])
 
 	return (
 		<form className={styles["contact-form"]}>

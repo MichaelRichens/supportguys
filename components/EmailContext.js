@@ -12,8 +12,7 @@ export const initialEmailState = {
 	subject: "",
 	subjectWarn: "",
 	body: "",
-	bodyWarn: "",
-	emailsSent: 0
+	bodyWarn: ""
 }
 
 export function emailReducer(draft, action) {
@@ -27,7 +26,6 @@ export function emailReducer(draft, action) {
 			draft.subjectWarn = ""
 			draft.body = ""
 			draft.bodyWarn = ""
-			draft.emailsSent++
 			return
 		case "name":
 			draft.name = action.value
