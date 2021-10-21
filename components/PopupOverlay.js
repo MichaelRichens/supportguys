@@ -27,7 +27,7 @@ export default function PopupOverlay(props) {
 						type="light"
 						border={true}
 						borderColor="#1a2b6d"
-						delayShow={100}
+						delayShow={500}
 					/>
 				</nav>
 				{props.children}

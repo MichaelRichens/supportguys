@@ -63,6 +63,7 @@ export default function Header(props) {
 						src={emailIcon}
 						data-tip="Email Us"
 						data-for="emailUs"
+						data-event-off="click"
 					/>
 				</span>
 			</nav>
@@ -73,7 +74,7 @@ export default function Header(props) {
 					type="light"
 					border={true}
 					borderColor="#1a2b6d"
-					delayShow={20}
+					delayShow={100}
 				/>
 			</NoSsr>
 			{props.children}
