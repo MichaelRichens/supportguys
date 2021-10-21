@@ -2,6 +2,7 @@ import { useContext, useRef } from "react"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import Image from "next/image"
+import ReactTooltip from "react-tooltip"
 
 import EmailContext from "../context/EmailContext"
 import PopupOverlay from "./PopupOverlay"
@@ -9,7 +10,8 @@ import ContactForm from "./ContactForm"
 
 import styles from "../styles/Header.module.css"
 
-import logo from "../public/images/logos/support_guys_logo900x140.png"
+import banner from "../public/images/logos/support_guys_logo900x140.png"
+import emailIcon from "../public/images/icons/email_white_icon35x20.png"
 
 export default function Header(props) {
 	const { emailState, emailDispatch } = useContext(EmailContext)
@@ -32,7 +34,7 @@ export default function Header(props) {
 				<Link href="/">
 					<a>
 						<Image
-							src={logo}
+							src={banner}
 							quality="100"
 							height="150"
 							width="949"
@@ -40,7 +42,7 @@ export default function Header(props) {
 					</a>
 				</Link>
 			</div>
-			<nav>
+			<nav className={styles.links}>
 				{menu.map((item, index) => {
 					return router.pathname !== item.path ? (
 						<Link key={index} href={item.path}>
@@ -52,7 +54,15 @@ export default function Header(props) {
 						</span>
 					)
 				})}
+				<span
+					className={styles.email}
+					onClick={() => emailDispatch({ type: "formToggle" })}
+				>
+					<Image src={emailIcon} data-tip="Email Us" />
+				</span>
 			</nav>
+
+			<ReactTooltip place="top" delayShow={20} />
 			{props.children}
 			<PopupOverlay
 				nodeRef={nodeRef}
