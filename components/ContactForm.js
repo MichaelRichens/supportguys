@@ -103,18 +103,22 @@ export default function ContactForm() {
 	// so just remove warning whenever a change is made
 
 	useEffect(() => {
+		localStorage.setItem("contact_form_name", emailState.name)
 		emailDispatch({ type: "nameWarn", value: "" })
 	}, [emailState.name])
 
 	useEffect(() => {
+		localStorage.setItem("contact_form_subject", emailState.subject)
 		emailDispatch({ type: "subjectWarn", value: "" })
 	}, [emailState.subject])
 
 	useEffect(() => {
+		localStorage.setItem("contact_form_body", emailState.body)
 		emailDispatch({ type: "bodyWarn", value: "" })
 	}, [emailState.body])
 
 	useEffect(() => {
+		localStorage.setItem("contact_form_email", emailState.email)
 		emailDispatch({ type: "emailWarn", value: "" })
 		let timer = null
 		if (emailState.email) {

@@ -4,14 +4,16 @@ const EmailContext = createContext()
 
 export default EmailContext
 
+const clientSide = typeof window !== "undefined"
+
 export const initialEmailState = {
-	name: "",
+	name: (clientSide && localStorage.getItem("contact_form_name")) || "",
 	nameWarn: "",
-	email: "",
+	email: (clientSide && localStorage.getItem("contact_form_email")) || "",
 	emailWarn: "",
-	subject: "",
+	subject: (clientSide && localStorage.getItem("contact_form_subject")) || "",
 	subjectWarn: "",
-	body: "",
+	body: (clientSide && localStorage.getItem("contact_form_body")) || "",
 	bodyWarn: "",
 	contactFormOpen: false
 }
