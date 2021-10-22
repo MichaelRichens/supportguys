@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import Page from "../components/Page"
 
 export default function privacy_policy() {
@@ -15,9 +17,9 @@ export default function privacy_policy() {
 					If you have additional questions or require more information
 					about our Privacy Policy, do not hesitate to contact us. Our
 					Privacy Policy was generated with the help of{" "}
-					<a href="https://www.gdprprivacynotice.com/">
+					<Link href="https://www.gdprprivacynotice.com/">
 						GDPR Privacy Policy Generator from GDPRPrivacyNotice.com
-					</a>
+					</Link>
 				</p>
 				<h2>General Data Protection Regulation (GDPR)</h2>
 				<p>We are a Data Controller of your information.</p>
