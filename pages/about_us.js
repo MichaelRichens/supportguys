@@ -25,9 +25,10 @@ export default function about_us() {
 			>
 				<ContentBoxMain
 					title="About Support Guys"
-					marginLeft="auto"
-					marginRight="10%"
+					marginLeft="2%"
+					marginRight="auto"
 					h1={true}
+					decoratorRight={true}
 				>
 					<TextAboutUsCambs />
 				</ContentBoxMain>
