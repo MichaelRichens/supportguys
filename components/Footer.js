@@ -33,6 +33,7 @@ export default function Footer() {
 										src={facebook_logo_small_square}
 										width="25"
 										height="25"
+										alt=""
 									/>
 									<span> Facebook</span>
 								</a>
@@ -50,6 +51,7 @@ export default function Footer() {
 										src={macupgrades_logo_small}
 										width="144"
 										height="25"
+										alt="MacUpgrades"
 									/>
 								</a>
 							</Link>
@@ -67,6 +69,7 @@ export default function Footer() {
 										src={appcentre_logo_small}
 										width="146"
 										height="25"
+										alt="AppCentre"
 									/>
 								</a>
 							</Link>

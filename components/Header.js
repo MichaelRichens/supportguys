@@ -42,6 +42,7 @@ export default function Header(props) {
 							quality="100"
 							height="150"
 							width="949"
+							alt="Support Guys"
 						/>
 					</a>
 				</Link>
@@ -67,6 +68,7 @@ export default function Header(props) {
 						data-tip="Email Us"
 						data-for="emailUs"
 						data-event-off="click"
+						alt="Email Us"
 					/>
 				</span>
 			</nav>
