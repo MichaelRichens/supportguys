@@ -17,7 +17,7 @@ async function postData(url = "", data = {}) {
 	return response.json() // parses JSON response into native JavaScript objects
 }
 
-export default function (req, res) {
+export default async function (req, res) {
 	return new Promise((resolve, reject) => {
 		postData(process.env.MAIL_URL, {
 			token: process.env.TOKEN_MAIL,

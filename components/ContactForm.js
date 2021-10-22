@@ -11,6 +11,7 @@ import FlashMessageContext from "../context/FlashMessageContext"
 import ValidationWarning from "./ValidationWarning"
 
 import styles from "../styles/ContactForm.module.css"
+import Header from "./Header"
 
 export default function ContactForm() {
 	const { emailState, emailDispatch } = useContext(EmailContext)
@@ -45,7 +46,6 @@ export default function ContactForm() {
 			emailDispatch({ type: "bodyWarn", value: "No message entered." })
 			valid = false
 		}
-		emailDispatch({ type: "setSendInProgress", value: true })
 		if (valid) {
 			const data = {
 				name: emailState.name,
@@ -90,7 +90,6 @@ export default function ContactForm() {
 					)
 				})
 		}
-		emailDispatch({ type: "setSendInProgress", value: false })
 	}
 
 	function validateEmail() {
@@ -180,7 +179,6 @@ export default function ContactForm() {
 	return (
 		<form className={styles["contact-form"]}>
 			<h2>Send Us An Email</h2>
-			{emailState.sendInProgress && <h3>Sending...</h3>}
 			<ValidationWarning
 				condition={emailState.nameWarn != ""}
 				message={emailState.nameWarn}
