@@ -101,7 +101,7 @@ export default function Page(props) {
 				/>
 			</Head>
 			<Header>
-				<FlashMessages messages={flashMessages} />
+				<FlashMessages />
 			</Header>
 			<main>{props.children}</main>
 			<Footer />

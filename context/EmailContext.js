@@ -31,7 +31,8 @@ export const initialEmailState = {
 		(clientSide && localStorage.getItem("contact_form_body")) ||
 		emailMagicServerPlaceholder,
 	bodyWarn: "",
-	contactFormOpen: false
+	contactFormOpen: false,
+	sendInProgress: false
 }
 
 export function emailReducer(draft, action) {
@@ -41,6 +42,9 @@ export function emailReducer(draft, action) {
 			return
 		case "formToggle":
 			draft.contactFormOpen = !draft.contactFormOpen
+			return
+		case "setSendInProgress":
+			draft.sendInProgress = action.value
 			return
 		case "sent":
 			draft.name = ""
