@@ -102,36 +102,42 @@ export default function privacy_policy() {
 					</p>
 				</section>
 				<section>
-					<h2>Privacy Policies</h2>
+					<h2>Website Analytics</h2>
 					<p>
-						You may consult this list to find the Privacy Policy for
-						each of the advertising partners of Support Guys.
-					</p>
-					<p>
-						Third-party ad servers or ad networks uses technologies
-						like cookies, JavaScript, or Web Beacons that are used
-						in their respective advertisements and links that appear
-						on Support Guys, which are sent directly to users'
-						browser. They automatically receive your IP address when
-						this occurs. These technologies are used to measure the
-						effectiveness of their advertising campaigns and/or to
-						personalize the advertising content that you see on
-						websites that you visit.
-					</p>
-					<p>
-						Note that Support Guys has no access to or control over
-						these cookies that are used by third-party advertisers.
+						We may also partner with selected third-party vendors,
+						such as Google Analytics and others, to allow tracking
+						technologies and remarketing services through the use of
+						first party cookies and third-party cookies, to, among
+						other things, analyze and track users' use of the
+						website, determine the popularity of certain content and
+						better understand online activity. By accessing the
+						website, you consent to the collection and use of your
+						information by these third-party vendors. You are
+						encouraged to review their privacy policy and contact
+						them directly for responses to your questions. We do not
+						transfer personal information to these third-party
+						vendors. However, if you do not want any information to
+						be collected and used by tracking technologies, you can
+						visit the third-party vendor or the{" "}
+						<Link href="https://optout.networkadvertising.org/">
+							Network Advertising Initiative Opt-Out Tool
+						</Link>{" "}
+						or{" "}
+						<Link href="https://digitaladvertisingalliance.org/">
+							Digital Advertising Alliance Opt-Out Tool
+						</Link>
+						.
 					</p>
 				</section>
 				<section>
 					<h2>Third Party Privacy Policies</h2>
 					<p>
 						Support Guys's Privacy Policy does not apply to other
-						advertisers or websites. Thus, we are advising you to
+						services or websites. Thus, we are advising you to
 						consult the respective Privacy Policies of these
-						third-party ad servers for more detailed information. It
+						third-party servers for more detailed information. It
 						may include their practices and instructions about how
-						to opt-out of certain options.{" "}
+						to opt-out of certain options.
 					</p>
 					<p>
 						You can choose to disable cookies through your
