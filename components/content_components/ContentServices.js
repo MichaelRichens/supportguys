@@ -64,7 +64,7 @@ export default function ContentServices(props) {
 					<p>
 						We all know that our data must be backed up, but how
 						where and when? We can help you form a concise and
-						planned backup strategy. Utilisiing the best of on-prem
+						planned backup strategy. Utilising the best of on-prem
 						and cloud solutions, making sure your data is safe.
 					</p>
 				</ContentBoxShadowed>
