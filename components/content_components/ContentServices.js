@@ -71,7 +71,7 @@ export default function ContentServices(props) {
 				<ContentBoxShadowed moroInfoHref="/slow_computers">
 					<h3>Slow Computers?</h3>
 					<p>
-						Is Jane asking why word takes 15 mins to open a small
+						Is Jane asking why Word takes 15 mins to open a small
 						document? How much productivity is lost to waiting and
 						watching the spinning wheel? We can help with assessing
 						your Macs to ensure your staff are not held back by slow
