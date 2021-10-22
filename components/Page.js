@@ -12,7 +12,7 @@ import FlashMessages from "./FlashMessages"
 export default function Page(props) {
 	// After far too much screwing around, FlashMessageContext is being created at the Page component level, and wrapping its children,
 	// so it fucks off when a new page loads, rather than showing the last message again, which is what happens when it wraps around _app.js
-	// whole approach is obviously messed up, but this works and it'll do
+	// sure there were better ways to fix the issue, but this works and it'll do
 	const [flashMessages, setFlashMessages] = useState([])
 	const canonicalURL = process.env.NEXT_PUBLIC_DOMAIN + useRouter().pathname
 
