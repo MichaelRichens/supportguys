@@ -1,14 +1,16 @@
 import Head from "next/head"
-import { useEffect } from "react"
+import { useContext, useEffect } from "react"
 import { useRouter } from "next/router"
 import smartquotes from "smartquotes"
 
+import FlashMessageContext from "../context/FlashMessageContext"
+
 import Header from "./Header"
 import Footer from "./Footer"
-import { useSharedFlashMessages } from "../shared/useSharedFlashMessages"
 import FlashMessages from "./FlashMessages"
 
 export default function Page(props) {
+	const { flashMessages } = useContext(FlashMessageContext)
 	const canonicalURL = process.env.NEXT_PUBLIC_DOMAIN + useRouter().pathname
 
 	const structuredDataOrg = {
@@ -55,7 +57,6 @@ export default function Page(props) {
 			}
 		})
 	}
-	const { flashMessages } = useSharedFlashMessages()
 
 	useEffect(() => {
 		smartquotes().listen()

@@ -25,7 +25,6 @@
 		"react-tooltip": "^4.2.21",
 		"react-transition-group": "^4.4.2",
 		"smartquotes": "^2.3.2",
-		"use-between": "0.0.18",
 		"use-immer": "^0.6.0"
 	},
 	"devDependencies": {

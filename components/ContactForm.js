@@ -3,17 +3,18 @@
 import { useContext, useEffect } from "react"
 import Link from "next/link"
 
-import styles from "../styles/ContactForm.module.css"
-
 import EmailContext, {
 	emailMagicServerPlaceholder
 } from "../context/EmailContext"
+import FlashMessageContext from "../context/FlashMessageContext"
+
 import ValidationWarning from "./ValidationWarning"
-import { useSharedFlashMessages } from "../shared/useSharedFlashMessages"
+
+import styles from "../styles/ContactForm.module.css"
 
 export default function ContactForm() {
 	const { emailState, emailDispatch } = useContext(EmailContext)
-	const { setFlashMessages } = useSharedFlashMessages()
+	const { setFlashMessages } = useContext(FlashMessageContext)
 	const validationTimeout = 1500
 
 	function handleInputChange(e) {
