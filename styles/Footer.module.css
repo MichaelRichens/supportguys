@@ -74,18 +74,18 @@
 	filter: sepia(100%) hue-rotate(160deg) saturate(200%);
 }
 
-.footer dl > dd > ul {
+.footer dl > dd ul {
 	padding: 0;
 	margin: 0;
 }
 
-.footer dl > dd > ul > li {
+.footer dl > dd ul > li {
 	margin: 0;
 	padding: 0;
 	margin-bottom: 0.3em;
 }
 
-.footer dl > dd > ul > li:last-child {
+.footer dl > dd ul > li:last-child {
 	margin-bottom: 0;
 }
 

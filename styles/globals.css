@@ -101,6 +101,12 @@ h1 {
 	text-align: center;
 }
 
+address {
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
 details > summary > * {
 	display: inline;
 }
