@@ -103,7 +103,7 @@
 .social ul a:hover img {
 	transform: rotate(360deg);
 	transition: transform 1s;
-	transition-delay: 500ms;
+	transition-delay: 300ms;
 }
 
 .bottom-links {

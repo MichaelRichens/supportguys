@@ -36,12 +36,10 @@
 
 .find-out-more > nav:hover > a:first-child {
 	background-color: red;
-	transition: all 200ms;
 }
 
 .find-out-more > nav:hover > a:last-child {
 	background-color: navy;
-	transition: all 200ms;
 }
 
 @media (max-width: 450px) {
