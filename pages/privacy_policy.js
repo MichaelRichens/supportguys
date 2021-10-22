@@ -132,7 +132,7 @@ export default function privacy_policy() {
 				<section>
 					<h2>Third Party Privacy Policies</h2>
 					<p>
-						Support Guys's Privacy Policy does not apply to other
+						Support Guys' Privacy Policy does not apply to other
 						services or websites. Thus, we are advising you to
 						consult the respective Privacy Policies of these
 						third-party servers for more detailed information. It
