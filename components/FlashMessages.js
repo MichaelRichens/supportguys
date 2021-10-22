@@ -1,5 +1,3 @@
-import { CSSTransition } from "react-transition-group"
-
 import styles from "../styles/FlashMessages.module.css"
 
 export default function FlashMessages(props) {
