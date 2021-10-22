@@ -175,7 +175,7 @@ export default function ContactForm() {
 	}, [emailState.email])
 
 	return (
-		<form className={styles["contact-form"]}>
+		<form className={styles["contact-form"]} onSubmit={handleSubmit}>
 			<h2>Send Us An Email</h2>
 			<ValidationWarning
 				condition={emailState.nameWarn != ""}
@@ -233,9 +233,7 @@ export default function ContactForm() {
 					value={emailState.body}
 				/>
 			</label>
-			<button type="submit" onClick={handleSubmit}>
-				Send Email
-			</button>
+			<button type="submit">Send Email</button>
 			<p className={styles.mailto}>
 				Or email us directly at:{" "}
 				<Link href={"mailto:" + process.env.NEXT_PUBLIC_EMAIL}>
