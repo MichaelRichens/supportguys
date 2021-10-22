@@ -1,5 +1,3 @@
-// TODO update the macupgrades.co.uk script once support guys email box is online
-
 import { useContext, useEffect } from "react"
 import Link from "next/link"
 

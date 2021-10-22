@@ -116,9 +116,9 @@ export default function case_studies() {
 				<p>
 					The previous support company (which they were paying a
 					substantial amount per month) now wanted a large amount to
-					replace the hardware. Reinforcing the service let down, they
-					were not even aware of the years of problems being reported
-					before the failure.
+					replace the hardware, yet claimed to be unaware of the years
+					of problems the client had reported to them before the
+					failure.
 				</p>
 				<p>
 					We were able to supply and install a number of Macs, with
