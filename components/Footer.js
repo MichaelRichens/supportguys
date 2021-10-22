@@ -35,7 +35,7 @@ export default function Footer() {
 										height="25"
 										alt=""
 									/>
-									<span> Facebook</span>
+									<span>Facebook</span>
 								</a>
 							</Link>
 						</li>
