@@ -1,4 +1,4 @@
-// TODO Social section
+// TODO More Social than just facebook
 
 import Link from "next/link"
 import Image from "next/image"
@@ -9,6 +9,7 @@ import styles from "../styles/Footer.module.css"
 
 import macupgrades_logo_small from "../public/images/logos/macupgrades_logo144x25.png"
 import appcentre_logo_small from "../public/images/logos/appcentre_logo146x25.png"
+import facebook_logo_small_square from "../public/images/logos/facebook_logo25x25.png"
 
 export default function Footer() {
 	const current_year = new Date().getFullYear()
@@ -22,8 +23,22 @@ export default function Footer() {
 					</h3>
 					<TextContactDetails />
 				</section>
-				<section>
+				<section className={styles.social}>
 					<h3>Social</h3>
+					<ul>
+						<li>
+							<Link href="https://www.facebook.com/SupportGuysUK/">
+								<a>
+									<Image
+										src={facebook_logo_small_square}
+										width="25"
+										height="25"
+									/>
+									<span> Facebook</span>
+								</a>
+							</Link>
+						</li>
+					</ul>
 				</section>
 				<nav className={styles.contact}>
 					<h3>Our Other Brands</h3>

@@ -20,11 +20,12 @@ export default function privacy_policy() {
 					<Link href="https://www.gdprprivacynotice.com/">
 						GDPR Privacy Policy Generator from GDPRPrivacyNotice.com
 					</Link>
+					.
 				</p>
 				<h2>General Data Protection Regulation (GDPR)</h2>
 				<p>We are a Data Controller of your information.</p>
 				<p>
-					Second Chance PC Ltd legal basis for collecting and using
+					Second Chance PC Ltd's legal basis for collecting and using
 					the personal information described in this Privacy Policy
 					depends on the Personal Information we collect and the
 					specific context in which we collect the information:

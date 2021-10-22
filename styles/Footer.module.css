@@ -94,6 +94,23 @@
 	margin-bottom: 0;
 }
 
+.social ul > li {
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.social ul a {
+	display: flex;
+	align-items: center;
+}
+
+.social ul a:hover img {
+	transform: rotate(360deg);
+	transition: transform 1s;
+	transition-delay: 500ms;
+}
+
 .bottom-links {
 	margin-left: 10%;
 	margin-right: 10%;
