@@ -6,8 +6,6 @@ import EmailContext, {
 	initialEmailState
 } from "../context/EmailContext"
 
-import FlashMessageContext from "../context/FlashMessageContext"
-
 import "../styles/globals.css"
 
 function MyApp({ Component, pageProps }) {
@@ -15,21 +13,13 @@ function MyApp({ Component, pageProps }) {
 		emailReducer,
 		initialEmailState
 	)
-	const [flashMessages, setFlashMessages] = useState([])
 
 	return (
-		<FlashMessageContext.Provider
-			value={{
-				flashMessages: flashMessages,
-				setFlashMessages: setFlashMessages
-			}}
+		<EmailContext.Provider
+			value={{ emailState: emailState, emailDispatch: emailDispatch }}
 		>
-			<EmailContext.Provider
-				value={{ emailState: emailState, emailDispatch: emailDispatch }}
-			>
-				<Component {...pageProps} />
-			</EmailContext.Provider>
-		</FlashMessageContext.Provider>
+			<Component {...pageProps} />
+		</EmailContext.Provider>
 	)
 }
 

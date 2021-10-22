@@ -1,18 +1,9 @@
-import { useContext, useEffect } from "react"
-
-import FlashMessageContext from "../context/FlashMessageContext"
-
 import styles from "../styles/FlashMessages.module.css"
 
-export default function FlashMessages() {
-	const { flashMessages } = useContext(FlashMessageContext)
-
-	if (!flashMessages) {
-		return <></>
-	}
+export default function FlashMessages(props) {
 	return (
 		<aside className={styles["floating-alerts"]}>
-			{flashMessages.map((msg, index) => {
+			{props.messages.map((msg, index) => {
 				return (
 					<div
 						className={

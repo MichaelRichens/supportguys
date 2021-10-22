@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { useContext, useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import smartquotes from "smartquotes"
 
@@ -10,7 +10,10 @@ import Footer from "./Footer"
 import FlashMessages from "./FlashMessages"
 
 export default function Page(props) {
-	const { flashMessages } = useContext(FlashMessageContext)
+	// After far too much screwing around, FlashMessageContext is being created at the Page component level, and wrapping its children,
+	// so it fucks off when a new page loads, rather than showing the last message again, which is what happens when it wraps around _app.js
+	// whole approach is obviously messed up, but this works and it'll do
+	const [flashMessages, setFlashMessages] = useState([])
 	const canonicalURL = process.env.NEXT_PUBLIC_DOMAIN + useRouter().pathname
 
 	const structuredDataOrg = {
@@ -62,7 +65,12 @@ export default function Page(props) {
 		smartquotes().listen()
 	}, [])
 	return (
-		<>
+		<FlashMessageContext.Provider
+			value={{
+				flashMessages: flashMessages,
+				setFlashMessages: setFlashMessages
+			}}
+		>
 			<Head>
 				<title>
 					{process.env.NEXT_PUBLIC_NAME +
@@ -101,10 +109,10 @@ export default function Page(props) {
 				/>
 			</Head>
 			<Header>
-				<FlashMessages />
+				<FlashMessages messages={flashMessages} />
 			</Header>
 			<main>{props.children}</main>
 			<Footer />
-		</>
+		</FlashMessageContext.Provider>
 	)
 }
