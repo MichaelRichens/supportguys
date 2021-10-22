@@ -108,28 +108,46 @@ export default function case_studies() {
 					Client: Small, specialised, technical services.
 				</h3>
 				<p>
-					Customer called as their PC server had suffered a
-					catastrophic hard drive failure, and their associated PCs
-					had stopped working as they were all bound to the Active
-					Directory Domain.
+					Initially the customer called as their PC server had
+					suffered a ransomware attack, the networked PCs had all been
+					infected, and the backup hard drive had suffered
+					catastrophic hardware failure. A company specialising in
+					data recovery had managed to get most of their data from the
+					backup drive, but the customer needed to get back up and
+					running as soon as possible, and was at a loss at how to do
+					so.
 				</p>
 				<p>
-					The previous support company (which they were paying a
-					substantial amount per month) now wanted a large amount to
-					replace the hardware, yet claimed to be unaware of the years
-					of problems the client had reported to them before the
-					failure.
+					Their previous support company (which they were paying a
+					substantial amount per month) now wanted a large amount of
+					labour to replace the hardware and set up again, whilst
+					claiming to be unaware of the years of problems the client
+					had reported to them before the failure. Once recovery was
+					complete, it was apparent that the backup had not been
+					working correctly for some time. Large amounts of time,
+					effort and expense were required to get all their data back,
+					resulting in downtime, lost income and upset on all parts.
 				</p>
 				<p>
 					We were able to supply and install a number of Macs, with
-					upgraded hard drives and max RAM, to run their massive
-					spreadsheets and technical documents. Replacing their domain
-					controller with a Mac running macOS Server gave them
-					visibility of their backups and data use, and allowed cloud
-					backups. We set up and implemented a VPN for work from home
+					upgraded hard drives and max RAM; to run their massive
+					spreadsheets, detailed technical documents, and invoicing
+					system. Replacing their PC fileserver with a Mac running
+					macOS Server gave them visibility of their backups and data
+					use, and allowed cloud backups. We set up active monitoring
+					tools, and remote access to assist when problems occurred.
+					We were able to provide peace of mind with regular checks on
+					the state of their backups and the locations of their data,
+					and agreed alerts and actions if the age of the backups
+					breached specific conditions.
+				</p>
+				<p>
+					We have also set up and implemented a VPN for work from home
 					staff, and have provided continuing support over several
-					years for small niggles. And more recently for a computer
-					upgrade cycle.
+					years for issues as small as setting up new printers, to
+					working with them to create a complete strategy for a recent
+					computer upgrade cycle; to minimise downtime, and work
+					around holidays, staff illness and remote locations.
 				</p>
 			</section>
 			<section className="standard-text">
