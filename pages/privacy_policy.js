@@ -21,9 +21,9 @@ export default function privacy_policy() {
 					about our Privacy Policy, do not hesitate to contact us. Our
 					Privacy Policy was generated with the help of{" "}
 					<Link href="https://www.gdprprivacynotice.com/">
-						GDPR Privacy Policy Generator from GDPRPrivacyNotice.com
-					</Link>
-					.
+						GDPR Privacy Policy Generator
+					</Link>{" "}
+					from GDPRPrivacyNotice.com .
 				</p>
 				<section>
 					<h2>General Data Protection Regulation (GDPR)</h2>
@@ -35,21 +35,21 @@ export default function privacy_policy() {
 						and the specific context in which we collect the
 						information:
 					</p>
-					<ul>
+					<ul className="bullet">
 						<li>
 							Second Chance PC Ltd needs to perform a contract
-							with you
+							with you.
 						</li>
 						<li>
 							You have given Second Chance PC Ltd permission to do
-							so
+							so.
 						</li>
 						<li>
 							Processing your personal information is in Second
-							Chance PC Ltd legitimate interests
+							Chance PC Ltd legitimate interests.
 						</li>
 						<li>
-							Second Chance PC Ltd needs to comply with the law
+							Second Chance PC Ltd needs to comply with the law.
 						</li>
 					</ul>
 					<p>
@@ -71,7 +71,7 @@ export default function privacy_policy() {
 						In certain circumstances, you have the following data
 						protection rights:
 					</p>
-					<ul>
+					<ul className="bullet">
 						<li>
 							The right to access, update or to delete the
 							information we have on you.
@@ -79,8 +79,8 @@ export default function privacy_policy() {
 						<li>The right of rectification.</li>
 						<li>The right to object.</li>
 						<li>The right of restriction.</li>
-						<li>The right to data portability</li>
-						<li>The right to withdraw consent</li>
+						<li>The right to data portability.</li>
+						<li>The right to withdraw consent.</li>
 					</ul>
 				</section>
 				<section>
