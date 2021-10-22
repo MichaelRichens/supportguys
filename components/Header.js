@@ -25,9 +25,12 @@ export default function Header(props) {
 		{ title: "Services", path: "/services" },
 		{ title: "Case Studies", path: "/case_studies" },
 		{ title: "Plans and Costs", path: "/plans_and_costs" },
-		{ title: "Get Support Now", path: "/support_now" },
-		{ title: "Tickets", path: "/tickets" }
+		{ title: "Get Support Now", path: "/support_now" }
 	]
+
+	if (process.env.NEXT_PUBLIC_TICKET_SYSTEM_ACTIVE != 0) {
+		menu.push({ title: "Tickets", path: "/tickets" })
+	}
 
 	return (
 		<header className={styles.header}>

@@ -43,9 +43,16 @@ export default function support_now() {
 						>
 							email
 						</span>{" "}
-						and our team can walk you through the process. Or if you
-						are an account customer you can use the{" "}
-						<Link href="/tickets">ticket system</Link>.
+						and our team can walk you through the process.
+						{process.env.NEXT_PUBLIC_TICKET_SYSTEM_ACTIVE != 0 ? (
+							<>
+								{" "}
+								Or if you are an account customer you can use
+								the <Link href="/tickets">ticket system</Link>.
+							</>
+						) : (
+							""
+						)}
 					</p>
 				</ContentBoxMain>
 			</section>

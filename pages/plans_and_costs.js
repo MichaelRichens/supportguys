@@ -94,12 +94,15 @@ export default function plans_and_costs() {
 						<h5>How much support do you need and how often?</h5>
 						<p>
 							This can be weekly check ins (work though a list of
-							support questions or support tickets for a day or
-							half-day a week). Or it can be monthly on-site
-							visits to work through the issues in person. Or it
-							can be ad hoc incidents during an agreed service
-							window to deal with these one at a time. Or any
-							combination that suits your needs.
+							support questions
+							{process.env.NEXT_PUBLIC_TICKET_SYSTEM_ACTIVE != 0
+								? " or support tickets "
+								: " "}
+							for a day or half-day a week). Or it can be monthly
+							on-site visits to work through the issues in person.
+							Or it can be ad hoc incidents during an agreed
+							service window to deal with these one at a time. Or
+							any combination that suits your needs.
 						</p>
 					</li>
 					<li>
