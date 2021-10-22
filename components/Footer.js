@@ -64,6 +64,9 @@ export default function Footer() {
 					</dl>
 				</nav>
 			</section>
+			<small className={styles["bottom-links"]}>
+				<Link href="/privacy_policy">Privacy Policy</Link>
+			</small>
 			<small className={styles.copyright}>
 				&copy;2021
 				{current_year > 2021 ? ` - ${current_year} ` : " "}Support Guys

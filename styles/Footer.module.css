@@ -94,6 +94,13 @@
 	margin-bottom: 0;
 }
 
+.bottom-links {
+	margin-left: 10%;
+	margin-right: 10%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
 @media (max-width: 1200px) {
 	.footer dl > dt {
 		width: 33%;
