@@ -139,25 +139,40 @@ export default function case_studies() {
 					limited hardware support.
 				</h3>
 				<p>
-					A customer called about a single project, replacing the hard
-					drives on more than 20 iMac 2012 computers. These were used
-					for entry level lessons in Logic, GarageBand and Motion. The
-					requirements were strictly entry-level, so the Macs should
-					have been adequate for running the software.
+					A customer called about a single project, upgrading or
+					repairing more than 20 iMacs (older, slim style). Their IT
+					support staff were unable to deal with the hardware, but had
+					suggested that the Macs were failing somehow or just not up
+					to the task. As a school with budget pressures, replacing
+					the entire suite of machines was not something they were in
+					a position to pursue.
 				</p>
 				<p>
-					However boot up times were extremely slow, frustrating
-					students. And the Macs were imaged each term as the classes
-					moved around, and this was taking longer and longer,
-					frustrating staff. The Macs were seeing less and less use,
-					and the school wanted to solve the issue without replacing
-					the machines.
+					The iMacs were used for entry level lessons in Logic,
+					GarageBand and Motion. The students were very
+					beginner-level, and the Macs should have been adequate for
+					running the software for the tasks they required. However
+					boot up times were extremely slow, frustrating students. The
+					Macs were imaged each term as the classes moved around, and
+					this was taking longer and longer, frustrating staff. The
+					Macs were seeing less and less use, and the school wanted to
+					solve the issue.
 				</p>
 				<p>
-					The upgrades were completed in 3 days on-site. We replaced
-					the hard drives with small SSDs. This reduced their boot
-					times to 10 seconds, making the machines excellent tools for
-					the students needs.
+					The customer called us to discuss the situation, and we
+					provided remote support. It was confirmed that the hard
+					drives were running very slowly and having a significant
+					impact on the overall performance. We provided a fixed cost
+					quote to come out on-site and replace the hard drives with
+					Solid State Drives (SSDs), and we were able to go ahead with
+					the short lead time required to fit around term dates.
+				</p>
+				<p>
+					The upgrades were completed in 3 days on-site. The resulting
+					performance improvement reduced their boot times to 10
+					seconds, allowed the applications they were using to startup
+					nearly instantly, and returning the machines to being
+					excellent tools for the students needs.
 				</p>
 			</section>
 			<section className="standard-text">
