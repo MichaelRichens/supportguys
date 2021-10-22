@@ -323,31 +323,27 @@ main > section.text-over-image {
 	}
 }
 
-.standard-text,
-.standard-text-large {
+.standard-text {
 	margin-left: 15%;
 	margin-right: 30%;
 }
 
 @media (max-width: 1200px) {
-	.standard-text,
-	.standard-text-large {
+	.standard-text {
 		margin-left: 10%;
 		margin-right: 20%;
 	}
 }
 
 @media (max-width: 700px) {
-	.standard-text,
-	.standard-text-large {
+	.standard-text {
 		margin-left: 10%;
 		margin-right: 10%;
 	}
 }
 
 @media (max-width: 500px) {
-	.standard-text,
-	.standard-text-large {
+	.standard-text {
 		margin-left: 5%;
 		margin-right: 5%;
 	}
@@ -361,8 +357,7 @@ main > section.text-over-image {
 	margin-bottom: 0.2em;
 }
 
-.standard-text > h2,
-.standard-text-large p {
+.standard-text > h2 {
 	font-size: 28px;
 }
 
