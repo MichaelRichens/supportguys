@@ -110,7 +110,13 @@
 	margin-left: 10%;
 	margin-right: 10%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
+}
+
+.copyright {
+	display: block;
+	margin-top: 2em;
+	text-align: center;
 }
 
 @media (max-width: 1200px) {
@@ -162,10 +168,4 @@
 		width: 95%;
 		margin-left: 5%;
 	}
-}
-
-.footer .copyright {
-	display: block;
-	margin-top: 2em;
-	text-align: center;
 }
