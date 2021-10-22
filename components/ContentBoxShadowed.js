@@ -4,7 +4,7 @@ import styles from "../styles/ContentBoxShadowed.module.css"
 
 export default function ContentBoxShadowed(props) {
 	return (
-		<div className={styles["content-box-shadowed"]}>
+		<section className={styles["content-box-shadowed"]}>
 			<div className="content-box">
 				<div>{props.children}</div>
 				{props.moroInfoHref && (
@@ -14,6 +14,6 @@ export default function ContentBoxShadowed(props) {
 				)}
 			</div>
 			<div> </div>
-		</div>
+		</section>
 	)
 }
