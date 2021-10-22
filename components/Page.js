@@ -20,27 +20,27 @@ export default function Page(props) {
 		__html: JSON.stringify({
 			"@context": "http://schema.org/",
 			"@type": "Website",
-			name: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_NAME}`,
-			description: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_DESC}`,
-			keywords: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_KEYWORDS}`,
+			name: `${process.env.NEXT_PUBLIC_STRUCT_DAT_WEBSITE_NAME}`,
+			description: `${process.env.NEXT_PUBLIC_STRUCT_DAT_WEBSITE_DESC}`,
+			keywords: `${process.env.NEXT_PUBLIC_STRUCT_DAT_WEBSITE_KEYWORDS}`,
 			url: `${process.env.NEXT_PUBLIC_DOMAIN}/`,
 			image: {
 				"@type": "ImageObject",
-				url: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_LOGO_PATH}`,
-				height: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_LOGO_HEIGHT}`,
-				width: `${process.env.NEXT_PUBLIC_STRUC_DAT_WEBSITE_LOGO_WIDTH}`
+				url: `${process.env.NEXT_PUBLIC_STRUCT_DAT_WEBSITE_LOGO_PATH}`,
+				height: `${process.env.NEXT_PUBLIC_STRUCT_DAT_WEBSITE_LOGO_HEIGHT}`,
+				width: `${process.env.NEXT_PUBLIC_STRUCT_DAT_WEBSITE_LOGO_WIDTH}`
 			},
 			author: {
 				"@type": "Corporation",
-				name: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_NAME}`,
-				description: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_NAME}`,
-				url: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_URL}/`,
+				name: `${process.env.NEXT_PUBLIC_STRUCT_DAT_AUTHOR_NAME}`,
+				description: `${process.env.NEXT_PUBLIC_STRUCT_DAT_AUTHOR_NAME}`,
+				url: `${process.env.NEXT_PUBLIC_STRUCT_DAT_AUTHOR_URL}/`,
 				telephone: `${process.env.NEXT_PUBLIC_PHONE_INT}`,
 				image: {
 					"@type": "ImageObject",
-					url: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_LOGO_PATH}`,
-					height: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_LOGO_HEIGHT}`,
-					width: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_LOGO_WIDTH}`
+					url: `${process.env.NEXT_PUBLIC_STRUCT_DAT_AUTHOR_LOGO_PATH}`,
+					height: `${process.env.NEXT_PUBLIC_STRUCT_DAT_AUTHOR_LOGO_HEIGHT}`,
+					width: `${process.env.NEXT_PUBLIC_STRUCT_DAT_AUTHOR_LOGO_WIDTH}`
 				},
 				contactPoint: [
 					{
@@ -51,7 +51,7 @@ export default function Page(props) {
 				],
 				address: {
 					"@type": "PostalAddress",
-					addressCountry: `${process.env.NEXT_PUBLIC_STRUC_DAT_AUTHOR_ADDRESS_COUNTRY}`,
+					addressCountry: `${process.env.NEXT_PUBLIC_STRUCT_DAT_AUTHOR_ADDRESS_COUNTRY}`,
 					streetAddress: `${process.env.NEXT_PUBLIC_ADDRESS_STREET}`,
 					addressLocality: `${process.env.NEXT_PUBLIC_ADDRESS_LOCALITY}`,
 					addressRegion: `${process.env.NEXT_PUBLIC_ADDRESS_REGION}`,
