@@ -530,3 +530,10 @@ a.image-link:active {
 		top: 0.1em;
 	}
 }
+/* the .clickable style can't be in Footer module since clickable is a global style, so I put the others here since they make a natural group */
+/* important because for some reason the privacy policy doesn't show as cyan without it in chrome, despite inspector telling me the colour has changed */
+footer .clickable:hover,
+footer a:hover,
+footer a:hover span {
+	color: cyan !important;
+}

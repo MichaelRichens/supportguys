@@ -71,7 +71,7 @@
 }
 
 .footer dl > dt.logo a:hover img {
-	filter: sepia(100%) hue-rotate(190deg) saturate(200%);
+	filter: sepia(100%) hue-rotate(160deg) saturate(200%);
 }
 
 .footer dl > dd > ul {
