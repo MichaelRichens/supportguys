@@ -1,7 +1,5 @@
-import { useContext, useRef } from "react"
+import { useContext } from "react"
 
-import ContactForm from "../ContactForm"
-import PopupOverlay from "../PopupOverlay"
 import EmailContext from "../../context/EmailContext"
 
 export default function TextContactDetails() {
