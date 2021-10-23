@@ -1,3 +1,9 @@
+@media (max-width: 400px) {
+	.content-box-main {
+		margin-top: 1em !important;
+	}
+}
+
 .title-only > h1,
 .title-only > h2 {
 	margin-bottom: 0;
