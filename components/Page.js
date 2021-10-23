@@ -61,6 +61,7 @@ export default function Page(props) {
 	useEffect(() => {
 		smartquotes().listen()
 	}, [])
+
 	return (
 		<FlashMessageContext.Provider
 			value={{
