@@ -17,12 +17,12 @@ export default function Footer() {
 	return (
 		<footer className={styles.footer}>
 			<section>
-				<section className={styles.contact}>
+				<address className={styles.contact}>
 					<h3>
 						<Link href="/contact_us">Contact Us</Link>
 					</h3>
 					<TextContactDetails />
-				</section>
+				</address>
 				<section className={styles.social}>
 					<h3>Social</h3>
 					<ul>

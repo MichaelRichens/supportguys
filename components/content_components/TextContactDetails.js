@@ -8,7 +8,7 @@ export default function TextContactDetails() {
 	const { emailDispatch } = useContext(EmailContext)
 
 	return (
-		<address>
+		<>
 			<dl>
 				<dt>Tel</dt>
 				<dd>{process.env.NEXT_PUBLIC_PHONE}</dd>
@@ -35,6 +35,6 @@ export default function TextContactDetails() {
 					</ul>
 				</dd>
 			</dl>
-		</address>
+		</>
 	)
 }
