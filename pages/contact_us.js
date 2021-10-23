@@ -1,6 +1,6 @@
 //TODO add social media links
 //TODO add google maps at bottom
-import { useContext, useRef } from "react"
+import { useContext } from "react"
 
 import Page from "../components/Page"
 import EmailContext from "../context/EmailContext"
