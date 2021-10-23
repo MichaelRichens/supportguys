@@ -39,6 +39,11 @@
 	}
 }
 
+.contact-methods {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
 .contact-methods h2,
 .contact-methods h3 {
 	text-align: center;
@@ -53,6 +58,20 @@
 	font-size: 26px;
 }
 
+@media (max-width: 1300px) {
+	.contact-methods {
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+}
+
+@media (max-width: 600px) {
+	.contact-methods {
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+	}
+}
+
 @media (max-width: 500px) {
 	.contact-methods h2 {
 		font-size: 28px;
@@ -63,17 +82,23 @@
 	}
 }
 
+@media (max-width: 400px) {
+	.contact-methods {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
 .contact-methods > div {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: center;
+	gap: 0.5em;
 }
 
 .contact-details {
-	flex: 1;
-	margin-left: 0.5em;
-	margin-right: 0.25em;
+	flex: 2;
 	font-size: 24px;
 }
 
@@ -111,9 +136,7 @@
 }
 
 .contact-now {
-	flex: 1;
-	margin-left: 0.25em;
-	margin-right: 0.5em;
+	flex: 3;
 }
 
 .contact-now > div {
@@ -139,11 +162,8 @@
 		font-size: 18px;
 	}
 	.contact-methods > div {
-		flex-direction: column;
-	}
-
-	.contact-methods > div > *:first-child {
-		margin-bottom: 0.5em;
+		flex-direction: column-reverse;
+		row-gap: 0.5em;
 	}
 }
 
