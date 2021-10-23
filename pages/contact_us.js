@@ -1,8 +1,5 @@
 //TODO add social media links
 //TODO add google maps at bottom
-import { useContext } from "react"
-
-import EmailContext from "../context/EmailContext"
 
 import Page from "../components/Page"
 import TextContactDetails from "../components/content_components/TextContactDetails"
@@ -11,8 +8,6 @@ import ContactForm from "../components/ContactForm"
 import styles from "../styles/contact_us.module.css"
 
 export default function contact_us() {
-	const { emailDispatch } = useContext(EmailContext)
-
 	return (
 		<Page title="Contact Us">
 			<section
