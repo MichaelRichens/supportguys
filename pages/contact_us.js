@@ -32,12 +32,16 @@ export default function contact_us() {
 			<section className={styles["contact-methods"]}>
 				<h2>Contact Us</h2>
 				<div>
-					<address
+					<section
 						className={`content-box ${styles["contact-details"]}`}
 					>
 						<h3>Contact Details</h3>
-						<TextContactDetails />
-					</address>
+						<address
+							className={`content-box ${styles["contact-details"]}`}
+						>
+							<TextContactDetails />
+						</address>
+					</section>
 					<div className={`content-box ${styles["contact-now"]}`}>
 						<ContactForm />
 					</div>
