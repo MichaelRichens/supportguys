@@ -139,7 +139,11 @@
 		font-size: 18px;
 	}
 	.contact-methods > div {
-		flex-direction: column-reverse;
+		flex-direction: column;
+	}
+
+	.contact-methods > div > *:first-child {
+		margin-bottom: 0.5em;
 	}
 }
 
