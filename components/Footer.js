@@ -16,7 +16,7 @@ export default function Footer() {
 
 	return (
 		<footer className={styles.footer}>
-			<section>
+			<div>
 				<section>
 					<h3>
 						<Link href="/contact_us">Contact Us</Link>
@@ -83,7 +83,7 @@ export default function Footer() {
 						</dd>
 					</dl>
 				</nav>
-			</section>
+			</div>
 			<small className={styles["bottom-links"]}>
 				<Link href="/privacy_policy">Privacy Policy</Link>
 			</small>

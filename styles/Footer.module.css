@@ -24,13 +24,13 @@
 	color: lightgray;
 }
 
-.footer > section {
+.footer > div:first-child {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
-.footer > section > * {
+.footer > div:first-child > * {
 	flex: 1;
 	text-align: center;
 	min-width: 200px;
@@ -130,7 +130,7 @@
 }
 
 @media (max-width: 1000px) {
-	.footer > section > * {
+	.footer > div:first-child > * {
 		margin-left: 0.4em;
 		margin-right: 0.4em;
 	}
