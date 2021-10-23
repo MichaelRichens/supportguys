@@ -5,7 +5,7 @@ export default function ValidationWarning(props) {
 				"validation-warning" + (!props.condition ? " invisible" : "")
 			}
 		>
-			{props.message ? props.message : "SPACER"}
+			{props.message ? props.message : "OK"}
 		</aside>
 	)
 }
