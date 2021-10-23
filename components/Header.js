@@ -59,7 +59,7 @@ export default function Header(props) {
 						</span>
 					)
 				})}
-				<span
+				<div
 					className={styles.email}
 					onClick={() => emailDispatch({ type: "formToggle" })}
 				>
@@ -70,7 +70,7 @@ export default function Header(props) {
 						data-event-off="click"
 						alt="Email Us"
 					/>
-				</span>
+				</div>
 			</nav>
 			<NoSsr>
 				<ReactTooltip
