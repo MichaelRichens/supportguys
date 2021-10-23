@@ -18,9 +18,7 @@ export default function ContentServices(props) {
 					some of the many areas in which we can help your business.
 				</p>
 			</section>
-			<section
-				className={"content-box-group " + styles["services-overview"]}
-			>
+			<div className={"content-box-group " + styles["services-overview"]}>
 				<ContentBoxShadowed moroInfoHref="/disaster_recovery">
 					<h3>Disaster Recovery</h3>
 					<p>
@@ -78,7 +76,7 @@ export default function ContentServices(props) {
 						hardware.
 					</p>
 				</ContentBoxShadowed>
-			</section>
+			</div>
 		</section>
 	)
 }
