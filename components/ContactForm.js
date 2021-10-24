@@ -9,7 +9,6 @@ import FlashMessageContext from "../context/FlashMessageContext"
 import ValidationWarning from "./ValidationWarning"
 
 import styles from "../styles/ContactForm.module.css"
-import Header from "./Header"
 
 export default function ContactForm() {
 	const { emailState, emailDispatch } = useContext(EmailContext)
