@@ -14,7 +14,7 @@ export default function TextContactDetails() {
 					className="clickable"
 					onClick={() => emailDispatch({ type: "formToggle" })}
 				>
-					email
+					Email
 				</dt>
 				<dd
 					className="clickable"

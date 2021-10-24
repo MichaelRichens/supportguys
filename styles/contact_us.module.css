@@ -212,6 +212,7 @@
 		font-family: Spinnaker, Arial, Helvetica, sans-serif;
 		color: #1a2b6d;
 		font-variant: initial;
+		line-height: 1.2em;
 	}
 	.contact-details dl > dt::after {
 		content: ":";
