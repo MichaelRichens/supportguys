@@ -14,7 +14,7 @@ import FlashMessages from "./FlashMessages"
 
 export default function Page(props) {
 	const { emailState, emailDispatch } = useContext(EmailContext)
-	const nodeRef = useRef(null)
+	const contactPopupNodeRef = useRef(null)
 	const [flashMessages, setFlashMessages] = useState([])
 	const canonicalURL = process.env.NEXT_PUBLIC_DOMAIN + useRouter().pathname
 
@@ -114,7 +114,7 @@ export default function Page(props) {
 			<Header>
 				<FlashMessages messages={flashMessages} />
 				<PopupOverlay
-					nodeRef={nodeRef}
+					nodeRef={contactPopupNodeRef}
 					isOpen={emailState.contactFormOpen}
 					close={() => emailDispatch({ type: "formClose" })}
 				>
