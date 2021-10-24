@@ -1,12 +1,11 @@
-import { useContext, useRef } from "react"
+import { useContext } from "react"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import Image from "next/image"
 import ReactTooltip from "react-tooltip"
 
 import EmailContext from "../context/EmailContext"
-import PopupOverlay from "./PopupOverlay"
-import ContactForm from "./ContactForm"
+
 import NoSsr from "./NoSsr"
 
 import styles from "../styles/Header.module.css"
@@ -15,8 +14,7 @@ import banner from "../public/images/logos/support_guys_logo900x140.png"
 import emailIcon from "../public/images/icons/email_white_icon35x20.png"
 
 export default function Header(props) {
-	const { emailState, emailDispatch } = useContext(EmailContext)
-	const nodeRef = useRef(null)
+	const { emailDispatch } = useContext(EmailContext)
 	const router = useRouter()
 	const menu = [
 		{ title: "Home", path: "/" },
@@ -84,13 +82,6 @@ export default function Header(props) {
 				/>
 			</NoSsr>
 			{props.children}
-			<PopupOverlay
-				nodeRef={nodeRef}
-				isOpen={emailState.contactFormOpen}
-				close={() => emailDispatch({ type: "formClose" })}
-			>
-				<ContactForm />
-			</PopupOverlay>
 		</header>
 	)
 }

@@ -1,15 +1,20 @@
 import Head from "next/head"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import { useRouter } from "next/router"
 import smartquotes from "smartquotes"
 
 import FlashMessageContext from "../context/FlashMessageContext"
+import EmailContext from "../context/EmailContext"
 
+import PopupOverlay from "./PopupOverlay"
+import ContactForm from "./ContactForm"
 import Header from "./Header"
 import Footer from "./Footer"
 import FlashMessages from "./FlashMessages"
 
 export default function Page(props) {
+	const { emailState, emailDispatch } = useContext(EmailContext)
+	const nodeRef = useRef(null)
 	const [flashMessages, setFlashMessages] = useState([])
 	const canonicalURL = process.env.NEXT_PUBLIC_DOMAIN + useRouter().pathname
 
@@ -108,6 +113,13 @@ export default function Page(props) {
 			</Head>
 			<Header>
 				<FlashMessages messages={flashMessages} />
+				<PopupOverlay
+					nodeRef={nodeRef}
+					isOpen={emailState.contactFormOpen}
+					close={() => emailDispatch({ type: "formClose" })}
+				>
+					<ContactForm />
+				</PopupOverlay>
 			</Header>
 			<main>{props.children}</main>
 			<Footer />
