@@ -35,6 +35,12 @@ export default function ContactForm() {
 			valid = false
 		} else {
 			valid = validateEmail()
+			if (!valid) {
+				emailDispatch({
+					type: "emailWarn",
+					value: "Invalid email address."
+				})
+			}
 		}
 		if (!emailState.subject) {
 			emailDispatch({ type: "subjectWarn", value: "No subject entered." })
@@ -92,10 +98,6 @@ export default function ContactForm() {
 
 	function validateEmail() {
 		if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailState.email)) {
-			emailDispatch({
-				type: "emailWarn",
-				value: "Invalid email address."
-			})
 			return false
 		}
 		return true
@@ -166,7 +168,14 @@ export default function ContactForm() {
 		emailDispatch({ type: "emailWarn", value: "" })
 		let timer = null
 		if (emailState.email) {
-			timer = setTimeout(() => validateEmail(), validationTimeout)
+			timer = setTimeout(() => {
+				if (!validateEmail()) {
+					emailDispatch({
+						type: "emailWarn",
+						value: "Invalid email address."
+					})
+				}
+			}, validationTimeout)
 		}
 
 		return () => {
