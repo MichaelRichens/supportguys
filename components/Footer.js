@@ -54,6 +54,7 @@ export default function Footer() {
 										width="144"
 										height="25"
 										alt="MacUpgrades"
+										priority={true}
 									/>
 								</a>
 							</Link>
@@ -72,6 +73,7 @@ export default function Footer() {
 										width="146"
 										height="25"
 										alt="AppCentre"
+										priority={true}
 									/>
 								</a>
 							</Link>
