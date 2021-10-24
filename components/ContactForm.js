@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useCallback, useContext, useEffect, useState } from "react"
 import Link from "next/link"
 
 import EmailContext, {
@@ -9,12 +9,20 @@ import FlashMessageContext from "../context/FlashMessageContext"
 import ValidationWarning from "./ValidationWarning"
 
 import styles from "../styles/ContactForm.module.css"
-import Header from "./Header"
 
 export default function ContactForm() {
 	const { emailState, emailDispatch } = useContext(EmailContext)
 	const { setFlashMessages } = useContext(FlashMessageContext)
 	const validationTimeout = 1500
+	// hacky fix for possible race condition - see comment above the useEffects below
+	const [, updateState] = useState()
+	const forceUpdate = useCallback(() => updateState({}), [])
+	const [valueNotLoadedYet, setValueNotLoadedYet] = useState({
+		name: emailState.name === emailMagicServerPlaceholder,
+		email: emailState.email === emailMagicServerPlaceholder,
+		subject: emailState.subject === emailMagicServerPlaceholder,
+		body: emailState.body === emailMagicServerPlaceholder
+	})
 
 	function handleInputChange(e) {
 		emailDispatch({ type: e.target.name, value: e.target.value })
@@ -108,9 +116,18 @@ export default function ContactForm() {
 
 	//the screwing around with emailMagicServerPlaceholder is a hack, see note comments in EmailContext.js
 	// - only relevant when this component has just been hard refreshed
+	// - had an issue (only on netlify, dev was fine) where body for some reason sometimes rendered with the placeholder value after a hard refresh,
+	// and its backing value then updated without forcing a rerender (race condition with update happening in EmailContext.js I *think*).
+	// Added an even more complicated system with [valueNotLoadedYet, setValueNotLoadedYet] which checks what the backing value is when
+	// the component loads and if it was the placeholder, forces an update in the first run of the relevant useEffect.
+	// This seemed to solve it, though not entirely sure if it did so in the way I intended (the forceUpdate path doesn't seem to have been
+	// actually followed as far as I can see, so it might just have been the extra code slowed things down enough for the race condition to not occur)
 	const clientSide = typeof window !== "undefined" //doubt this check is needed, but might as well
 
 	useEffect(() => {
+		if (valueNotLoadedYet.name) {
+			forceUpdate()
+		}
 		if (emailState.name === emailMagicServerPlaceholder) {
 			emailDispatch({
 				type: "name",
@@ -120,11 +137,19 @@ export default function ContactForm() {
 			})
 		} else {
 			localStorage.setItem("contact_form_name", emailState.name)
+			setValueNotLoadedYet((prev) => {
+				let next = { ...prev }
+				next.name = false
+				return next
+			})
 		}
 		emailDispatch({ type: "nameWarn", value: "" })
 	}, [emailState.name])
 
 	useEffect(() => {
+		if (valueNotLoadedYet.subject) {
+			forceUpdate()
+		}
 		if (emailState.subject === emailMagicServerPlaceholder) {
 			emailDispatch({
 				type: "subject",
@@ -135,11 +160,19 @@ export default function ContactForm() {
 			})
 		} else {
 			localStorage.setItem("contact_form_subject", emailState.subject)
+			setValueNotLoadedYet((prev) => {
+				let next = { ...prev }
+				next.subject = false
+				return next
+			})
 		}
 		emailDispatch({ type: "subjectWarn", value: "" })
 	}, [emailState.subject])
 
 	useEffect(() => {
+		if (valueNotLoadedYet.body) {
+			forceUpdate()
+		}
 		if (emailState.body === emailMagicServerPlaceholder) {
 			emailDispatch({
 				type: "body",
@@ -149,11 +182,19 @@ export default function ContactForm() {
 			})
 		} else {
 			localStorage.setItem("contact_form_body", emailState.body)
+			setValueNotLoadedYet((prev) => {
+				let next = { ...prev }
+				next.body = false
+				return next
+			})
 		}
 		emailDispatch({ type: "bodyWarn", value: "" })
 	}, [emailState.body])
 
 	useEffect(() => {
+		if (valueNotLoadedYet.email) {
+			forceUpdate()
+		}
 		if (emailState.email === emailMagicServerPlaceholder) {
 			emailDispatch({
 				type: "email",
@@ -164,6 +205,11 @@ export default function ContactForm() {
 			})
 		} else {
 			localStorage.setItem("contact_form_email", emailState.email)
+			setValueNotLoadedYet((prev) => {
+				let next = { ...prev }
+				next.email = false
+				return next
+			})
 		}
 		emailDispatch({ type: "emailWarn", value: "" })
 		let timer = null
@@ -196,8 +242,12 @@ export default function ContactForm() {
 					type="text"
 					name="name"
 					autoComplete="name"
-					value={emailState.name}
-					onChange={handleInputChange}
+					onInput={handleInputChange}
+					value={
+						emailState.name !== emailMagicServerPlaceholder
+							? emailState.name
+							: ""
+					}
 				/>
 			</label>
 			<ValidationWarning
@@ -211,8 +261,12 @@ export default function ContactForm() {
 					placeholder="email@example.com"
 					name="email"
 					autoComplete="email"
-					value={emailState.email}
-					onChange={handleInputChange}
+					onInput={handleInputChange}
+					value={
+						emailState.email !== emailMagicServerPlaceholder
+							? emailState.email
+							: ""
+					}
 				/>
 			</label>
 			<ValidationWarning
@@ -225,8 +279,12 @@ export default function ContactForm() {
 					type="text"
 					name="subject"
 					autoComplete="off"
-					onChange={handleInputChange}
-					value={emailState.subject}
+					onInput={handleInputChange}
+					value={
+						emailState.subject !== emailMagicServerPlaceholder
+							? emailState.subject
+							: ""
+					}
 				/>
 			</label>
 			<ValidationWarning
@@ -238,8 +296,12 @@ export default function ContactForm() {
 				<textarea
 					name="body"
 					autoComplete="off"
-					onChange={handleInputChange}
-					value={emailState.body}
+					onInput={handleInputChange}
+					value={
+						emailState.body !== emailMagicServerPlaceholder
+							? emailState.body
+							: ""
+					}
 				/>
 			</label>
 			<button type="submit">Send Email</button>
