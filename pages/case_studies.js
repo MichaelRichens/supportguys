@@ -9,7 +9,7 @@ export default function case_studies() {
 	return (
 		<Page
 			title={"Case Studies"}
-			metaDescription="Support Guys provide Mac focussed IT support to a variety of SME and other clients, helping with networking, disaster planning, and hardware upgrades."
+			metaDescription="Support Guys provide Mac focused IT support to a variety of SME and other clients, helping with networking, disaster planning, and hardware upgrades."
 		>
 			<section
 				className={stylesMainPage["page-intro"]}

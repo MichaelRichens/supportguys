@@ -30,7 +30,7 @@ export default function Home() {
 					h1={true}
 				>
 					<p>
-						Support Guys provides expert Apple Mac focussed IT
+						Support Guys provides expert Apple Mac focused IT
 						support to business customers. We have been supporting
 						customers using Apple Mac computers for over
 						{" " + (new Date().getFullYear() - 2001) + " "} years.

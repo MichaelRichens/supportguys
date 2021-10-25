@@ -6,7 +6,7 @@ export default function disaster_recovery() {
 	return (
 		<Page
 			title={"Disaster Recovery"}
-			metaDescription={`Mac focussed disaster planning and general support for SMEs, from Cambridge based Support Guys, Mac experts with ${
+			metaDescription={`Mac focused disaster planning and general support for SMEs, from Cambridge based Support Guys, Mac experts with ${
 				current_year - 2001
 			} years experience.`}
 		>
