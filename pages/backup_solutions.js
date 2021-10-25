@@ -8,7 +8,7 @@ export default function backup_solutions() {
 	return (
 		<Page
 			title="Backup Solutions"
-			metaDescription={`We provide Apple Mac specific, expert advice, on SME backup solutions and strategies. We can advise on on- and off-premises options with the benefit of over ${
+			metaDescription={`We provide Apple Mac specific, expert advice, on SME backup solutions and strategies. We can advise on on- and off-premises options with the benefit of ${
 				current_year - 2001
 			} years experience.`}
 		>
@@ -95,7 +95,7 @@ export default function backup_solutions() {
 					business to do!
 				</p>
 				<p>
-					We've been designing and deploying backup solutions for over{" "}
+					We've been designing and deploying backup solutions for{" "}
 					{current_year - 2001} years, and the technology has changed
 					a lot. If you have concerns over your data, get in touch to
 					book in a consultation with one of our specialists.

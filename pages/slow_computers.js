@@ -9,7 +9,7 @@ export default function slow_computers() {
 	return (
 		<Page
 			title="Computer Performance Upgrades"
-			metaDescription={`Support Guys is the SME support arm of MacUpgrades, and has over ${
+			metaDescription={`Support Guys is the SME support arm of MacUpgrades, and has ${
 				current_year - 2001
 			} years experience in improving the performance of Apple Mac computers.`}
 		>
