@@ -12,7 +12,7 @@ export default function ContentServices(props) {
 					<h2>Our Services</h2>
 				)}
 				<p>
-					Sometimes we all need some Support. We aim to help you get
+					Sometimes we all need some support. We aim to help you get
 					the most from your IT infrastructure and devices, and give
 					you the time and confidence to do what you do best. Here are
 					some of the many areas in which we can help your business.

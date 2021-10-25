@@ -36,7 +36,7 @@ export default function Home() {
 						{" " + (new Date().getFullYear() - 2001) + " "} years.
 						We specialise in the world of Mac hardware, macOS and
 						all associated technologies like WiFi networks,
-						Filemaker servers, NAS solutions, and backups. We can
+						FileMaker servers, NAS solutions, and backups. We can
 						assess, plan and improve your networks and
 						infrastructure and the computers you use.
 					</p>
