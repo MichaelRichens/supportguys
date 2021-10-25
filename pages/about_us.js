@@ -15,7 +15,7 @@ export default function about_us() {
 	return (
 		<Page
 			title="About Us"
-			metaDescription="Support Guys bring two decades of Apple Mac experience to support our SME customers in ensuring your IT setup is resilient and trouble free."
+			metaDescription="Support Guys bring two decades of real world Apple Mac experience to support our SME customers in ensuring your IT setup is resilient and trouble free."
 		>
 			<section
 				className={stylesMainPage["page-intro"]}

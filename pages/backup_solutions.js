@@ -19,7 +19,7 @@ export default function backup_solutions() {
 				imageBoxHeight="500"
 			>
 				<p>
-					So... it's not the 90s anymore. Everyone knows they need a
+					So... it's not the 90s any more. Everyone knows they need a
 					backup strategy - anything of value on your computer needs
 					to be kept elsewhere as well. In business this is even more
 					important - telling a client that their project is delayed
