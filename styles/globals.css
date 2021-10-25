@@ -16,6 +16,10 @@ body {
 	}
 }
 
+* {
+	box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -49,8 +53,8 @@ h3 {
 	}
 }
 
-* {
-	box-sizing: border-box;
+h1 {
+	text-align: center;
 }
 
 ul {
@@ -60,26 +64,6 @@ ul {
 
 ol {
 	padding-left: 2em;
-}
-
-ul.bullet {
-	list-style-type: circle;
-	padding-left: 1.2em;
-}
-
-ul.bullet > li,
-ol > li {
-	margin-bottom: 0.5em;
-}
-
-ul.bullet,
-ol > li:last-child,
-ol > li:last-child {
-	margin-bottom: initial;
-}
-
-.clickable {
-	cursor: pointer;
 }
 
 button {
@@ -114,10 +98,6 @@ button:disabled {
 	top: 1px;
 }
 
-h1 {
-	text-align: center;
-}
-
 address {
 	font-style: normal;
 	margin: 0;
@@ -126,6 +106,62 @@ address {
 
 details > summary > * {
 	display: inline;
+}
+
+ul.bullet {
+	list-style-type: circle;
+	padding-left: 1.2em;
+}
+
+ul.bullet > li,
+ol > li {
+	margin-bottom: 0.5em;
+}
+
+ul.bullet,
+ol > li:last-child,
+ol > li:last-child {
+	margin-bottom: initial;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.centre-contents {
+	display: flex;
+	justify-content: center;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.validation-warning {
+	color: red;
+	font-size: 85%;
+}
+
+.logo-list > li {
+	margin-bottom: 1em;
+	margin-left: 2em;
+}
+
+.logo-list > li:last-child {
+	margin-bottom: 0;
+}
+
+a.image-link,
+a.image-link:visited,
+a.image-link:hover,
+a.image-link:active {
+	color: initial;
+	background-color: initial;
+	text-decoration: initial;
+}
+
+a.image-link:hover {
+	filter: brightness(75%);
 }
 
 main a,
@@ -435,33 +471,6 @@ main > section.text-over-image {
 	.standard-text dl {
 		line-height: 1.1em;
 	}
-}
-
-.invisible {
-	visibility: hidden;
-}
-
-.validation-warning {
-	color: red;
-	font-size: 85%;
-}
-
-.logo-list > li {
-	margin-bottom: 1em;
-	margin-left: 2em;
-}
-
-.logo-list > li:last-child {
-	margin-bottom: 0;
-}
-
-a.image-link,
-a.image-link:visited,
-a.image-link:hover,
-a.image-link:active {
-	color: initial;
-	background-color: initial;
-	text-decoration: initial;
 }
 
 /*	Keep popup-overlay styles here - have to keep transition styles here anyway, 
