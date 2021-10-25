@@ -64,14 +64,14 @@ export default function about_us() {
 					using Apple Mac computers for over
 					{" " + (new Date().getFullYear() - 2001) + " "} years. We
 					specialise in the world of Mac hardware, macOS and all
-					associated technologies like WiFi networks, Filemaker
+					associated technologies like WiFi networks, FileMaker
 					servers, NAS solutions, and backups. We can assess, plan and
 					improve your networks and infrastructure and the computers
 					you use.
 				</p>
 				<p>
 					We tend to focus on the user, the person doing the work and
-					look for bottlenecks which get in the way. This usually
+					look for bottlenecks which get in their way. This usually
 					starts with a lot of questions about what is causing you
 					pain, and trying and work through them to deliver a complete
 					solution.
