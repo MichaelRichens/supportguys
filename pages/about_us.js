@@ -53,7 +53,7 @@ export default function about_us() {
 					</Link>
 					, which provides Apple Mac repairs and upgrades on a retail
 					basis. Over the years, our relationships with some of our
-					business customers evolved into a more that of a traditional
+					business customers evolved into more that of a traditional
 					IT support provider, with us handling everything to major
 					network upgrades to printer configuration - "Go and speak to
 					those support guys; they will sort it all out for you." And
