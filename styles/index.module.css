@@ -34,10 +34,6 @@
 	align-items: center;
 }
 
-.home-page-find-out-more > div:first-child {
-	max-width: 800px;
-}
-
 .home-page-find-out-more > nav:nth-child(2) {
 	margin-right: 40%;
 }
