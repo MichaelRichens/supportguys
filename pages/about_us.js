@@ -10,7 +10,7 @@ import TextAboutUsCambs from "../components/content_components/TextAboutUsCambs"
 import stylesMainPage from "../styles/stylesMainPage.module.css"
 
 export default function about_us() {
-	const current_year = new Date().getFullYear()
+	const currentYear = new Date().getFullYear()
 
 	return (
 		<Page
@@ -117,9 +117,9 @@ export default function about_us() {
 					Sometimes you need a detailed disaster recovery plan for a
 					business proposal, or to update one as new risks have
 					emerged
-					{current_year <= 2022
+					{currentYear <= 2022
 						? ` (such as a global pandemic${
-								current_year <= 2021
+								currentYear <= 2021
 									? ", or no one able to get into the office as their cars have no petrol!)"
 									: "!)"
 						  }`

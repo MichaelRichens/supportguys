@@ -12,7 +12,7 @@ import appcentre_logo_small from "../public/images/logos/appcentre_logo146x25.pn
 import facebook_logo_small_square from "../public/images/logos/facebook_logo25x25.png"
 
 export default function Footer() {
-	const current_year = new Date().getFullYear()
+	const currentYear = new Date().getFullYear()
 
 	return (
 		<footer className={styles.footer}>
@@ -91,8 +91,8 @@ export default function Footer() {
 			</small>
 			<small className={styles.copyright}>
 				&copy;2021
-				{current_year > 2021 ? ` - ${current_year} ` : " "}Support Guys
-				is a trading division of MacUpgrades / Second Chance PC Ltd.
+				{currentYear > 2021 ? ` - ${currentYear} ` : " "}Support Guys is
+				a trading division of MacUpgrades / Second Chance PC Ltd.
 				Company number: 4331031. Registered for VAT: GB 783705210.
 			</small>
 		</footer>
