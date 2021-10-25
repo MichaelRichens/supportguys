@@ -69,11 +69,11 @@ export default function about_us() {
 					networks and infrastructure and the computers you use.
 				</p>
 				<p>
-					We tend to focus on the user, the person doing the work and
+					We tend to focus on the user, the person doing the work; and
 					look for bottlenecks which get in their way. This usually
 					starts with a lot of questions about what is causing you
-					pain, and trying and work through them to deliver a complete
-					solution.
+					pain, and trying to work through them to find the root
+					causes of the issues.
 				</p>
 				<p>
 					Often these are obvious, sometimes they are not. Questions
