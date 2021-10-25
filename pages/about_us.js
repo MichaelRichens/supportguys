@@ -137,28 +137,9 @@ export default function about_us() {
 				<h2>Next Steps</h2>
 				<p>
 					Just <Link href="/contact_us">get in touch</Link> with our
-					team to begin the process.
-				</p>
-				<p>
-					Initial Assessment: historically this was a visit to your
-					site, walk and talk through what is causing you issues.
-					These days this can be remote if needed (via Teamviewer, or
-					even apps like Zoom or FaceTime)
-				</p>
-				<p>
-					A usual assessment reveals two distinct (related but
-					separate) requirements:
-				</p>
-				<ol type="i">
-					<li>How much support do you need and how often.</li>
-
-					<li>
-						Very specific projects; expected costs and timelines.
-					</li>
-				</ol>
-				<p>
-					We are here to help every step through the journey. We look
-					forward to working with you.
+					team to begin the process, or have a look at our{" "}
+					<Link href="/plans_and_costs">Plans and Costs</Link> for
+					more information.
 				</p>
 			</section>
 		</Page>
