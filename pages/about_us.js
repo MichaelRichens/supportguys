@@ -1,4 +1,4 @@
-// TODO dougs input on new focus and specialities section
+// TODO time critical response section is a mess
 
 import Link from "next/link"
 
@@ -104,11 +104,11 @@ export default function about_us() {
 					what is wrong and how to fix it.
 				</p>
 				<p>
-					Maybe someone’s computer has fallen over and now you realise
-					that you need to get them all fixed and backing up?
+					Maybe someone's computer has fallen over, and you need to
+					get their data restored and them back up quickly.
 				</p>
 				<p>
-					Maybe you now have 10 people working from home and need to
+					Maybe you now have 10 people working from home, and need to
 					think about how to keep all that communication safe and
 					secure (more secure than WhatsApp or email).
 				</p>
@@ -116,9 +116,9 @@ export default function about_us() {
 					Sometimes you need a detailed disaster recovery plan for a
 					business proposal, or to update one as new risks have
 					emerged
-					{currentYear <= 2022
+					{currentYear < 2023
 						? ` (such as a global pandemic${
-								currentYear <= 2021
+								currentYear < 2022
 									? ", or no one able to get into the office as their cars have no petrol!)"
 									: "!)"
 						  }`
