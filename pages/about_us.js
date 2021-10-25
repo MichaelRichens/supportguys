@@ -79,7 +79,7 @@ export default function about_us() {
 				<p>
 					Often these are obvious, sometimes they are not. Questions
 					about email being slow can be underlying network issues
-					(DNS, Broadband connection failure, too many hubs, old or
+					(DNS, broadband connection failure, too many hubs, old or
 					damaged cables). It could be client issues (software out of
 					date, corrupted email databases, malware or PUPs getting in
 					the way). However it can also be about training and
