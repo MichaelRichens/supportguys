@@ -5,6 +5,7 @@ import ServicePage from "../components/ServicePage"
 
 export default function backup_solutions() {
 	const currentYear = new Date().getFullYear()
+
 	return (
 		<Page
 			title="Backup Solutions"

@@ -62,12 +62,11 @@ export default function about_us() {
 				<p>
 					We are a small company that has been supporting customers
 					using Apple Mac computers for over
-					{" " + (new Date().getFullYear() - 2001) + " "} years. We
-					specialise in the world of Mac hardware, macOS and all
-					associated technologies like WiFi networks, FileMaker
-					servers, NAS solutions, and backups. We can assess, plan and
-					improve your networks and infrastructure and the computers
-					you use.
+					{" " + (currentYear - 2001) + " "} years. We specialise in
+					the world of Mac hardware, macOS and all associated
+					technologies like WiFi networks, FileMaker servers, NAS
+					solutions, and backups. We can assess, plan and improve your
+					networks and infrastructure and the computers you use.
 				</p>
 				<p>
 					We tend to focus on the user, the person doing the work and
