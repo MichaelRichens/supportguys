@@ -54,7 +54,7 @@ export default function about_us() {
 					, which provides Apple Mac repairs and upgrades on a retail
 					basis. Over the years, our relationships with some of our
 					business customers evolved into more that of a traditional
-					IT support provider, with us handling everything to major
+					IT support provider, with us handling everything from major
 					network upgrades to printer configuration - "Go and speak to
 					those support guys; they will sort it all out for you." And
 					we have, we do, and will continue to do so.
