@@ -61,7 +61,7 @@ export default function about_us() {
 				</p>
 				<p>
 					We are a small company that has been supporting customers
-					using Apple Mac computers for over
+					using Apple Mac computers for
 					{" " + (currentYear - 2001) + " "} years. We specialise in
 					the world of Mac hardware, macOS and all associated
 					technologies like WiFi networks, FileMaker servers, NAS
