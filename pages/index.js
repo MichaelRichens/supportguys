@@ -56,7 +56,7 @@ export default function Home() {
 				}}
 			>
 				<h2>About Us</h2>
-				<TextAboutUsCambs />
+				<TextAboutUsCambs yearsInBusiness={currentYear - 2001} />
 			</section>
 			<ContentServices />
 			<hr />

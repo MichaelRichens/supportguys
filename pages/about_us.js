@@ -31,7 +31,7 @@ export default function about_us() {
 					h1={true}
 					decoratorRight={true}
 				>
-					<TextAboutUsCambs />
+					<TextAboutUsCambs yearsInBusiness={currentYear - 2001} />
 				</ContentBoxMain>
 			</section>
 			<section className="standard-text">
