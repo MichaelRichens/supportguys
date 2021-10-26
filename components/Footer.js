@@ -17,7 +17,7 @@ export default function Footer() {
 	return (
 		<footer className={styles.footer}>
 			<div>
-				<section>
+				<section className={styles.contact}>
 					<h3>
 						<Link href="/contact_us">Contact Us</Link>
 					</h3>
@@ -43,10 +43,10 @@ export default function Footer() {
 						</li>
 					</ul>
 				</section>
-				<nav>
+				<nav className={styles.brands}>
 					<h3>Our Other Brands</h3>
-					<dl className={styles.brands}>
-						<dt>
+					<ul>
+						<li>
 							<Link href="https://www.macupgrades.co.uk/store/">
 								<a>
 									<Image
@@ -58,32 +58,34 @@ export default function Footer() {
 									/>
 								</a>
 							</Link>
-						</dt>
-						<dd>
-							Repair and Upgrades for Macintosh Computers since
-							2005, specialising in board level repairs and
-							detailed compatibility guidance.
-						</dd>
 
-						<dt>
-							<Link href="https://www.appcentre.co.uk/softstore/">
-								<a>
-									<Image
-										src={appcentre_logo_small}
-										width="146"
-										height="25"
-										alt="AppCentre"
-										priority={true}
-									/>
-								</a>
-							</Link>
-						</dt>
-						<dd>
-							Supplying and supporting Kerio Connect mailserver
-							and Control firewall, and other Kerio and GFI
-							business software.
-						</dd>
-					</dl>
+							<p>
+								Repair and Upgrades for Macintosh Computers
+								since 2005, specialising in board level repairs
+								and detailed compatibility guidance.
+							</p>
+						</li>
+						<li>
+							<div>
+								<Link href="https://www.appcentre.co.uk/softstore/">
+									<a>
+										<Image
+											src={appcentre_logo_small}
+											width="146"
+											height="25"
+											alt="AppCentre"
+											priority={true}
+										/>
+									</a>
+								</Link>
+							</div>
+							<div>
+								Supplying and supporting Kerio Connect
+								mailserver and Control firewall, and other Kerio
+								and GFI business software.
+							</div>
+						</li>
+					</ul>
 				</nav>
 			</div>
 			<small className={styles["bottom-links"]}>
