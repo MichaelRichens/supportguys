@@ -62,15 +62,15 @@
 	content: " :";
 }
 
-.footer dl > dt.logo {
+.footer .brands dt {
 	margin-top: 10px;
 }
 
-.footer dl > dt.logo::after {
+.footer .brands dt::after {
 	content: "";
 }
 
-.footer dl > dt.logo a:hover img {
+.footer .brands dt a:hover img {
 	filter: sepia(100%) hue-rotate(160deg) saturate(200%);
 }
 

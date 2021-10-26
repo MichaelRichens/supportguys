@@ -45,8 +45,8 @@ export default function Footer() {
 				</section>
 				<nav>
 					<h3>Our Other Brands</h3>
-					<dl>
-						<dt className={styles.logo}>
+					<dl className={styles.brands}>
+						<dt>
 							<Link href="https://www.macupgrades.co.uk/store/">
 								<a>
 									<Image
@@ -65,7 +65,7 @@ export default function Footer() {
 							detailed compatibility guidance.
 						</dd>
 
-						<dt className={styles.logo}>
+						<dt>
 							<Link href="https://www.appcentre.co.uk/softstore/">
 								<a>
 									<Image
