@@ -57,7 +57,7 @@ export default function about_us() {
 					IT support provider, with us handling everything from major
 					network upgrades to printer configuration - "Go and speak to
 					those support guys; they will sort it all out for you." And
-					we have, we do, and will continue to do so.
+					we have, we do, and we will continue to do so.
 				</p>
 				<p>
 					We are a small company that has been supporting customers
