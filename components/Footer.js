@@ -21,7 +21,7 @@ export default function Footer() {
 					<h3>
 						<Link href="/contact_us">Contact Us</Link>
 					</h3>
-					<address className={styles.contact}>
+					<address>
 						<TextContactDetails />
 					</address>
 				</section>
@@ -43,7 +43,7 @@ export default function Footer() {
 						</li>
 					</ul>
 				</section>
-				<nav className={styles.contact}>
+				<nav>
 					<h3>Our Other Brands</h3>
 					<dl>
 						<dt className={styles.logo}>
