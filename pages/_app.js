@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
 	useEffect(() => {
 		const handleRouteChange = (url) => {
 			process.env.NODE_ENV == "production"
-			ga.pageview(url)
+			pageview(url)
 		}
 		//When the component is mounted, subscribe to router changes
 		//and log those page views
