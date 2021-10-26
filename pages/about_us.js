@@ -87,6 +87,12 @@ export default function about_us() {
 					architectural drawings is easy - but slow and insecure.
 					Better solutions exist today.
 				</p>
+				<p>
+					If you want to read about some of the more memorable
+					customers we have helped, please visit our{" "}
+					<Link href="/case_studies">case studies page</Link>, where
+					we share some of their stories.
+				</p>
 			</section>
 			<section className="standard-text">
 				<h2>Time critical response</h2>
@@ -138,8 +144,16 @@ export default function about_us() {
 				<p>
 					Just <Link href="/contact_us">get in touch</Link> with our
 					team to begin the process, or have a look at our{" "}
-					<Link href="/plans_and_costs">Plans and Costs</Link> for
+					<Link href="/plans_and_costs">plans and costs</Link> for
 					more information.
+				</p>
+				<p>
+					We offer a wide variety of services, and try to be flexible
+					to meet your needs, even if that involves additional
+					research. Our <Link href="/services">services page</Link>{" "}
+					outlines our standard offerings, but please do ask if you
+					have a specific need outside of that; often we can go deeper
+					into an area if we know it will help.
 				</p>
 			</section>
 		</Page>
