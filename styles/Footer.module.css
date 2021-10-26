@@ -107,6 +107,7 @@
 }
 
 /* leave the .footer selector - need it to override the .footer dt, .footer dd styling */
+
 .footer .contact dt,
 .footer .contact dd {
 	margin-bottom: 1.5em;
