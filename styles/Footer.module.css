@@ -106,6 +106,12 @@
 	transition-delay: 300ms;
 }
 
+/* leave the .footer selector - need it to override the .footer dt, .footer dd styling */
+.footer .contact dt,
+.footer .contact dd {
+	margin-bottom: 1.5em;
+}
+
 .bottom-links {
 	margin-left: 10%;
 	margin-right: 10%;
