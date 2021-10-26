@@ -123,15 +123,15 @@ export default function support_now() {
 				<p>
 					Support Guys was formed to help our SME customers with
 					larger and ongoing jobs. If you have a single Mac computer
-					with issues or needing upgrades, then you will find more
-					relevant information and support from our sister site{" "}
+					with issues or needing upgrades, then you will find a wealth
+					of relevant information and support on our sister site{" "}
 					<Link href="https://www.macupgrades.co.uk/store/">
 						MacUpgrades.co.uk
 					</Link>{" "}
 					- machine specific pricing, hardware available for user
 					installation, and a wealth of machine specific information.
 				</p>
-				<div style={{ display: "flex", justifyContent: "center" }}>
+				<div className="centre-contents">
 					<Link href="https://www.macupgrades.co.uk/store/">
 						<a className="image-link">
 							<Image src={macupgrades_logo} />

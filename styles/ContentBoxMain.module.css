@@ -1,3 +1,25 @@
+.content-box-main {
+	max-width: 800px;
+}
+
+@media (max-width: 900px) {
+	.content-box-main {
+		max-width: 700px;
+	}
+}
+
+@media (max-width: 800px) {
+	.content-box-main {
+		max-width: 600px;
+	}
+}
+
+@media (max-width: 700px) {
+	.content-box-main {
+		max-width: 500px;
+	}
+}
+
 @media (max-width: 400px) {
 	.content-box-main {
 		margin-top: 1em !important;

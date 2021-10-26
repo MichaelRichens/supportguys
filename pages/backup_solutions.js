@@ -4,12 +4,13 @@ import Page from "../components/Page"
 import ServicePage from "../components/ServicePage"
 
 export default function backup_solutions() {
-	const current_year = new Date().getFullYear()
+	const currentYear = new Date().getFullYear()
+
 	return (
 		<Page
 			title="Backup Solutions"
 			metaDescription={`We provide Apple Mac specific, expert advice, on SME backup solutions and strategies. We can advise on on- and off-premises options with the benefit of ${
-				current_year - 2001
+				currentYear - 2001
 			} years experience.`}
 		>
 			<ServicePage
@@ -19,7 +20,7 @@ export default function backup_solutions() {
 				imageBoxHeight="500"
 			>
 				<p>
-					So... it's not the 90s anymore. Everyone knows they need a
+					So... it's not the 90s any more. Everyone knows they need a
 					backup strategy - anything of value on your computer needs
 					to be kept elsewhere as well. In business this is even more
 					important - telling a client that their project is delayed
@@ -96,8 +97,8 @@ export default function backup_solutions() {
 				</p>
 				<p>
 					We've been designing and deploying backup solutions for{" "}
-					{current_year - 2001} years, and the technology has changed
-					a lot. If you have concerns over your data, get in touch to
+					{currentYear - 2001} years, and the technology has changed a
+					lot. If you have concerns over your data, get in touch to
 					book in a consultation with one of our specialists.
 				</p>
 			</ServicePage>

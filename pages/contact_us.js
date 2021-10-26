@@ -8,6 +8,8 @@ import ContactForm from "../components/ContactForm"
 import styles from "../styles/contact_us.module.css"
 
 export default function contact_us() {
+	const currentYear = new Date().getFullYear()
+
 	return (
 		<Page title="Contact Us">
 			<section
@@ -20,7 +22,7 @@ export default function contact_us() {
 				<h1>Get in Touch</h1>
 				<p>
 					We're here to help you and your business
-					{new Date().getFullYear() < 2023
+					{currentYear < 2023
 						? " return to normality and beyond. "
 						: " do what it does best. "}
 					Whether it be an emergency support request or planning the

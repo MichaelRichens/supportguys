@@ -1,4 +1,4 @@
-// TODO dougs input on new focus and specialities section
+// TODO time critical response section is a mess
 
 import Link from "next/link"
 
@@ -10,12 +10,12 @@ import TextAboutUsCambs from "../components/content_components/TextAboutUsCambs"
 import stylesMainPage from "../styles/stylesMainPage.module.css"
 
 export default function about_us() {
-	const current_year = new Date().getFullYear()
+	const currentYear = new Date().getFullYear()
 
 	return (
 		<Page
 			title="About Us"
-			metaDescription="Support Guys bring two decades of Apple Mac experience to support our SME customers in ensuring your IT setup is resilient and trouble free."
+			metaDescription="Support Guys bring two decades of real world Apple Mac experience to support our SME customers in ensuring your IT setup is resilient and trouble free."
 		>
 			<section
 				className={stylesMainPage["page-intro"]}
@@ -53,8 +53,8 @@ export default function about_us() {
 					</Link>
 					, which provides Apple Mac repairs and upgrades on a retail
 					basis. Over the years, our relationships with some of our
-					business customers evolved into a more that of a traditional
-					IT support provider, with us handling everything to major
+					business customers evolved into more that of a traditional
+					IT support provider, with us handling everything from major
 					network upgrades to printer configuration - "Go and speak to
 					those support guys; they will sort it all out for you." And
 					we have, we do, and will continue to do so.
@@ -62,18 +62,22 @@ export default function about_us() {
 				<p>
 					We are a small company that has been supporting customers
 					using Apple Mac computers for
+<<<<<<< HEAD
 					{" " + (current_year - 2001) + " "} years. We specialise in
+=======
+					{" " + (currentYear - 2001) + " "} years. We specialise in
+>>>>>>> main
 					the world of Mac hardware, macOS and all associated
 					technologies like WiFi networks, FileMaker servers, NAS
 					solutions, and backups. We can assess, plan and improve your
 					networks and infrastructure and the computers you use.
 				</p>
 				<p>
-					We tend to focus on the user, the person doing the work and
+					We tend to focus on the user, the person doing the work; and
 					look for bottlenecks which get in their way. This usually
 					starts with a lot of questions about what is causing you
-					pain, and trying and work through them to deliver a complete
-					solution.
+					pain, and trying to work through them to find the root
+					causes of the issues.
 				</p>
 				<p>
 					Often these are obvious, sometimes they are not. Questions
@@ -104,11 +108,11 @@ export default function about_us() {
 					what is wrong and how to fix it.
 				</p>
 				<p>
-					Maybe someone’s computer has fallen over and now you realise
-					that you need to get them all fixed and backing up?
+					Maybe someone's computer has fallen over, and you need to
+					get their data restored and them back up quickly.
 				</p>
 				<p>
-					Maybe you now have 10 people working from home and need to
+					Maybe you now have 10 people working from home, and need to
 					think about how to keep all that communication safe and
 					secure (more secure than WhatsApp or email).
 				</p>
@@ -116,9 +120,9 @@ export default function about_us() {
 					Sometimes you need a detailed disaster recovery plan for a
 					business proposal, or to update one as new risks have
 					emerged
-					{current_year <= 2022
+					{currentYear < 2023
 						? ` (such as a global pandemic${
-								current_year <= 2021
+								currentYear < 2022
 									? ", or no one able to get into the office as their cars have no petrol!)"
 									: "!)"
 						  }`
@@ -137,28 +141,9 @@ export default function about_us() {
 				<h2>Next Steps</h2>
 				<p>
 					Just <Link href="/contact_us">get in touch</Link> with our
-					team to begin the process.
-				</p>
-				<p>
-					Initial Assessment: historically this was a visit to your
-					site, walk and talk through what is causing you issues.
-					These days this can be remote if needed (via Teamviewer, or
-					even apps like Zoom or FaceTime)
-				</p>
-				<p>
-					A usual assessment reveals two distinct (related but
-					separate) requirements:
-				</p>
-				<ol type="i">
-					<li>How much support do you need and how often.</li>
-
-					<li>
-						Very specific projects; expected costs and timelines.
-					</li>
-				</ol>
-				<p>
-					We are here to help every step through the journey. We look
-					forward to working with you.
+					team to begin the process, or have a look at our{" "}
+					<Link href="/plans_and_costs">Plans and Costs</Link> for
+					more information.
 				</p>
 			</section>
 		</Page>

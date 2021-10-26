@@ -1,4 +1,8 @@
+import { useEffect } from "react"
+import { useRouter } from "next/router"
 import { useImmerReducer } from "use-immer"
+
+import { pageview } from "../functions/ga"
 
 import EmailContext, {
 	emailReducer,
@@ -12,6 +16,24 @@ function MyApp({ Component, pageProps }) {
 		emailReducer,
 		initialEmailState
 	)
+
+	const router = useRouter()
+
+	useEffect(() => {
+		const handleRouteChange = (url) => {
+			process.env.NODE_ENV == "production"
+			ga.pageview(url)
+		}
+		//When the component is mounted, subscribe to router changes
+		//and log those page views
+		router.events.on("routeChangeComplete", handleRouteChange)
+
+		// If the component is unmounted, unsubscribe
+		// from the event with the `off` method
+		return () => {
+			router.events.off("routeChangeComplete", handleRouteChange)
+		}
+	}, [router.events])
 
 	return (
 		<EmailContext.Provider

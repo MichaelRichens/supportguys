@@ -4,13 +4,13 @@ import Page from "../components/Page"
 import ServicePage from "../components/ServicePage"
 
 export default function slow_computers() {
-	const current_year = new Date().getFullYear()
+	const currentYear = new Date().getFullYear()
 
 	return (
 		<Page
 			title="Computer Performance Upgrades"
 			metaDescription={`Support Guys is the SME support arm of MacUpgrades, and has ${
-				current_year - 2001
+				currentYear - 2001
 			} years experience in improving the performance of Apple Mac computers.`}
 		>
 			<ServicePage
@@ -88,7 +88,7 @@ export default function slow_computers() {
 						the operating system and software, you place higher
 						demands on the system, meaning the amount of RAM
 						available from new is no longer enough.
-						{current_year > 2022
+						{currentYear > 2022
 							? " At the time of writing (2022), "
 							: " "}
 						8GB is the bare minimum for current Apple operating

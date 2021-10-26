@@ -11,11 +11,13 @@ import styles from "../styles/index.module.css"
 import stylesMainPage from "../styles/stylesMainPage.module.css"
 
 export default function Home() {
+	const currentYear = new Date().getFullYear()
+
 	return (
 		<Page
 			title={process.env.NEXT_PUBLIC_NAME}
 			metaDescription={`Support Guys bring ${
-				new Date().getFullYear() - 2001
+				currentYear - 2001
 			} years of Apple Mac experience to support our SME customers in ensuring your IT setup is resilient and trouble free.`}
 		>
 			<section

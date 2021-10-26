@@ -2,12 +2,12 @@ import Page from "../components/Page"
 import ServicePage from "../components/ServicePage"
 
 export default function disaster_recovery() {
-	const current_year = new Date().getFullYear()
+	const currentYear = new Date().getFullYear()
 	return (
 		<Page
 			title={"Disaster Recovery"}
 			metaDescription={`Mac focused disaster planning and general support for SMEs, from Cambridge based Support Guys, Mac experts with ${
-				current_year - 2001
+				currentYear - 2001
 			} years experience.`}
 		>
 			<ServicePage
@@ -29,8 +29,7 @@ export default function disaster_recovery() {
 					<li>What if your staff can't get to the office?</li>
 					<li>
 						What if all your staff have to work from home
-						{current_year < 2023 ? " due to a global pandemic" : ""}
-						?
+						{currentYear < 2023 ? " due to a global pandemic" : ""}?
 					</li>
 				</ul>
 				<p>
