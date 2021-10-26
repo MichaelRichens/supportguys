@@ -83,8 +83,7 @@ export default function ContactForm() {
 							})
 						)
 						gaEvent({
-							action: "email",
-							params: {}
+							action: "email"
 						})
 						emailDispatch({ type: "sent" })
 					} else {
