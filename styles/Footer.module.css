@@ -186,9 +186,6 @@
 }
 
 @media (max-width: 450px) {
-	.footer {
-		font-size: 14px;
-	}
 	.footer h3 {
 		font-size: 24px;
 		margin-top: 0.5em;
@@ -198,7 +195,7 @@
 		flex-direction: column;
 	}
 	.social h3 {
-		margin-top: 0;
+		margin-top: 0.2;
 		margin-bottom: 0.3em;
 	}
 	.social ul {
