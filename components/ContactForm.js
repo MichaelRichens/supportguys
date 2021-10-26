@@ -4,8 +4,9 @@ import Link from "next/link"
 import EmailContext, {
 	emailMagicServerPlaceholder
 } from "../context/EmailContext"
-import FlashMessageContext from "../context/FlashMessageContext"
 
+import { gaEvent } from "../functions/ga"
+import FlashMessageContext from "../context/FlashMessageContext"
 import ValidationWarning from "./ValidationWarning"
 
 import styles from "../styles/ContactForm.module.css"
@@ -81,6 +82,10 @@ export default function ContactForm() {
 								message: "Email Sent!"
 							})
 						)
+						gaEvent({
+							action: "email",
+							params: {}
+						})
 						emailDispatch({ type: "sent" })
 					} else {
 						console.error(res)
