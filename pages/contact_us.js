@@ -38,9 +38,7 @@ export default function contact_us() {
 						className={`content-box ${styles["contact-details"]}`}
 					>
 						<h3>Contact Details</h3>
-						<address
-							className={`content-box ${styles["contact-details"]}`}
-						>
+						<address>
 							<TextContactDetails />
 						</address>
 					</section>

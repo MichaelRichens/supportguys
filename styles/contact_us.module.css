@@ -104,6 +104,10 @@
 	padding-right: 2em;
 }
 
+.contact-details a {
+	text-decoration: none;
+}
+
 .contact-details dl > dt {
 	margin: 0;
 	margin-right: 3%;
@@ -135,6 +139,11 @@
 .contact-details dl > dt,
 .contact-details dl > dd {
 	text-decoration: none;
+}
+
+/*Facebook logo*/
+.contact-details dl > dd img:first-of-type {
+	background-color: #4267b2;
 }
 
 .contact-now {

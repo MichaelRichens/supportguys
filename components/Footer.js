@@ -25,24 +25,6 @@ export default function Footer() {
 						<TextContactDetails />
 					</address>
 				</section>
-				<section className={styles.social}>
-					<h3>Social</h3>
-					<ul>
-						<li>
-							<Link href="https://www.facebook.com/SupportGuysUK/">
-								<a>
-									<Image
-										src={facebook_logo_small_square}
-										width="25"
-										height="25"
-										alt=""
-									/>
-									<span>Facebook</span>
-								</a>
-							</Link>
-						</li>
-					</ul>
-				</section>
 				<nav className={styles.brands}>
 					<h3>Our Other Brands</h3>
 					<ul>
