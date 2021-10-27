@@ -96,6 +96,16 @@
 	margin-bottom: 0;
 }
 
+.social ul a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social ul span {
+	margin-left: 0.2em;
+}
+
 .social ul a:hover img {
 	transform: rotate(360deg);
 	transition: transform 1s;
