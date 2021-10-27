@@ -214,6 +214,7 @@
 	}
 	.brands li {
 		flex-direction: column;
+		border-bottom: none;
 	}
 }
 
