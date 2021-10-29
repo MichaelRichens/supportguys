@@ -3,6 +3,7 @@ module.exports = {
 	changefreq: "weekly",
 	priority: 0.7,
 	generateRobotsTxt: true,
+	exclude: ["/tickets"],
 	// Default transformation function
 	transform: async (config, path) => {
 		return {
