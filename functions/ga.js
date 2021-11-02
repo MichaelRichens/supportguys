@@ -1,6 +1,6 @@
 //Google Analytics functions
 
-// log the pageview with their URL
+// log the page view with their URL
 export function gaPageView(url) {
 	if (process.env.NODE_ENV == "production") {
 		window.gtag("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
