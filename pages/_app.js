@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useRouter } from "next/router"
 import { useImmerReducer } from "use-immer"
 
-import { gaPageview } from "../functions/ga"
+import { gaPageView } from "../functions/ga"
 
 import EmailContext, {
 	emailReducer,
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
 	const router = useRouter()
 
 	useEffect(() => {
-		const handleRouteChange = (url) => gaPageview(url)
+		const handleRouteChange = (url) => gaPageView(url)
 
 		//When the component is mounted, subscribe to router changes
 		//and log those page views
