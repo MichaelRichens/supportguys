@@ -1,5 +1,6 @@
-import { useCallback, useContext, useEffect, useState } from "react"
+import { createRef, useCallback, useContext, useEffect, useState } from "react"
 import Link from "next/link"
+import ReCAPTCHA from "react-google-recaptcha"
 
 import EmailContext, {
 	emailMagicServerPlaceholder
@@ -15,6 +16,7 @@ export default function ContactFormInner() {
 	const { emailState, emailDispatch } = useContext(EmailContext)
 	const { setFlashMessages } = useContext(FlashMessageContext)
 	const validationTimeout = 1500
+	const recaptchaRef = createRef()
 	// hacky fix for possible race condition - see comment above the useEffects below
 	const [, updateState] = useState()
 	const forceUpdate = useCallback(() => updateState({}), [])
@@ -29,7 +31,7 @@ export default function ContactFormInner() {
 		emailDispatch({ type: e.target.name, value: e.target.value })
 	}
 
-	function handleSubmit(e) {
+	const handleSubmit = (e) => {
 		e.preventDefault()
 		let valid = true
 		if (!emailState.name) {
@@ -60,52 +62,61 @@ export default function ContactFormInner() {
 			valid = false
 		}
 		if (valid) {
-			const data = {
-				name: emailState.name,
-				email: emailState.email,
-				subject: emailState.subject,
-				body: emailState.body
-			}
-			fetch("/api/contact", {
-				method: "POST",
-				headers: {
-					Accept: "application/json, text/plain, */*",
-					"Content-Type": "application/json"
-				},
-				body: JSON.stringify(data)
-			})
-				.then((res) => {
-					if (res.status === 200) {
-						setFlashMessages((prev) =>
-							prev.concat({
-								class: "success",
-								message: "Email Sent!"
-							})
-						)
-						gaEvent({
-							action: "email"
+			recaptchaRef.current.execute()
+		}
+	}
+
+	const onReCAPTCHAChange = (captchaCode) => {
+		if (!captchaCode) {
+			return
+		}
+		const data = {
+			name: emailState.name,
+			email: emailState.email,
+			subject: emailState.subject,
+			body: emailState.body,
+			token: captchaCode
+		}
+		fetch("/api/contact", {
+			method: "POST",
+			headers: {
+				Accept: "application/json, text/plain, */*",
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(data)
+		})
+			.then((res) => {
+				if (res.status === 200) {
+					setFlashMessages((prev) =>
+						prev.concat({
+							class: "success",
+							message: "Email Sent!"
 						})
-						emailDispatch({ type: "sent" })
-					} else {
-						console.error(res)
-						setFlashMessages((prev) =>
-							prev.concat({
-								class: "error",
-								message: "Sorry, email failed..."
-							})
-						)
-					}
-				})
-				.catch((error) => {
-					console.error(error)
+					)
+					gaEvent({
+						action: "email"
+					})
+					emailDispatch({ type: "sent" })
+				} else {
+					console.error(res)
 					setFlashMessages((prev) =>
 						prev.concat({
 							class: "error",
 							message: "Sorry, email failed..."
 						})
 					)
-				})
-		}
+				}
+			})
+			.catch((error) => {
+				console.error(error)
+				setFlashMessages((prev) =>
+					prev.concat({
+						class: "error",
+						message: "Sorry, email failed..."
+					})
+				)
+			})
+		recaptchaRef.current.reset()
 	}
 
 	function validateEmail() {
@@ -235,86 +246,93 @@ export default function ContactFormInner() {
 
 	return (
 		<form className={styles["contact-form"]} onSubmit={handleSubmit}>
-			<h2>Send Us An Email</h2>
-			<ValidationWarning
-				condition={emailState.nameWarn != ""}
-				message={emailState.nameWarn}
-			/>
-			<label>
-				Your Name:
-				<input
-					type="text"
-					name="name"
-					autoComplete="name"
-					onInput={handleInputChange}
-					value={
-						emailState.name !== emailMagicServerPlaceholder
-							? emailState.name
-							: ""
-					}
+			<ReCAPTCHA
+				ref={recaptchaRef}
+				size="invisible"
+				sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+				onChange={onReCAPTCHAChange}
+			>
+				<h2>Send Us An Email</h2>
+				<ValidationWarning
+					condition={emailState.nameWarn != ""}
+					message={emailState.nameWarn}
 				/>
-			</label>
-			<ValidationWarning
-				condition={emailState.emailWarn != ""}
-				message={emailState.emailWarn}
-			/>
-			<label>
-				Your Email:
-				<input
-					type="text"
-					placeholder="email@example.com"
-					name="email"
-					autoComplete="email"
-					onInput={handleInputChange}
-					value={
-						emailState.email !== emailMagicServerPlaceholder
-							? emailState.email
-							: ""
-					}
+				<label>
+					Your Name:
+					<input
+						type="text"
+						name="name"
+						autoComplete="name"
+						onInput={handleInputChange}
+						value={
+							emailState.name !== emailMagicServerPlaceholder
+								? emailState.name
+								: ""
+						}
+					/>
+				</label>
+				<ValidationWarning
+					condition={emailState.emailWarn != ""}
+					message={emailState.emailWarn}
 				/>
-			</label>
-			<ValidationWarning
-				condition={emailState.subjectWarn != ""}
-				message={emailState.subjectWarn}
-			/>
-			<label>
-				Subject:
-				<input
-					type="text"
-					name="subject"
-					autoComplete="off"
-					onInput={handleInputChange}
-					value={
-						emailState.subject !== emailMagicServerPlaceholder
-							? emailState.subject
-							: ""
-					}
+				<label>
+					Your Email:
+					<input
+						type="text"
+						placeholder="email@example.com"
+						name="email"
+						autoComplete="email"
+						onInput={handleInputChange}
+						value={
+							emailState.email !== emailMagicServerPlaceholder
+								? emailState.email
+								: ""
+						}
+					/>
+				</label>
+				<ValidationWarning
+					condition={emailState.subjectWarn != ""}
+					message={emailState.subjectWarn}
 				/>
-			</label>
-			<ValidationWarning
-				condition={emailState.bodyWarn != ""}
-				message={emailState.bodyWarn}
-			/>
-			<label>
-				Message:
-				<textarea
-					name="body"
-					autoComplete="off"
-					onInput={handleInputChange}
-					value={
-						emailState.body !== emailMagicServerPlaceholder
-							? emailState.body
-							: ""
-					}
+				<label>
+					Subject:
+					<input
+						type="text"
+						name="subject"
+						autoComplete="off"
+						onInput={handleInputChange}
+						value={
+							emailState.subject !== emailMagicServerPlaceholder
+								? emailState.subject
+								: ""
+						}
+					/>
+				</label>
+				<ValidationWarning
+					condition={emailState.bodyWarn != ""}
+					message={emailState.bodyWarn}
 				/>
-			</label>
-			<button type="submit">Send Email</button>
-			<p className={styles.mailto}>
-				Or email us directly at:{" "}
-				<Link href={"mailto:" + process.env.NEXT_PUBLIC_EMAIL}>
-					{process.env.NEXT_PUBLIC_EMAIL}
-				</Link>
-			</p>
+				<label>
+					Message:
+					<textarea
+						name="body"
+						autoComplete="off"
+						onInput={handleInputChange}
+						value={
+							emailState.body !== emailMagicServerPlaceholder
+								? emailState.body
+								: ""
+						}
+					/>
+				</label>
+				<button type="submit">Send Email</button>
+				<p className={styles.mailto}>
+					Or email us directly at:{" "}
+					<Link href={"mailto:" + process.env.NEXT_PUBLIC_EMAIL}>
+						{process.env.NEXT_PUBLIC_EMAIL}
+					</Link>
+				</p>
+			</ReCAPTCHA>
 		</form>
 	)
 }
