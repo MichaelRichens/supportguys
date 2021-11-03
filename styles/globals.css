@@ -491,6 +491,7 @@ main > section.text-over-image {
 	border-radius: 1em;
 	background-color: #1c2936;
 	color: white;
+	max-height: 100%;
 	overflow: auto;
 }
 
