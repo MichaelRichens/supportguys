@@ -249,6 +249,7 @@ export default function ContactFormInner() {
 			<ReCAPTCHA
 				ref={recaptchaRef}
 				size="invisible"
+				badge="bottomleft"
 				sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
 				onChange={onReCAPTCHAChange}
 			>
