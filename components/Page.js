@@ -72,9 +72,9 @@ export default function Page(props) {
 			const script = document.createElement("script")
 			script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`
 			script.async = true
-			document.body.appendChild(script)
+			document.head.appendChild(script)
 			return () => {
-				document.body.removeChild(script)
+				document.head.removeChild(script)
 			}
 		}
 	}, [])
