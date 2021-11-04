@@ -190,7 +190,7 @@ export default function Page(props) {
 					<>
 						{/* Global Site Tag (gtag.js) - Google Analytics */}
 						<script
-							async
+							async={true}
 							src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
 						/>
 						<script
