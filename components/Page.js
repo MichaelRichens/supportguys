@@ -68,15 +68,14 @@ export default function Page(props) {
 	}, [])
 
 	useEffect(() => {
-		const script = document.createElement("script")
-
-		script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`
-		script.async = true
-
-		document.body.appendChild(script)
-
-		return () => {
-			document.body.removeChild(script)
+		if (process.env.NODE_ENV == "production") {
+			const script = document.createElement("script")
+			script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`
+			script.async = true
+			document.body.appendChild(script)
+			return () => {
+				document.body.removeChild(script)
+			}
 		}
 	}, [])
 
