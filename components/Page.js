@@ -67,6 +67,19 @@ export default function Page(props) {
 		smartquotes().listen()
 	}, [])
 
+	useEffect(() => {
+		const script = document.createElement("script")
+
+		script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`
+		script.async = true
+
+		document.body.appendChild(script)
+
+		return () => {
+			document.body.removeChild(script)
+		}
+	}, [])
+
 	return (
 		<FlashMessageContext.Provider
 			value={{
@@ -188,11 +201,6 @@ export default function Page(props) {
 				<meta name="theme-color" content="#ffffff" />
 				{process.env.NODE_ENV == "production" && (
 					<>
-						{/* Global Site Tag (gtag.js) - Google Analytics */}
-						<script
-							async={true}
-							src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-						/>
 						<script
 							dangerouslySetInnerHTML={{
 								__html: `
