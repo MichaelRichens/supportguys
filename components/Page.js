@@ -90,8 +90,7 @@ export default function Page(props) {
 				<title>
 					{process.env.NEXT_PUBLIC_NAME +
 						" - Apple Mac Specialist IT Support" +
-						(props.title &&
-						props.title != process.env.NEXT_PUBLIC_NAME
+						(props.title != process.env.NEXT_PUBLIC_NAME
 							? `: ${props.title}`
 							: "")}
 				</title>
