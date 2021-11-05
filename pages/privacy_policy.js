@@ -4,7 +4,10 @@ import Page from "../components/Page"
 
 export default function privacy_policy() {
 	return (
-		<Page title={"Privacy Policy"}>
+		<Page
+			title="Privacy Policy"
+			metaDescription="Privacy policy for Support Guys, a trading division of MacUpgrades / Second Chance PC Ltd."
+		>
 			<article className="standard-text">
 				<h1>Privacy Policy for Second Chance PC Ltd</h1>
 				<section>

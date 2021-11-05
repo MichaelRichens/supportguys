@@ -11,7 +11,10 @@ export default function contact_us() {
 	const currentYear = new Date().getFullYear()
 
 	return (
-		<Page title="Contact Us">
+		<Page
+			title="Contact Us"
+			metaDescription="Contact details and address for Support Guys, Apple Mac specialist IT support for UK SMEs."
+		>
 			<section
 				className={`text-over-image ${styles["contact-us-intro"]}`}
 				style={{
