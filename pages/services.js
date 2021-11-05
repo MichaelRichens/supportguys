@@ -9,7 +9,7 @@ export default function services() {
 			title={"Services"}
 			metaDescription={`Support Guys bring ${
 				currentYear - 2001
-			} years of Apple Mac experience to support our SME customers in ensuring your IT setup is resilient and trouble free.`}
+			} years of Apple Mac experience to support our SME customers. See the service offer to help ensure your IT setup is resilient and trouble free.`}
 		>
 			<ContentServices onOwnPage={true} />
 		</Page>

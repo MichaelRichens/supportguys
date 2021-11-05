@@ -10,7 +10,10 @@ export default function plans_and_costs() {
 	const { emailDispatch } = useContext(EmailContext)
 
 	return (
-		<Page title={""} metaDescription="">
+		<Page
+			title={"Plans and Costs"}
+			metaDescription="Details of the options Support Guys offers to bring your business specialist IT support from Apple Mac experts."
+		>
 			<section
 				className={stylesMainPage["page-intro"]}
 				style={{

@@ -15,7 +15,7 @@ export default function Home() {
 
 	return (
 		<Page
-			title={process.env.NEXT_PUBLIC_NAME}
+			title="Support Guys - Apple Mac Specialist IT Support"
 			metaDescription={`Support Guys bring ${
 				currentYear - 2001
 			} years of Apple Mac experience to support our SME customers in ensuring your IT setup is resilient and trouble free.`}
