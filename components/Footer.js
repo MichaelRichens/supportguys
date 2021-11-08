@@ -47,24 +47,23 @@ export default function Footer() {
 							</p>
 						</li>
 						<li>
-							<div>
-								<Link href="https://www.appcentre.co.uk/softstore/">
-									<a>
-										<Image
-											src={appcentre_logo_small}
-											width="146"
-											height="25"
-											alt="AppCentre"
-											priority={true}
-										/>
-									</a>
-								</Link>
-							</div>
-							<div>
+							<Link href="https://www.appcentre.co.uk/softstore/">
+								<a>
+									<Image
+										src={appcentre_logo_small}
+										width="146"
+										height="25"
+										alt="AppCentre"
+										priority={true}
+									/>
+								</a>
+							</Link>
+
+							<p>
 								Supplying and supporting Kerio Connect
 								mailserver and Control firewall, and other Kerio
 								and GFI business software.
-							</div>
+							</p>
 						</li>
 					</ul>
 				</nav>
