@@ -73,9 +73,10 @@ export default function Footer() {
 			</small>
 			<small className={styles.copyright}>
 				&copy;2021
-				{currentYear > 2021 ? ` - ${currentYear} ` : " "}Support Guys is
-				a trading division of MacUpgrades / Second Chance PC Ltd.
-				Company number: 4331031. Registered for VAT: GB 783705210.
+				{currentYear > 2021 ? ` - ${currentYear} ` : " "}{" "}
+				{process.env.NEXT_PUBLIC_NAME} is a trading division of
+				MacUpgrades / Second Chance PC Ltd. Company number: 4331031.
+				Registered for VAT: GB 783705210.
 			</small>
 		</footer>
 	)
