@@ -9,7 +9,6 @@ import styles from "../styles/Footer.module.css"
 
 import macupgrades_logo_small from "../public/images/logos/macupgrades_logo144x25.png"
 import appcentre_logo_small from "../public/images/logos/appcentre_logo146x25.png"
-import facebook_logo_small_square from "../public/images/logos/facebook_logo25x25.png"
 
 export default function Footer() {
 	const currentYear = new Date().getFullYear()
