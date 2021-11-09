@@ -47,9 +47,9 @@ export default function contact_us() {
 					</div>
 				</div>
 			</section>
-			<section className="map">
+			<div className="map">
 				<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1GK87q0dlrIf1Mk58bsD1F-xX3ibKxqM5" />
-			</section>
+			</div>
 		</Page>
 	)
 }
