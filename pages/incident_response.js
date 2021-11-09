@@ -1,6 +1,3 @@
-//TODO not really sure this sounds like we know what we are talking about (even less sure that we do...)
-// Want doug to read it since he's the one who'll need to follow through on it.
-
 import Page from "../components/Page"
 import ServicePage from "../components/ServicePage"
 
