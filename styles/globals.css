@@ -453,9 +453,7 @@ main > section.text-over-image {
 	.standard-text > h2 {
 		font-size: 24px;
 	}
-}
 
-@media (max-width: 600px) {
 	.standard-text p,
 	.standard-text ol,
 	.standard-text ul,
@@ -470,6 +468,28 @@ main > section.text-over-image {
 	.standard-text ul,
 	.standard-text dl {
 		line-height: 1.1em;
+	}
+}
+
+.map {
+	text-align: center;
+}
+
+.map iframe {
+	width: 80%;
+	height: 600px;
+}
+
+@media (max-width: 800px) {
+	.map iframe {
+		width: 90%;
+	}
+}
+
+@media (max-width: 840px) {
+	.map iframe {
+		width: 98%;
+		height: 500px;
 	}
 }
 
