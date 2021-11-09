@@ -333,6 +333,20 @@ export default function ContactFormInner() {
 						{process.env.NEXT_PUBLIC_EMAIL}
 					</Link>
 				</p>
+				<p className={styles.recaptchaDisclaimer}>
+					This site is protected by reCAPTCHA and the Google{" "}
+					<a
+						target="_blank"
+						href="https://policies.google.com/privacy"
+					>
+						Privacy Policy
+					</a>{" "}
+					and{" "}
+					<a target="_blank" href="https://policies.google.com/terms">
+						Terms of Service
+					</a>{" "}
+					apply.
+				</p>
 			</ReCAPTCHA>
 		</form>
 	)

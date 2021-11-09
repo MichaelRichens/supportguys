@@ -128,6 +128,10 @@ ol > li:last-child {
 	cursor: pointer;
 }
 
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
 .centre-contents {
 	display: flex;
 	justify-content: center;
