@@ -45,12 +45,12 @@ export default function ContactFormInner() {
 			})
 			valid = false
 		} else {
-			valid = validateEmail()
-			if (!valid) {
+			if (!validateEmail()) {
 				emailDispatch({
 					type: "emailWarn",
 					value: "Invalid email address."
 				})
+				valid = false
 			}
 		}
 		if (!emailState.subject) {
@@ -332,6 +332,20 @@ export default function ContactFormInner() {
 					<Link href={"mailto:" + process.env.NEXT_PUBLIC_EMAIL}>
 						{process.env.NEXT_PUBLIC_EMAIL}
 					</Link>
+				</p>
+				<p className={styles.recaptchaDisclaimer}>
+					This site is protected by reCAPTCHA and the Google{" "}
+					<a
+						target="_blank"
+						href="https://policies.google.com/privacy"
+					>
+						Privacy Policy
+					</a>{" "}
+					and{" "}
+					<a target="_blank" href="https://policies.google.com/terms">
+						Terms of Service
+					</a>{" "}
+					apply.
 				</p>
 			</ReCAPTCHA>
 		</form>

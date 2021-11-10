@@ -1,6 +1,3 @@
-//TODO add social media links
-//TODO add google maps at bottom
-
 import Page from "../components/Page"
 import TextContactDetails from "../components/content_components/TextContactDetails"
 import ContactForm from "../components/ContactForm"
@@ -50,6 +47,9 @@ export default function contact_us() {
 					</div>
 				</div>
 			</section>
+			<div className="map">
+				<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1GK87q0dlrIf1Mk58bsD1F-xX3ibKxqM5" />
+			</div>
 		</Page>
 	)
 }

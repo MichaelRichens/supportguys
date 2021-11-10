@@ -1,5 +1,3 @@
-// TODO time critical response section is a mess
-
 import Link from "next/link"
 
 import ContentBoxMain from "../components/ContentBoxMain"

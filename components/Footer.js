@@ -1,5 +1,3 @@
-// TODO More Social than just facebook
-
 import Link from "next/link"
 import Image from "next/image"
 
