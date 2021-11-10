@@ -45,12 +45,12 @@ export default function ContactFormInner() {
 			})
 			valid = false
 		} else {
-			valid = validateEmail()
-			if (!valid) {
+			if (!validateEmail()) {
 				emailDispatch({
 					type: "emailWarn",
 					value: "Invalid email address."
 				})
+				valid = false
 			}
 		}
 		if (!emailState.subject) {
