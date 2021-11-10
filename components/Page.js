@@ -16,7 +16,10 @@ export default function Page(props) {
 	const { emailState, emailDispatch } = useContext(EmailContext)
 	const contactPopupNodeRef = useRef(null)
 	const [flashMessages, setFlashMessages] = useState([])
-	const canonicalURL = process.env.NEXT_PUBLIC_DOMAIN + useRouter().pathname
+	const canonicalURL =
+		process.env.NEXT_PUBLIC_DOMAIN + useRouter().pathname != "/"
+			? useRouter().pathname
+			: ""
 
 	const structuredDataOrg = {
 		__html: JSON.stringify({
