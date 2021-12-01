@@ -6,17 +6,22 @@ export default function privacy_policy() {
 	return (
 		<Page
 			title="Privacy Policy"
-			metaDescription="Privacy policy for Support Guys, a trading division of MacUpgrades / Second Chance PC Ltd."
+			metaDescription={
+				"Privacy policy for " +
+				process.env.NEXT_PUBLIC_NAME +
+				", a trading division of MacUpgrades / Second Chance PC Ltd."
+			}
 		>
 			<article className="standard-text">
 				<h1>Privacy Policy for Second Chance PC Ltd</h1>
 				<section>
 					<p>
-						At Support Guys, accessible from www.supportguys.co.uk,
-						one of our main priorities is the privacy of our
-						visitors. This Privacy Policy document contains types of
-						information that is collected and recorded by Support
-						Guys and how we use it.
+						At {process.env.NEXT_PUBLIC_NAME}, accessible from{" "}
+						{process.env.NEXT_PUBLIC_URL_TEXT}, one of our main
+						priorities is the privacy of our visitors. This Privacy
+						Policy document contains types of information that is
+						collected and recorded by Support Guys and how we use
+						it.
 					</p>
 				</section>
 				<p>
@@ -90,18 +95,19 @@ export default function privacy_policy() {
 					<h2>Log Files</h2>
 
 					<p>
-						Support Guys follows a standard procedure of using log
-						files. These files log visitors when they visit
-						websites. All hosting companies do this and a part of
-						hosting services' analytics. The information collected
-						by log files include internet protocol (IP) addresses,
-						browser type, Internet Service Provider (ISP), date and
-						time stamp, referring/exit pages, and possibly the
-						number of clicks. These are not linked to any
-						information that is personally identifiable. The purpose
-						of the information is for analysing trends,
-						administering the site, tracking users' movement on the
-						website, and gathering demographic information.
+						{process.env.NEXT_PUBLIC_NAME} follows a standard
+						procedure of using log files. These files log visitors
+						when they visit websites. All hosting companies do this
+						and a part of hosting services' analytics. The
+						information collected by log files include internet
+						protocol (IP) addresses, browser type, Internet Service
+						Provider (ISP), date and time stamp, referring/exit
+						pages, and possibly the number of clicks. These are not
+						linked to any information that is personally
+						identifiable. The purpose of the information is for
+						analysing trends, administering the site, tracking
+						users' movement on the website, and gathering
+						demographic information.
 					</p>
 				</section>
 				<section>
@@ -135,12 +141,12 @@ export default function privacy_policy() {
 				<section>
 					<h2>Third Party Privacy Policies</h2>
 					<p>
-						Support Guys' Privacy Policy does not apply to other
-						services or websites. Thus, we are advising you to
-						consult the respective Privacy Policies of these
-						third-party servers for more detailed information. It
-						may include their practices and instructions about how
-						to opt-out of certain options.
+						{process.env.NEXT_PUBLIC_NAME}' Privacy Policy does not
+						apply to other services or websites. Thus, we are
+						advising you to consult the respective Privacy Policies
+						of these third-party servers for more detailed
+						information. It may include their practices and
+						instructions about how to opt-out of certain options.
 					</p>
 					<p>
 						You can choose to disable cookies through your
@@ -159,12 +165,13 @@ export default function privacy_policy() {
 						and guide their online activity.
 					</p>
 					<p>
-						Support Guys does not knowingly collect any Personal
-						Identifiable Information from children under the age of
-						13. If you think that your child provided this kind of
-						information on our website, we strongly encourage you to
-						contact us immediately and we will do our best efforts
-						to promptly remove such information from our records.
+						{process.env.NEXT_PUBLIC_NAME} does not knowingly
+						collect any Personal Identifiable Information from
+						children under the age of 13. If you think that your
+						child provided this kind of information on our website,
+						we strongly encourage you to contact us immediately and
+						we will do our best efforts to promptly remove such
+						information from our records.
 					</p>
 				</section>
 				<section>
@@ -173,9 +180,9 @@ export default function privacy_policy() {
 						Our Privacy Policy applies only to our online activities
 						and is valid for visitors to our website with regards to
 						the information that they shared and/or collect in
-						Support Guys. This policy is not applicable to any
-						information collected offline or via channels other than
-						this website.
+						{process.env.NEXT_PUBLIC_NAME}. This policy is not
+						applicable to any information collected offline or via
+						channels other than this website.
 					</p>
 				</section>
 				<section>
