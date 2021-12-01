@@ -31,7 +31,7 @@ export default function privacy_policy() {
 					<Link href="https://www.gdprprivacynotice.com/">
 						GDPR Privacy Policy Generator
 					</Link>{" "}
-					from GDPRPrivacyNotice.com .
+					from GDPRPrivacyNotice.com.
 				</p>
 				<section>
 					<h2>General Data Protection Regulation (GDPR)</h2>
