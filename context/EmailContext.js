@@ -43,10 +43,6 @@ export function emailReducer(draft, action) {
 			draft.contactFormOpen = !draft.contactFormOpen
 			return
 		case "sent":
-			draft.name = ""
-			draft.nameWarn = ""
-			draft.email = ""
-			draft.emailWarn = ""
 			draft.subject = ""
 			draft.subjectWarn = ""
 			draft.body = ""
