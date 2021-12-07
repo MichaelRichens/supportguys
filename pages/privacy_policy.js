@@ -20,8 +20,8 @@ export default function privacy_policy() {
 						{process.env.NEXT_PUBLIC_URL_TEXT}, one of our main
 						priorities is the privacy of our visitors. This Privacy
 						Policy document contains types of information that is
-						collected and recorded by Support Guys and how we use
-						it.
+						collected and recorded by {process.env.NEXT_PUBLIC_NAME}{" "}
+						and how we use it.
 					</p>
 				</section>
 				<p>
