@@ -35,7 +35,7 @@ export default function Home() {
 					<p>
 						Support Guys provides expert Apple Mac focused IT
 						support to business customers. We have been supporting
-						customers using Apple Mac computers for over
+						customers using Apple Mac computers for
 						{" " + (new Date().getFullYear() - 2001) + " "} years.
 						We specialise in the world of Mac hardware, macOS and
 						all associated technologies like WiFi networks,
