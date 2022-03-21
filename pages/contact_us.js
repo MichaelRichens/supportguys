@@ -27,8 +27,8 @@ export default function contact_us() {
 						: " do what it does best. "}
 					Whether it be an emergency support request or planning the
 					next stage of your business growth, we are at your service.
-					Let us share our 60 years of combined IT knowledge to help
-					your business thrive.
+					Let us share our over 60 years of combined IT knowledge to
+					help your business thrive.
 				</p>
 			</section>
 			<section className={styles["contact-methods"]}>
