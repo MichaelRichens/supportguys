@@ -67,7 +67,6 @@
 }
 
 .email:hover {
-	filter: sepia(100%) hue-rotate(195deg) saturate(400%);
 	transform: rotate(22.5deg);
 	transition: transform 200ms;
 }
